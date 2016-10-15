@@ -7,25 +7,35 @@
 }
 
 .menu-container{
-  margin-top: 10px;
-  margin-right: 10px;
+  margin-top: 20px;
+  margin-right: 20px;
   height: 500px;
   width:280px;
   position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-box-hidden{
+  height:5px;
+  width:5px;
+  background-color: black;
+  opacity: 0.6;
+  transition: width 2s ease, height 2s ease;
 }
 
 .menu-box{
-  height: 500px;
+  height: 400px;
   width:280px;
   background-color: black;
   opacity: 0.6;
-  transition-delay: 2s;
+  transition: width 4s ease, height 4s ease;
 }
 
   .icon{
     position: absolute;
-    right:0px;
-    top:0px;
+    right:-10px;
+    top:-10px;
     z-index: 1;
     height: 50px;
     width: 50px;

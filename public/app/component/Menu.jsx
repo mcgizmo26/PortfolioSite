@@ -7,7 +7,8 @@ export default class Menu extends React.Component {
 		super()
 		this.handleClick = this.handleClick.bind(this);
     this.state = {
-      modalVisible: false
+      modalVisible: false,
+      class: "menu-box-hidden"
     }
 
 	}
@@ -17,20 +18,22 @@ export default class Menu extends React.Component {
 			<section className="menu-wrapper">
 				<div className="menu-container">
 					<div className="icon" onClick={this.handleClick}></div>
-          {this.state.modalVisible === true ? <div className="menu-box"></div> : null}
+          <div className={this.state.class}></div>
 				</div>
 			</section>
 		)
 	}
 
 	handleClick(event) {
-    if(this.state.modalVisible === false){
+    if(this.state.class === "menu-box-hidden"){
       this.setState({
-        modalVisible: true
+        modalVisible: true,
+        class: "menu-box"
       })
-    } else {
+    } else if(this.state.class === "menu-box") {
       this.setState({
-        modalVisible: false
+        modalVisible: false,
+        class: "menu-box-hidden"
       })
     }
 	}

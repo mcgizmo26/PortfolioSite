@@ -21531,7 +21531,7 @@
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
-			value: true
+	  value: true
 	});
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -21551,51 +21551,54 @@
 	__webpack_require__(181);
 	
 	var Menu = function (_React$Component) {
-			_inherits(Menu, _React$Component);
+	  _inherits(Menu, _React$Component);
 	
-			function Menu() {
-					_classCallCheck(this, Menu);
+	  function Menu() {
+	    _classCallCheck(this, Menu);
 	
-					var _this = _possibleConstructorReturn(this, (Menu.__proto__ || Object.getPrototypeOf(Menu)).call(this));
+	    var _this = _possibleConstructorReturn(this, (Menu.__proto__ || Object.getPrototypeOf(Menu)).call(this));
 	
-					_this.handleClick = _this.handleClick.bind(_this);
-					_this.state = {
-							modalVisible: false
-					};
+	    _this.handleClick = _this.handleClick.bind(_this);
+	    _this.state = {
+	      modalVisible: false,
+	      class: "menu-box-hidden"
+	    };
 	
-					return _this;
-			}
+	    return _this;
+	  }
 	
-			_createClass(Menu, [{
-					key: "render",
-					value: function render() {
-							return _react2.default.createElement(
-									"section",
-									{ className: "menu-wrapper" },
-									_react2.default.createElement(
-											"div",
-											{ className: "menu-container" },
-											_react2.default.createElement("div", { className: "icon", onClick: this.handleClick }),
-											this.state.modalVisible === true ? _react2.default.createElement("div", { className: "menu-box" }) : null
-									)
-							);
-					}
-			}, {
-					key: "handleClick",
-					value: function handleClick(event) {
-							if (this.state.modalVisible === false) {
-									this.setState({
-											modalVisible: true
-									});
-							} else {
-									this.setState({
-											modalVisible: false
-									});
-							}
-					}
-			}]);
+	  _createClass(Menu, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "section",
+	        { className: "menu-wrapper" },
+	        _react2.default.createElement(
+	          "div",
+	          { className: "menu-container" },
+	          _react2.default.createElement("div", { className: "icon", onClick: this.handleClick }),
+	          _react2.default.createElement("div", { className: this.state.class })
+	        )
+	      );
+	    }
+	  }, {
+	    key: "handleClick",
+	    value: function handleClick(event) {
+	      if (this.state.class === "menu-box-hidden") {
+	        this.setState({
+	          modalVisible: true,
+	          class: "menu-box"
+	        });
+	      } else if (this.state.class === "menu-box") {
+	        this.setState({
+	          modalVisible: false,
+	          class: "menu-box-hidden"
+	        });
+	      }
+	    }
+	  }]);
 	
-			return Menu;
+	  return Menu;
 	}(_react2.default.Component);
 	
 	exports.default = Menu;
@@ -22087,7 +22090,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".menu-wrapper {\n  height: 20vh;\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;\n  position: relative; }\n\n.menu-container {\n  margin-top: 10px;\n  margin-right: 10px;\n  height: 500px;\n  width: 280px;\n  position: relative; }\n\n.menu-box {\n  height: 500px;\n  width: 280px;\n  background-color: black;\n  opacity: 0.6;\n  transition-delay: 2s; }\n\n.icon {\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  z-index: 1;\n  height: 50px;\n  width: 50px;\n  border-radius: 50%;\n  background-image: url(\"/img/menu2.png\");\n  background-size: contain;\n  background-repeat: no-repeat; }\n", ""]);
+	exports.push([module.id, ".menu-wrapper {\n  height: 20vh;\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;\n  position: relative; }\n\n.menu-container {\n  margin-top: 20px;\n  margin-right: 20px;\n  height: 500px;\n  width: 280px;\n  position: relative;\n  display: flex;\n  justify-content: flex-end; }\n\n.menu-box-hidden {\n  height: 5px;\n  width: 5px;\n  background-color: black;\n  opacity: 0.6;\n  transition: width 2s ease, height 2s ease; }\n\n.menu-box {\n  height: 400px;\n  width: 280px;\n  background-color: black;\n  opacity: 0.6;\n  transition: width 4s ease, height 4s ease; }\n\n.icon {\n  position: absolute;\n  right: -10px;\n  top: -10px;\n  z-index: 1;\n  height: 50px;\n  width: 50px;\n  border-radius: 50%;\n  background-image: url(\"/img/menu2.png\");\n  background-size: contain;\n  background-repeat: no-repeat; }\n", ""]);
 	
 	// exports
 
