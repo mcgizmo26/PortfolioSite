@@ -21577,7 +21577,29 @@
 	          "div",
 	          { className: "menu-container" },
 	          _react2.default.createElement("div", { className: "icon", onClick: this.handleClick }),
-	          _react2.default.createElement("div", { className: this.state.class })
+	          _react2.default.createElement(
+	            "div",
+	            { className: this.state.class },
+	            this.state.modalVisible ? _react2.default.createElement(
+	              "div",
+	              null,
+	              _react2.default.createElement(
+	                "div",
+	                { id: "about-link" },
+	                "About"
+	              ),
+	              _react2.default.createElement(
+	                "div",
+	                { id: "projects-link" },
+	                "Projects"
+	              ),
+	              _react2.default.createElement(
+	                "div",
+	                { id: "contact-link" },
+	                "Contact Info"
+	              )
+	            ) : null
+	          )
 	        )
 	      );
 	    }
@@ -22090,7 +22112,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".menu-wrapper {\n  height: 20vh;\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;\n  position: relative; }\n\n.menu-container {\n  margin-top: 20px;\n  margin-right: 20px;\n  height: 500px;\n  width: 280px;\n  position: relative;\n  display: flex;\n  justify-content: flex-end; }\n\n.menu-box-hidden {\n  height: 5px;\n  width: 5px;\n  background-color: black;\n  opacity: 0.6;\n  transition: width 2s ease, height 2s ease; }\n\n.menu-box {\n  height: 400px;\n  width: 280px;\n  background-color: black;\n  opacity: 0.6;\n  transition: width 4s ease, height 4s ease; }\n\n.icon {\n  position: absolute;\n  right: -10px;\n  top: -10px;\n  z-index: 1;\n  height: 50px;\n  width: 50px;\n  border-radius: 50%;\n  background-image: url(\"/img/menu2.png\");\n  background-size: contain;\n  background-repeat: no-repeat; }\n", ""]);
+	exports.push([module.id, ".menu-wrapper {\n  height: 20vh;\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;\n  position: relative; }\n\n.menu-container {\n  margin-top: 20px;\n  margin-right: 20px;\n  height: 500px;\n  width: 280px;\n  position: relative;\n  display: flex;\n  justify-content: flex-end;\n  cursor: pointer; }\n\n.icon {\n  position: absolute;\n  right: -10px;\n  top: -10px;\n  z-index: 1;\n  height: 50px;\n  width: 50px;\n  border-radius: 50%;\n  background-image: url(\"/img/menu2.png\");\n  background-size: contain;\n  background-repeat: no-repeat; }\n\n.menu-box-hidden {\n  height: 5px;\n  width: 5px;\n  font-size: 1px;\n  transition: width 2s ease, height 2s ease; }\n\n.menu-box {\n  height: 400px;\n  width: 280px;\n  font-size: 30px;\n  color: white;\n  transition: all 2s ease; }\n  .menu-box div {\n    height: 400px;\n    width: 280px;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center; }\n\n#about-link:hover {\n  color: #ffff99; }\n\n#projects-link:hover {\n  color: #ffff99; }\n\n#contact-link:hover {\n  color: #ffff99; }\n", ""]);
 	
 	// exports
 

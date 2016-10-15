@@ -14,22 +14,7 @@
   position: relative;
   display: flex;
   justify-content: flex-end;
-}
-
-.menu-box-hidden{
-  height:5px;
-  width:5px;
-  background-color: black;
-  opacity: 0.6;
-  transition: width 2s ease, height 2s ease;
-}
-
-.menu-box{
-  height: 400px;
-  width:280px;
-  background-color: black;
-  opacity: 0.6;
-  transition: width 4s ease, height 4s ease;
+  cursor: pointer;
 }
 
   .icon{
@@ -43,4 +28,45 @@
     background-image: url('/img/menu2.png');
     background-size: contain;
     background-repeat: no-repeat;
+  }
+
+  .menu-box-hidden{
+    height:5px;
+    width:5px;
+    font-size: 1px;
+    transition: width 2s ease, height 2s ease;
+  }
+
+  .menu-box{
+    height: 400px;
+    width:280px;
+    font-size: 30px;
+    color: white;
+    transition: all 2s ease;
+    div{
+      height: 400px;
+      width:280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+
+  #about-link{
+    &:hover{
+      color: #ffff99;
+    }
+  }
+
+  #projects-link{
+    &:hover{
+      color: #ffff99;
+    }
+  }
+
+  #contact-link{
+    &:hover{
+      color: #ffff99;
+    }
   }

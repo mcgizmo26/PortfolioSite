@@ -18,7 +18,13 @@ export default class Menu extends React.Component {
 			<section className="menu-wrapper">
 				<div className="menu-container">
 					<div className="icon" onClick={this.handleClick}></div>
-          <div className={this.state.class}></div>
+          <div className={this.state.class}>
+            {this.state.modalVisible ? <div>
+            <div id="about-link">About</div>
+            <div id="projects-link">Projects</div>
+            <div id="contact-link">Contact Info</div>
+            </div> : null}
+          </div>
 				</div>
 			</section>
 		)
