@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-var PortfolioApp = React.createClass({
+import PortfolioHomePage from './component/HomePage.jsx';
+
+class PortfolioApp extends React.Component{
+  constructor(){
+    super()
+  }
+
   render() {
     return (
-      <div></div>
+      <div>
+        <PortfolioHomePage />
+      </div>
     )
   }
-})
+}
 
 ReactDOM.render(<PortfolioApp />, document.getElementById('app'));

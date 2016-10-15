@@ -1,0 +1,36 @@
+.menu-wrapper{
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.menu-container{
+  margin-top: 10px;
+  margin-right: 10px;
+  height: 500px;
+  width:280px;
+  position: relative;
+}
+
+.menu-box{
+  height: 500px;
+  width:280px;
+  background-color: black;
+  opacity: 0.6;
+  transition-delay: 2s;
+}
+
+  .icon{
+    position: absolute;
+    right:0px;
+    top:0px;
+    z-index: 1;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-image: url('/img/menu2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }

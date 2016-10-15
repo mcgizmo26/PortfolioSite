@@ -1,6 +1,6 @@
 module.exports = {
 	entry: {
-		main: './public/app/ReactApp.jsx'
+		main: './public/app/PortfolioApp.jsx'
 	},
 	output: {
 		filename: 'bundle.js',
