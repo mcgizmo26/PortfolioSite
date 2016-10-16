@@ -3,12 +3,6 @@ module.exports = {
 		main: './public/app/PortfolioApp.jsx'
 	},
 
-	devServer: {
-	 historyApiFallback: true,
-	 inline: true,
-	 port: 3000
- },
-
 	output: {
 		filename: 'bundle.js',
 		path: './public/scripts'
