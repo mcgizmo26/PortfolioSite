@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link, browserHistory} from 'react-router';
 
 require("../../stylesheets/component/Menu.scss");
 
@@ -20,9 +21,11 @@ export default class Menu extends React.Component {
 					<div className="icon" onClick={this.handleClick}></div>
           <div className={this.state.class}>
             {this.state.modalVisible ? <div>
-            <div id="about-link">About</div>
-            <div id="projects-link">Projects</div>
-            <div id="contact-link">Contact Info</div>
+            <Link className="about-link" to='/About'>
+            <ul>About</ul>
+            </Link>
+            <Link className="projects-link">Projects</Link>
+            <Link className="contact-link">Contact Info</Link>
             </div> : null}
           </div>
 				</div>

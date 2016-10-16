@@ -42,7 +42,8 @@
     width:280px;
     font-size: 30px;
     color: white;
-    transition: all 2s ease;
+    opacity: 0.8;
+    transition: all 3s ease;
     div{
       height: 400px;
       width:280px;
@@ -53,19 +54,25 @@
     }
   }
 
-  #about-link{
+  .about-link{
+    text-decoration: none;
+    color: white;
     &:hover{
       color: #ffff99;
     }
   }
 
-  #projects-link{
+  .projects-link{
+    text-decoration: none;
+    color: white;
     &:hover{
       color: #ffff99;
     }
   }
 
-  #contact-link{
+  .contact-link{
+    text-decoration: none;
+    color: white;
     &:hover{
       color: #ffff99;
     }

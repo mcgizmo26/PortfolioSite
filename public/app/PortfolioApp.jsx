@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { render } from 'react-dom'
 import { Router, Route, browserHistory, Link, hashHistory } from 'react-router';
 
 import PortfolioHomePage from './component/HomePage.jsx';
-import About from './component/About.jsx';
+import About from './component/about/About.jsx';
 
 class PortfolioApp extends React.Component{
   constructor(){
