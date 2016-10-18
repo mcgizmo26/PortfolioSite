@@ -1,6 +1,6 @@
 import React from 'react';
 
-require("../../stylesheets/component/QuoteBox.scss");
+require("../../../stylesheets/component/QuoteBox.scss");
 
 export default class QuoteBox extends React.Component {
 	constructor() {

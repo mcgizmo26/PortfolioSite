@@ -4,11 +4,20 @@ import {render} from 'react-dom'
 import {IndexRoute} from 'react-router';
 import {Router, Route, browserHistory, Link, hashHistory} from 'react-router';
 
-import PortfolioHomePage from './component/HomePage.jsx';
 import About from './component/about/About.jsx';
 import AboutMeText from './component/about/aboutmecomponents/AboutMeText.jsx';
-import Skills from './component/about/aboutmecomponents/Skills.jsx';
 import PersonalFacts from './component/about/aboutmecomponents/PersonalFacts.jsx';
+import PortfolioHomePage from './component/home/HomePage.jsx';
+import Projects from './component/projects/Projects.jsx';
+import Skills from './component/about/aboutmecomponents/Skills.jsx';
+
+
+require('../stylesheets/component/about/About.scss');
+require('../stylesheets/component/about/AboutMe.scss');
+require('../stylesheets/component/about/Skills.scss');
+require('../stylesheets/component/about/PersonalFacts.scss');
+
+require('../stylesheets/component/projects/Projects.scss');
 
 class PortfolioApp extends React.Component {
 	constructor() {
@@ -20,9 +29,10 @@ class PortfolioApp extends React.Component {
 			<Router history={browserHistory}>
 				<Route path="/" component={PortfolioHomePage}/>
 				<Route path="/about" component={About}>
-					<Route path="/skills" component={Skills}/>
-					<Route path="/personalfacts" component={PersonalFacts}/>
+					<Route path="/about/skills" component={Skills}/>
+					<Route path="/about/personalfacts" component={PersonalFacts}/>
 				</Route>
+				<Route path="/projects" component={Projects}/>
 			</Router>
 		)
 	}

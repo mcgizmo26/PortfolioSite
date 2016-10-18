@@ -18,9 +18,7 @@
 }
 
   .icon{
-    position: absolute;
-    right:-10px;
-    top:-10px;
+    position: fixed;
     z-index: 1;
     height: 50px;
     width: 50px;
@@ -28,6 +26,28 @@
     background-image: url('/img/menu2.png');
     background-size: contain;
     background-repeat: no-repeat;
+    transition: all ease 2s;
+    &:hover{
+      transition: transform 1s;
+      transform: rotate(180deg);
+    }
+  }
+
+  .icon-clicked{
+    position: fixed;
+    opacity: 0.5;
+    z-index: 1;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-image: url('/img/menu2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all ease 2s;
+    &:hover{
+      transition: transform 1s;
+      transform: rotate(-180deg);
+    }
   }
 
   .menu-box-hidden{

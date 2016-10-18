@@ -1,7 +1,5 @@
 import React from 'react';
 
-require("../../../../stylesheets/component/about/AboutMe.scss");
-
 export default class AboutMeTextArea extends React.Component {
 
 	constructor() {

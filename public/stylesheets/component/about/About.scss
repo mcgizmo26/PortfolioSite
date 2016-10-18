@@ -4,13 +4,18 @@
   background-image: url('/img/tranquil.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
 }
 
-.false-about-background{
-  height: 100vh;
+.about-upper{
+  height: 25vh;
   width: 100vw;
-  position: fixed;
+}
+
+.about-lower{
+  height: 75vh;
+  width:100vw;
   display: flex;
   justify-content: center;
-  align-items: center;
 }

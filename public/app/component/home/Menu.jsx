@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, browserHistory} from 'react-router';
 
-require("../../stylesheets/component/Menu.scss");
+require("../../../stylesheets/component/Menu.scss");
 
 export default class Menu extends React.Component {
 	constructor() {
@@ -9,7 +9,8 @@ export default class Menu extends React.Component {
 		this.handleClick = this.handleClick.bind(this);
     this.state = {
       modalVisible: false,
-      class: "menu-box-hidden"
+      class: "menu-box-hidden",
+			class1: "icon"
     }
 
 	}
@@ -18,13 +19,13 @@ export default class Menu extends React.Component {
 		return (
 			<section className="menu-wrapper">
 				<div className="menu-container">
-					<div className="icon" onClick={this.handleClick}></div>
+					<div className={this.state.class1} onClick={this.handleClick}></div>
           <div className={this.state.class}>
             {this.state.modalVisible ? <div>
             <Link className="about-link" to='/About'>
             <ul>About</ul>
             </Link>
-            <Link className="projects-link">Projects</Link>
+            <Link className="projects-link" to='/Projects'>Projects</Link>
             <Link className="contact-link">Contact Info</Link>
             </div> : null}
           </div>
@@ -37,12 +38,14 @@ export default class Menu extends React.Component {
     if(this.state.class === "menu-box-hidden"){
       this.setState({
         modalVisible: true,
-        class: "menu-box"
+        class: "menu-box",
+				class1: "icon-clicked"
       })
     } else if(this.state.class === "menu-box") {
       this.setState({
         modalVisible: false,
-        class: "menu-box-hidden"
+        class: "menu-box-hidden",
+				class1: "icon"
       })
     }
 	}
