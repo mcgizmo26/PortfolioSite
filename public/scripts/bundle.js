@@ -28505,6 +28505,10 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
+	var _ProjectsHeaderLinks = __webpack_require__(268);
+	
+	var _ProjectsHeaderLinks2 = _interopRequireDefault(_ProjectsHeaderLinks);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -28519,7 +28523,13 @@
 		function ProjectsHeader() {
 			_classCallCheck(this, ProjectsHeader);
 	
-			return _possibleConstructorReturn(this, (ProjectsHeader.__proto__ || Object.getPrototypeOf(ProjectsHeader)).call(this));
+			var _this = _possibleConstructorReturn(this, (ProjectsHeader.__proto__ || Object.getPrototypeOf(ProjectsHeader)).call(this));
+	
+			_this.state = {
+				class: "not-sticky-div",
+				class2: "hidden-span"
+			};
+			return _this;
 		}
 	
 		_createClass(ProjectsHeader, [{
@@ -28529,13 +28539,14 @@
 				var head = (0, _jquery2.default)(".header");
 				var stick = "sticky";
 				var projHead = document.getElementById("projHead");
-				var notStickyDiv = document.getElementsByClassName('not-sticky-div');
+	
+				var that = this;
 	
 				(0, _jquery2.default)(window).scroll(function () {
 					(0, _jquery2.default)(window).scrollTop() > 400 ? head.addClass(stick) : head.removeClass(stick);
 					var newValue = projHead.classList.value.split(' ', 2);
 					for (var i = 0; i < newValue.length; i++) {
-						newValue[i] === "sticky" ? console.log('worked') : null;
+						newValue[i] === "sticky" ? that.setState({ class: "sticky-div", class2: "visible-span" }) : that.setState({ class: "not-sticky-div", class2: "hidden-span" });
 					}
 				});
 			}
@@ -28547,30 +28558,17 @@
 					{ id: 'projHead', className: 'header' },
 					_react2.default.createElement(
 						'div',
-						{ className: 'not-sticky-div' },
-						_react2.default.createElement(
+						{ className: this.state.class },
+						this.state.class === "not-sticky-div" ? _react2.default.createElement(
 							'div',
 							null,
 							'"This is My Projects Page" --Lonnie McGill'
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'hidden-span' },
-						_react2.default.createElement(
-							'span',
+						) : _react2.default.createElement(
+							'div',
 							null,
-							'Something1'
-						),
-						_react2.default.createElement(
-							'span',
-							null,
-							'Something2'
-						),
-						_react2.default.createElement(
-							'span',
-							null,
-							'Something3'
+							' ',
+							_react2.default.createElement(_ProjectsHeaderLinks2.default, null),
+							' '
 						)
 					)
 				);
@@ -28777,7 +28775,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
 	
 	// module
-	exports.push([module.id, "body {\n  padding-top: 400px; }\n\n.projects-background {\n  top: 0;\n  height: 100vh;\n  width: 100vw;\n  background-image: url(/img/code.jpeg);\n  background-repeat: no-repeat;\n  background-size: cover;\n  position: fixed; }\n\n.header {\n  top: 0;\n  height: 15vh;\n  width: 100vw;\n  background-color: black;\n  opacity: 0.9;\n  display: flex;\n  flex-direction: row;\n  z-index: 1; }\n\n.sticky {\n  top: 0;\n  position: fixed; }\n\n.not-sticky-div {\n  height: inhert;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .not-sticky-div div {\n    font-size: 30px;\n    font-family: 'PT Mono', monospace;\n    color: white; }\n\n.sticky-div {\n  height: 0%;\n  width: 0%; }\n  .sticky-div div {\n    font-size: 1px; }\n\n.hidden-span span {\n  height: 0;\n  width: 0; }\n\n.visible-span span {\n  height: 100%;\n  width: 33.33%; }\n\n.demo-space {\n  height: 200vh;\n  width: 100vw;\n  background-color: green; }\n", ""]);
+	exports.push([module.id, "body {\n  padding-top: 400px; }\n\n.projects-background {\n  top: 0;\n  height: 100vh;\n  width: 100vw;\n  background-image: url(/img/code.jpeg);\n  background-repeat: no-repeat;\n  background-size: cover;\n  position: fixed; }\n\n.header {\n  top: 0; }\n\n.sticky {\n  top: 0;\n  position: fixed; }\n\n.not-sticky-div {\n  height: 15vh;\n  width: 100vw;\n  background-color: black;\n  opacity: 0.9;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transition: 2s all ease; }\n  .not-sticky-div div {\n    font-size: 30px;\n    font-family: 'PT Mono', monospace;\n    color: white; }\n\n.sticky-div {\n  height: 10vh;\n  width: 100vw;\n  background-color: gray;\n  opacity: 0.9;\n  transition: 2s all ease; }\n  .sticky-div section {\n    height: 10vh;\n    width: 100vw;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: space-around; }\n\n.demo-space {\n  height: 200vh;\n  width: 100vw; }\n", ""]);
 	
 	// exports
 
@@ -39007,6 +39005,69 @@
 	return jQuery;
 	} );
 
+
+/***/ },
+/* 268 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var ProjectsHeaderLinks = function (_React$Component) {
+	  _inherits(ProjectsHeaderLinks, _React$Component);
+	
+	  function ProjectsHeaderLinks() {
+	    _classCallCheck(this, ProjectsHeaderLinks);
+	
+	    return _possibleConstructorReturn(this, (ProjectsHeaderLinks.__proto__ || Object.getPrototypeOf(ProjectsHeaderLinks)).call(this));
+	  }
+	
+	  _createClass(ProjectsHeaderLinks, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "section",
+	        null,
+	        _react2.default.createElement(
+	          "div",
+	          { className: "projects-to-home" },
+	          "Link"
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "projects-label" },
+	          "Projects Page"
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "projects-to-about" },
+	          "Link"
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return ProjectsHeaderLinks;
+	}(_react2.default.Component);
+	
+	exports.default = ProjectsHeaderLinks;
 
 /***/ }
 /******/ ]);
