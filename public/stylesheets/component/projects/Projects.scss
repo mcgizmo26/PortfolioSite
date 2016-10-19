@@ -1,7 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+
+body{
+  padding-top:400px;
+}
+
 .projects-background{
+  top: 0;
   height: 100vh;
   width: 100vw;
   background-image: url(/img/code.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+  position: fixed;
+}
+
+
+.header{
+  top: 0;
+  height: 15vh;
+  width: 100vw;
+  background-color: black;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+}
+
+.sticky{
+  top: 0;
+  position: fixed;
+}
+
+.not-sticky-div{
+  height: inhert;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div{
+    font-size: 30px;
+    font-family: 'PT Mono', monospace;
+    color: white;
+  }
+}
+
+.sticky-div{
+  height: 0%;
+  width: 0%;
+  div{
+    font-size: 1px;
+  }
+}
+
+.hidden-span{
+  span{
+    height: 0;
+    width: 0;
+  }
+}
+
+.visible-span{
+  span{
+    height: 100%;
+    width: 33.33%;
+  }
+}
+
+.demo-space{
+  height: 200vh;
+  width:100vw;
+  background-color: green;
 }

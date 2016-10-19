@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ProjectsHeader from './ProjectsHeader.jsx';
+
 export default class Projects extends React.Component {
 	constructor() {
 		super()
@@ -7,11 +9,13 @@ export default class Projects extends React.Component {
 
 	render() {
 		return (
-			<section className="projects-background">
-				<div className="false-projects-background">
-          	<div>Connection Working</div>
-        </div>
-			</section>
+			<div>
+				<section className="projects-background"></section>
+
+				<ProjectsHeader/>
+				<div className="demo-space"></div>
+
+			</div>
 		)
 	}
 }
