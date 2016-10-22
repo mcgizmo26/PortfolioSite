@@ -13,29 +13,26 @@ export default class AboutHeader extends React.Component {
 			class: "about-header-wrapper-hidden",
 			class2: "route-away-hidden"
 		}
-		console.log(this.state);
 	}
 
 	componentDidMount() {
-		console.log("mounted");
 		this.timeDelay();
+
 	}
+
 
 	timeDelay() {
 		setTimeout(function updateState() {
-			this.setState({class: "about-header-wrapper"})
+			this.setState({class: "about-header-wrapper", class3: "mounted"})
 		}.bind(this), 1000);
-		console.log("timeDelay worked");
+
 	}
 
 	render() {
-		{
-			console.log(this.state)
-		}
 		return (
 			<section>
 				<div className={this.state.class}>
-					<span></span>
+					<span className="header-left-block"></span>
 					<span className="header-mid-block">
 						<h1>"My About Page" -Lonnie McGill</h1>
 					</span>
@@ -44,21 +41,21 @@ export default class AboutHeader extends React.Component {
 							<div className="about-menu-header-button" onClick={this.handleClick}>
 
 								<span>
-									<p></p>
+									<div></div>
 								</span>
 								<span>
-									<p></p>
+									<div></div>
 								</span>
 								<span>
-									<p></p>
+									<div></div>
 								</span>
 							</div>
 						</section>
 
 					 	  <section className={this.state.class2}>
 							  <Link className="from-about-to-home-link" to='/'>Home</Link>
-							  <Link className="from-about-to-projects-link" to='/Projects'>Projects</Link>
-							  <Link className="from-about-to-contact-link">Contact Info</Link>
+							  <Link className="from-about-to-projects-link" to='/projects'>Projects</Link>
+							  <Link className="from-about-to-contact-link" to='/contact'>Contact Info</Link>
 						  </section>
 
 					</span>

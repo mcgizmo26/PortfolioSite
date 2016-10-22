@@ -1,0 +1,59 @@
+.projects-header-links-container-hidden{
+  right: -500px;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  position: fixed;
+
+}
+
+.projects-header-links-container{
+  top: 0;
+  margin-top: 20px;
+  margin-right: 20px;
+  right: 0;
+  width: 100%;
+  z-index: 3;
+  position: fixed;
+    transition: 3s all ease;
+}
+
+
+.projects-header-links{
+  width: 300px;
+  float: right;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+
+// ****************** Links styling to rest of App *************
+.projects-to-home{
+  font-size: 20px;
+  font-family: 'PT Mono', monospace;
+  text-decoration: none;
+  color: white;
+  &:hover{
+    color: #ffff66;
+  }
+}
+
+.projects-to-contact{
+  font-size: 20px;
+  font-family: 'PT Mono', monospace;
+  text-decoration: none;
+  color: white;
+  &:hover{
+    color: #ffff66;
+  }
+}
+
+.projects-to-about{
+  font-size: 20px;
+  font-family: 'PT Mono', monospace;
+  text-decoration: none;
+  color: white;
+  &:hover{
+    color: #ffff66;
+  }
+}

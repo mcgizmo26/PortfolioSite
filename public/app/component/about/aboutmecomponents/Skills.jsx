@@ -12,18 +12,18 @@ export default class Skills extends React.Component{
   render(){
     return(
       <section className="skills-wrapper">
-        <h1>Skills:</h1>
-        <div>
-          <p>Angular.js</p>
-          <p>CSS</p>
-          <p>Github</p>
-          <p>JavaScript</p>
-          <p>Jquery</p>
-          <p>Node.js</p>
-          <p>Mongo</p>
-          <p>PostgreSQL</p>
-          <p>SASS/SCSS</p>
-          <p>React.js</p>
+        <div className="skills">Skills:</div>
+        <div className="skills-container">
+          <div className="skill-list">Angular.js</div>
+          <div className="skill-list">CSS</div>
+          <div className="skill-list">Github</div>
+          <div className="skill-list">JavaScript</div>
+          <div className="skill-list">Jquery</div>
+          <div className="skill-list">Node.js</div>
+          <div className="skill-list">Mongo</div>
+          <div className="skill-list">PostgreSQL</div>
+          <div className="skill-list">SASS/SCSS</div>
+          <div className="skill-list">React.js</div>
         </div>
       </section>
     )

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="stylesheet" href="./Portfolio Site_files/reset.css">
+    <title>Portfolio Site</title>
+  <style type="text/css">@import url(https://fonts.googleapis.com/css?family=PT+Mono);</style><style type="text/css">.about-header-wrapper-hidden {
+  height: .5px;
+  width: .5px;
+  background-color: black;
+  opacity: 0; }
+
+.about-header-wrapper {
+  height: 10vh;
+  width: 100vw;
+  background-color: black;
+  opacity: 0.7;
+  transition: height ease 3s;
+  display: flex;
+  flex-direction: row;
+  position: fixed; }
+  .about-header-wrapper span {
+    height: 100%;
+    width: 33.33%; }
+    .about-header-wrapper span h1 {
+      color: #fff;
+      font-size: 30px;
+      font-family: 'PT Mono', monospace; }
+
+.header-mid-block {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.header-right-block {
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.right-upper-box {
+  position: relative;
+  align-items: center;
+  height: 50%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row; }
+
+.about-menu-header-button {
+  cursor: pointer;
+  margin-right: 10px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all ease 1s; }
+  .about-menu-header-button span {
+    width: 100%; }
+    .about-menu-header-button span p {
+      border: 2px solid grey; }
+  .about-menu-header-button:hover {
+    margin-top: 20px;
+    height: 40px;
+    width: 40px;
+    transition: all ease 1s; }
+
+.route-away-hidden {
+  height: 1px;
+  width: 1px;
+  opacity: 0; }
+
+.route-away {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  justify-content: space-around;
+  transition: all ease 2s; }
+
+.from-about-to-home-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'PT Mono', monospace; }
+  .from-about-to-home-link:hover {
+    color: #ffff99; }
+
+.from-about-to-projects-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'PT Mono', monospace; }
+  .from-about-to-projects-link:hover {
+    color: #ffff99; }
+
+.from-about-to-contact-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'PT Mono', monospace; }
+  .from-about-to-contact-link:hover {
+    color: #ffff99; }
+</style><style type="text/css">.menu-wrapper {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative; }
+
+.menu-container {
+  margin-top: 20px;
+  margin-right: 20px;
+  height: 500px;
+  width: 280px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer; }
+
+.icon {
+  position: fixed;
+  z-index: 1;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-image: url("/img/menu2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all ease 2s; }
+  .icon:hover {
+    transition: transform 1s;
+    transform: rotate(180deg); }
+
+.icon-clicked {
+  position: fixed;
+  opacity: 0.5;
+  z-index: 1;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-image: url("/img/menu2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all ease 2s; }
+  .icon-clicked:hover {
+    transition: transform 1s;
+    transform: rotate(-180deg); }
+
+.menu-box-hidden {
+  height: 5px;
+  width: 5px;
+  font-size: 1px;
+  transition: width 2s ease, height 2s ease; }
+
+.menu-box {
+  height: 400px;
+  width: 280px;
+  font-size: 30px;
+  color: white;
+  opacity: 0.8;
+  transition: all 3s ease; }
+  .menu-box div {
+    height: 400px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+
+.about-link {
+  text-decoration: none;
+  color: white; }
+  .about-link:hover {
+    color: #ffff99; }
+
+.projects-link {
+  text-decoration: none;
+  color: white; }
+  .projects-link:hover {
+    color: #ffff99; }
+
+.contact-link {
+  text-decoration: none;
+  color: white; }
+  .contact-link:hover {
+    color: #ffff99; }
+</style><style type="text/css">@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT);</style><style type="text/css">.text-box {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
+.text {
+  height: 50%;
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 50px;
+  border: 5px solid white; }
+  .text div {
+    font-size: 50px;
+    font-family: 'Old Standard TT', serif;
+    font-style: italic;
+    margin-bottom: 10px; }
+
+.author {
+  margin-right: 100px; }
+</style><style type="text/css">.home-page-wrapper {
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/img/background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: fixed; }
+</style><style type="text/css">.about-background {
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/img/tranquil.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: fixed; }
+
+.about-upper {
+  height: 25vh;
+  width: 100vw; }
+
+.about-lower {
+  height: 75vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center; }
+</style><style type="text/css">@import url(https://fonts.googleapis.com/css?family=PT+Mono);</style><style type="text/css">.about-me-wrapper {
+  height: 60vh;
+  width: 70vw;
+  border: 2px solid grey;
+  background-color: white;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.about-me-wrapper-hidden {
+  height: 60vh;
+  width: 70vw;
+  border: 2px solid grey;
+  background-color: white;
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.pic-box {
+  margin-top: 20px;
+  margin-left: 20px;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-image: url("/img/profilepic.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 3s; }
+
+.pic-box-alternative {
+  margin-top: 20px;
+  margin-left: 20px;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-image: url("/img/Jango.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 2s; }
+
+.about-me-content-box {
+  height: 100%;
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.about-me-text-area {
+  height: 80%;
+  width: 90%;
+  border: 2px solid grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.about-me-header {
+  border-bottom: 2px solid black;
+  height: 54px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .about-me-header h1 {
+    font-size: 40px;
+    font-family: 'PT Mono', monospace; }
+
+.about-me-text {
+  margin-top: 15px;
+  height: 303px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-self: center; }
+  .about-me-text p {
+    font-size: 20px;
+    font-family: 'PT Mono', monospace;
+    line-height: 2; }
+
+.about-me-footer-wrapper {
+  cursor: pointer;
+  height: 83px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  .about-me-footer-wrapper div {
+    font-size: 30px;
+    font-family: 'PT Mono', monospace; }
+
+.about-me-home {
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'PT Mono', monospace;
+  color: black; }
+  .about-me-home:hover {
+    color: #42C0FB; }
+
+.skills-link {
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'PT Mono', monospace;
+  color: black; }
+  .skills-link:hover {
+    color: #42C0FB; }
+
+.personal-link {
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'PT Mono', monospace;
+  color: black; }
+  .personal-link:hover {
+    color: #42C0FB; }
+</style><style type="text/css">@import url(https://fonts.googleapis.com/css?family=PT+Mono);</style><style type="text/css">.skills-wrapper {
+  margin-top: 15px;
+  height: 303px;
+  width: 90%;
+  display: flex;
+  flex-direction: row; }
+  .skills-wrapper h1 {
+    width: 160px;
+    font-size: 30px;
+    font-family: 'PT Mono', monospace; }
+  .skills-wrapper div {
+    height: 150px;
+    width: 100%;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; }
+    .skills-wrapper div p {
+      font-size: 20px;
+      font-family: 'PT Mono', monospace; }
+</style><style type="text/css">@import url(https://fonts.googleapis.com/css?family=PT+Mono);</style><style type="text/css">.personal-facts-wrapper {
+  margin-top: 15px;
+  height: 303px;
+  width: 90%;
+  display: flex;
+  flex-direction: row; }
+  .personal-facts-wrapper h1 {
+    width: 170px;
+    font-size: 30px;
+    font-family: 'PT Mono', monospace; }
+  .personal-facts-wrapper p {
+    line-height: 1.5;
+    font-size: 20px;
+    font-family: 'PT Mono', monospace; }
+</style><style type="text/css">@import url(https://fonts.googleapis.com/css?family=PT+Mono);</style><style type="text/css">body {
+  padding-top: 400px; }
+
+.projects-background {
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(/img/code.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed; }
+
+.header {
+  top: 0; }
+
+.sticky {
+  top: 0;
+  position: fixed; }
+
+.not-sticky-div {
+  height: 15vh;
+  width: 100vw;
+  background-color: black;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 2s all ease; }
+  .not-sticky-div div {
+    font-size: 30px;
+    font-family: 'PT Mono', monospace;
+    color: white; }
+
+.sticky-div {
+  height: 98px;
+  width: 100vw;
+  background: linear-gradient(20deg, black, #545454);
+  opacity: 0.7;
+  transition: 2s all ease; }
+  .sticky-div section {
+    height: 100%;
+    display: flex;
+    flex-direction: column; }
+
+.upper-projects-header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .upper-projects-header div {
+    font-size: 40px;
+    font-family: 'PT Mono', monospace;
+    color: white; }
+
+.lower-projects-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-around; }
+
+.projects-to-home {
+  font-size: 20px;
+  font-family: 'PT Mono', monospace;
+  text-decoration: none;
+  color: white;
+  transition: 2s all ease; }
+
+.projects-to-link {
+  font-size: 20px;
+  font-family: 'PT Mono', monospace;
+  text-decoration: none;
+  color: white;
+  transition: 2s all ease; }
+
+.projects-to-about {
+  font-size: 20px;
+  font-family: 'PT Mono', monospace;
+  text-decoration: none;
+  color: white;
+  transition: 2s all ease; }
+
+.demo-space {
+  height: 200vh;
+  width: 100vw; }
+</style></head>
+  <body>
+    <div id="app"><div data-reactroot="" class="home-page-wrapper"><section class="menu-wrapper"><div class="menu-container"><div class="icon"></div><div class="menu-box-hidden"></div></div></section><div class="text-box"><div class="text"><div>"I have a passion for programming. I see coding as Art and love creating things. Thank you for visiting my Portfolio Site"</div><div class="author">-Lonnie McGill</div></div></div></div></div>
+    <script src="./Portfolio Site_files/jquery.min.js"></script>
+    <script src="./Portfolio Site_files/bundle.js"></script>
+  
+
+</body></html>

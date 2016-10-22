@@ -66,15 +66,19 @@
 	
 	var _AboutMeText2 = _interopRequireDefault(_AboutMeText);
 	
+	var _Contact = __webpack_require__(246);
+	
+	var _Contact2 = _interopRequireDefault(_Contact);
+	
 	var _PersonalFacts = __webpack_require__(245);
 	
 	var _PersonalFacts2 = _interopRequireDefault(_PersonalFacts);
 	
-	var _HomePage = __webpack_require__(246);
+	var _HomePage = __webpack_require__(247);
 	
 	var _HomePage2 = _interopRequireDefault(_HomePage);
 	
-	var _Projects = __webpack_require__(255);
+	var _Projects = __webpack_require__(256);
 	
 	var _Projects2 = _interopRequireDefault(_Projects);
 	
@@ -90,12 +94,14 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(257);
-	__webpack_require__(259);
-	__webpack_require__(261);
 	__webpack_require__(263);
-	
 	__webpack_require__(265);
+	__webpack_require__(267);
+	__webpack_require__(269);
+	
+	__webpack_require__(271);
+	
+	__webpack_require__(273);
 	
 	var PortfolioApp = function (_React$Component) {
 		_inherits(PortfolioApp, _React$Component);
@@ -119,7 +125,8 @@
 						_react2.default.createElement(_reactRouter.Route, { path: '/about/skills', component: _Skills2.default }),
 						_react2.default.createElement(_reactRouter.Route, { path: '/about/personalfacts', component: _PersonalFacts2.default })
 					),
-					_react2.default.createElement(_reactRouter.Route, { path: '/projects', component: _Projects2.default })
+					_react2.default.createElement(_reactRouter.Route, { path: '/projects', component: _Projects2.default }),
+					_react2.default.createElement(_reactRouter.Route, { path: '/contact', component: _Contact2.default })
 				);
 			}
 		}]);
@@ -27256,37 +27263,31 @@
 				class: "about-header-wrapper-hidden",
 				class2: "route-away-hidden"
 			};
-			console.log(_this.state);
 			return _this;
 		}
 	
 		_createClass(AboutHeader, [{
 			key: 'componentDidMount',
 			value: function componentDidMount() {
-				console.log("mounted");
 				this.timeDelay();
 			}
 		}, {
 			key: 'timeDelay',
 			value: function timeDelay() {
 				setTimeout(function updateState() {
-					this.setState({ class: "about-header-wrapper" });
+					this.setState({ class: "about-header-wrapper", class3: "mounted" });
 				}.bind(this), 1000);
-				console.log("timeDelay worked");
 			}
 		}, {
 			key: 'render',
 			value: function render() {
-				{
-					console.log(this.state);
-				}
 				return _react2.default.createElement(
 					'section',
 					null,
 					_react2.default.createElement(
 						'div',
 						{ className: this.state.class },
-						_react2.default.createElement('span', null),
+						_react2.default.createElement('span', { className: 'header-left-block' }),
 						_react2.default.createElement(
 							'span',
 							{ className: 'header-mid-block' },
@@ -27308,17 +27309,17 @@
 									_react2.default.createElement(
 										'span',
 										null,
-										_react2.default.createElement('p', null)
+										_react2.default.createElement('div', null)
 									),
 									_react2.default.createElement(
 										'span',
 										null,
-										_react2.default.createElement('p', null)
+										_react2.default.createElement('div', null)
 									),
 									_react2.default.createElement(
 										'span',
 										null,
-										_react2.default.createElement('p', null)
+										_react2.default.createElement('div', null)
 									)
 								)
 							),
@@ -27332,12 +27333,12 @@
 								),
 								_react2.default.createElement(
 									_reactRouter.Link,
-									{ className: 'from-about-to-projects-link', to: '/Projects' },
+									{ className: 'from-about-to-projects-link', to: '/projects' },
 									'Projects'
 								),
 								_react2.default.createElement(
 									_reactRouter.Link,
-									{ className: 'from-about-to-contact-link' },
+									{ className: 'from-about-to-contact-link', to: '/contact' },
 									'Contact Info'
 								)
 							)
@@ -27392,7 +27393,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
 	
 	// module
-	exports.push([module.id, ".about-header-wrapper-hidden {\n  height: .5px;\n  width: .5px;\n  background-color: black;\n  opacity: 0; }\n\n.about-header-wrapper {\n  height: 10vh;\n  width: 100vw;\n  background-color: black;\n  opacity: 0.7;\n  transition: height ease 3s;\n  display: flex;\n  flex-direction: row;\n  position: fixed; }\n  .about-header-wrapper span {\n    height: 100%;\n    width: 33.33%; }\n    .about-header-wrapper span h1 {\n      color: #fff;\n      font-size: 30px;\n      font-family: 'PT Mono', monospace; }\n\n.header-mid-block {\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.header-right-block {\n  height: 100%;\n  display: flex;\n  flex-direction: column; }\n\n.right-upper-box {\n  position: relative;\n  align-items: center;\n  height: 50%;\n  display: flex;\n  justify-content: flex-end;\n  flex-direction: row; }\n\n.about-menu-header-button {\n  cursor: pointer;\n  margin-right: 10px;\n  height: 30px;\n  width: 30px;\n  display: flex;\n  flex-direction: column;\n  cursor: pointer;\n  transition: all ease 1s; }\n  .about-menu-header-button span {\n    width: 100%; }\n    .about-menu-header-button span p {\n      border: 2px solid grey; }\n  .about-menu-header-button:hover {\n    margin-top: 20px;\n    height: 40px;\n    width: 40px;\n    transition: all ease 1s; }\n\n.route-away-hidden {\n  height: 1px;\n  width: 1px;\n  opacity: 0; }\n\n.route-away {\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  height: 50%;\n  width: 100%;\n  display: flex;\n  align-items: flex-end;\n  flex-direction: row;\n  justify-content: space-around;\n  transition: all ease 2s; }\n\n.from-about-to-home-link {\n  color: #fff;\n  text-decoration: none;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace; }\n  .from-about-to-home-link:hover {\n    color: #ffff99; }\n\n.from-about-to-projects-link {\n  color: #fff;\n  text-decoration: none;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace; }\n  .from-about-to-projects-link:hover {\n    color: #ffff99; }\n\n.from-about-to-contact-link {\n  color: #fff;\n  text-decoration: none;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace; }\n  .from-about-to-contact-link:hover {\n    color: #ffff99; }\n", ""]);
+	exports.push([module.id, ".about-header-wrapper-hidden {\n  height: 0.5px;\n  width: 0.5px;\n  background-color: black;\n  opacity: 0; }\n\n.about-header-wrapper {\n  height: 10vh;\n  width: 100%;\n  background-color: black;\n  opacity: 0.7;\n  transition: height ease 3s;\n  display: flex;\n  flex-direction: row;\n  position: fixed; }\n  .about-header-wrapper span {\n    height: 100%; }\n    .about-header-wrapper span h1 {\n      color: #fff;\n      font-size: 30px;\n      font-family: 'PT Mono', monospace; }\n\n.header-left-block {\n  width: 20%; }\n\n.header-mid-block {\n  width: 60%;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.header-right-block {\n  height: 100%;\n  width: 20%;\n  display: flex;\n  flex-direction: column; }\n\n.right-upper-box {\n  align-items: center;\n  height: 50px;\n  display: flex;\n  justify-content: flex-end;\n  flex-direction: row; }\n\n.about-menu-header-button {\n  cursor: pointer;\n  margin-right: 10px;\n  height: 30px;\n  width: 30px;\n  display: flex;\n  flex-direction: column;\n  cursor: pointer;\n  transition: all ease 1s; }\n  .about-menu-header-button span {\n    width: 100%; }\n    .about-menu-header-button span div {\n      border: 2px solid grey; }\n  .about-menu-header-button:hover {\n    margin-top: 20px;\n    height: 40px;\n    width: 40px;\n    transition: all ease 1s; }\n\n.route-away-hidden {\n  height: 1px;\n  width: 1px;\n  opacity: 0; }\n\n.route-away {\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  height: 50%;\n  width: 100%;\n  display: flex;\n  align-items: flex-end;\n  flex-direction: row;\n  justify-content: space-around;\n  transition: all ease 2s; }\n\n.from-about-to-home-link {\n  color: #fff;\n  text-decoration: none;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace; }\n  .from-about-to-home-link:hover {\n    color: #ffff99; }\n\n.from-about-to-projects-link {\n  color: #fff;\n  text-decoration: none;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace; }\n  .from-about-to-projects-link:hover {\n    color: #ffff99; }\n\n.from-about-to-contact-link {\n  color: #fff;\n  text-decoration: none;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace; }\n  .from-about-to-contact-link:hover {\n    color: #ffff99; }\n\n@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  .about-header-wrapper span h1 {\n    margin-top: -10px; }\n  .header-left-block {\n    width: 20%; }\n  .header-right-block {\n    height: 100%;\n    width: 20%;\n    display: flex;\n    flex-direction: column; }\n  .header-mid-block {\n    width: 60%;\n    display: flex;\n    justify-content: center;\n    align-items: center; } }\n", ""]);
 	
 	// exports
 
@@ -27892,10 +27893,10 @@
 			value: function render() {
 				return _react2.default.createElement(
 					"div",
-					{ className: "about-me-text" },
+					{ className: "about-me-text-wrapper" },
 					_react2.default.createElement(
-						"p",
-						null,
+						"div",
+						{ className: "about-me-text" },
 						"I enjoy coding, creating applications and problem solving. I view coding as a scientific art form in which I am able to both problem solve and create someone's vision. I love the Front End and enjoy learning."
 					)
 				);
@@ -27947,61 +27948,61 @@
 	        "section",
 	        { className: "skills-wrapper" },
 	        _react2.default.createElement(
-	          "h1",
-	          null,
+	          "div",
+	          { className: "skills" },
 	          "Skills:"
 	        ),
 	        _react2.default.createElement(
 	          "div",
-	          null,
+	          { className: "skills-container" },
 	          _react2.default.createElement(
-	            "p",
-	            null,
+	            "div",
+	            { className: "skill-list" },
 	            "Angular.js"
 	          ),
 	          _react2.default.createElement(
-	            "p",
-	            null,
+	            "div",
+	            { className: "skill-list" },
 	            "CSS"
 	          ),
 	          _react2.default.createElement(
-	            "p",
-	            null,
+	            "div",
+	            { className: "skill-list" },
 	            "Github"
 	          ),
 	          _react2.default.createElement(
-	            "p",
-	            null,
+	            "div",
+	            { className: "skill-list" },
 	            "JavaScript"
 	          ),
 	          _react2.default.createElement(
-	            "p",
-	            null,
+	            "div",
+	            { className: "skill-list" },
 	            "Jquery"
 	          ),
 	          _react2.default.createElement(
-	            "p",
-	            null,
+	            "div",
+	            { className: "skill-list" },
 	            "Node.js"
 	          ),
 	          _react2.default.createElement(
-	            "p",
-	            null,
+	            "div",
+	            { className: "skill-list" },
 	            "Mongo"
 	          ),
 	          _react2.default.createElement(
-	            "p",
-	            null,
+	            "div",
+	            { className: "skill-list" },
 	            "PostgreSQL"
 	          ),
 	          _react2.default.createElement(
-	            "p",
-	            null,
+	            "div",
+	            { className: "skill-list" },
 	            "SASS/SCSS"
 	          ),
 	          _react2.default.createElement(
-	            "p",
-	            null,
+	            "div",
+	            { className: "skill-list" },
 	            "React.js"
 	          )
 	        )
@@ -28054,13 +28055,13 @@
 					"section",
 					{ className: "personal-facts-wrapper" },
 					_react2.default.createElement(
-						"h1",
-						null,
+						"div",
+						{ className: "facts" },
 						"Facts:"
 					),
 					_react2.default.createElement(
-						"p",
-						null,
+						"div",
+						{ className: "facts-text" },
 						"I am married and have four children. I enjoy hiking and want to mountaineer some day. I love soccer and am an avid Arsenal and Real Salt Lake supporter. I love gaming and play Destiny, Fifa and Titanfall on the Xbox One. I also love Star Wars and may or may not secretly be a Mandalorian."
 					)
 				);
@@ -28074,6 +28075,61 @@
 
 /***/ },
 /* 246 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(172);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Contact = function (_React$Component) {
+	  _inherits(Contact, _React$Component);
+	
+	  function Contact() {
+	    _classCallCheck(this, Contact);
+	
+	    return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this));
+	  }
+	
+	  _createClass(Contact, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "contact-background" },
+	        _react2.default.createElement(
+	          "div",
+	          null,
+	          "Contact Place Holder Under Construction"
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Contact;
+	}(_react2.default.Component);
+	
+	exports.default = Contact;
+
+/***/ },
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28092,11 +28148,11 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _Menu = __webpack_require__(247);
+	var _Menu = __webpack_require__(248);
 	
 	var _Menu2 = _interopRequireDefault(_Menu);
 	
-	var _QuoteBox = __webpack_require__(250);
+	var _QuoteBox = __webpack_require__(251);
 	
 	var _QuoteBox2 = _interopRequireDefault(_QuoteBox);
 	
@@ -28108,7 +28164,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(253);
+	__webpack_require__(254);
 	
 	var PortfolioHomePage = function (_React$Component) {
 	  _inherits(PortfolioHomePage, _React$Component);
@@ -28137,7 +28193,7 @@
 	exports.default = PortfolioHomePage;
 
 /***/ },
-/* 247 */
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28162,7 +28218,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(248);
+	__webpack_require__(249);
 	
 	var Menu = function (_React$Component) {
 	  _inherits(Menu, _React$Component);
@@ -28247,13 +28303,13 @@
 	exports.default = Menu;
 
 /***/ },
-/* 248 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(249);
+	var content = __webpack_require__(250);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(240)(content, {});
@@ -28273,7 +28329,7 @@
 	}
 
 /***/ },
-/* 249 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(239)();
@@ -28287,7 +28343,7 @@
 
 
 /***/ },
-/* 250 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28310,7 +28366,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(251);
+	__webpack_require__(252);
 	
 	var QuoteBox = function (_React$Component) {
 		_inherits(QuoteBox, _React$Component);
@@ -28351,13 +28407,13 @@
 	exports.default = QuoteBox;
 
 /***/ },
-/* 251 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(252);
+	var content = __webpack_require__(253);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(240)(content, {});
@@ -28377,7 +28433,7 @@
 	}
 
 /***/ },
-/* 252 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(239)();
@@ -28385,19 +28441,19 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT);", ""]);
 	
 	// module
-	exports.push([module.id, ".text-box {\n  height: 500px;\n  width: 100%;\n  display: flex;\n  justify-content: center; }\n\n.text {\n  height: 50%;\n  width: 45%;\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-end;\n  flex-direction: column;\n  padding: 50px;\n  border: 5px solid white; }\n  .text div {\n    font-size: 50px;\n    font-family: 'Old Standard TT', serif;\n    font-style: italic;\n    margin-bottom: 10px; }\n\n.author {\n  margin-right: 100px; }\n", ""]);
+	exports.push([module.id, ".text-box {\n  height: 500px;\n  width: 100%;\n  display: flex;\n  justify-content: center; }\n\n.text {\n  height: 50%;\n  width: 45%;\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-end;\n  flex-direction: column;\n  padding: 50px;\n  border: 5px solid white; }\n  .text div {\n    font-size: 50px;\n    font-family: 'Old Standard TT', serif;\n    font-style: italic;\n    margin-bottom: 10px; }\n\n.author {\n  margin-right: 100px; }\n\n@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  .text {\n    height: 50%;\n    width: 45%;\n    display: flex;\n    justify-content: space-between;\n    align-items: flex-end;\n    flex-direction: column;\n    padding: 50px;\n    border: 5px solid white; }\n    .text div {\n      font-size: 40px;\n      font-family: 'Old Standard TT', serif;\n      font-style: italic;\n      margin-bottom: 10px; } }\n", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 253 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(254);
+	var content = __webpack_require__(255);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(240)(content, {});
@@ -28417,7 +28473,7 @@
 	}
 
 /***/ },
-/* 254 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(239)();
@@ -28429,61 +28485,6 @@
 	
 	// exports
 
-
-/***/ },
-/* 255 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _ProjectsHeader = __webpack_require__(256);
-	
-	var _ProjectsHeader2 = _interopRequireDefault(_ProjectsHeader);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Projects = function (_React$Component) {
-		_inherits(Projects, _React$Component);
-	
-		function Projects() {
-			_classCallCheck(this, Projects);
-	
-			return _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this));
-		}
-	
-		_createClass(Projects, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement('section', { className: 'projects-background' }),
-					_react2.default.createElement(_ProjectsHeader2.default, null),
-					_react2.default.createElement('div', { className: 'demo-space' })
-				);
-			}
-		}]);
-	
-		return Projects;
-	}(_react2.default.Component);
-	
-	exports.default = Projects;
 
 /***/ },
 /* 256 */
@@ -28501,11 +28502,87 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _jquery = __webpack_require__(267);
+	var _ProjectsHeader = __webpack_require__(257);
+	
+	var _ProjectsHeader2 = _interopRequireDefault(_ProjectsHeader);
+	
+	var _ProjectsBody = __webpack_require__(262);
+	
+	var _ProjectsBody2 = _interopRequireDefault(_ProjectsBody);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Projects = function (_React$Component) {
+		_inherits(Projects, _React$Component);
+	
+		function Projects() {
+			_classCallCheck(this, Projects);
+	
+			var _this = _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this));
+	
+			_this.state = {
+				hidden: "false"
+			};
+			_this.headerChange = _this.headerChange.bind(_this);
+			return _this;
+		}
+	
+		_createClass(Projects, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				this.headerChange();
+			}
+		}, {
+			key: 'headerChange',
+			value: function headerChange(newStateFromHeader) {
+				this.setState({ hidden: newStateFromHeader });
+				console.log(newStateFromHeader);
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					null,
+					_react2.default.createElement('section', { className: 'projects-background' }),
+					_react2.default.createElement(_ProjectsHeader2.default, { parentToChild: this.state.hidden, cbChildToParent: this.headerChange }),
+					_react2.default.createElement(_ProjectsBody2.default, null)
+				);
+			}
+		}]);
+	
+		return Projects;
+	}(_react2.default.Component);
+	
+	exports.default = Projects;
+
+/***/ },
+/* 257 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _jquery = __webpack_require__(258);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _ProjectsHeaderLinks = __webpack_require__(268);
+	var _ProjectsHeaderLinks = __webpack_require__(259);
 	
 	var _ProjectsHeaderLinks2 = _interopRequireDefault(_ProjectsHeaderLinks);
 	
@@ -28517,17 +28594,23 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
+	__webpack_require__(260);
+	
 	var ProjectsHeader = function (_React$Component) {
 		_inherits(ProjectsHeader, _React$Component);
 	
-		function ProjectsHeader() {
+		function ProjectsHeader(props) {
 			_classCallCheck(this, ProjectsHeader);
 	
-			var _this = _possibleConstructorReturn(this, (ProjectsHeader.__proto__ || Object.getPrototypeOf(ProjectsHeader)).call(this));
+			var _this = _possibleConstructorReturn(this, (ProjectsHeader.__proto__ || Object.getPrototypeOf(ProjectsHeader)).call(this, props));
 	
 			_this.state = {
+				hidden: _this.props.parentToChild,
 				class: "not-sticky-div",
-				class2: "hidden-span"
+				class2: "hidden-span",
+				class3: "projects-quote-hidden",
+				class4: "project-title-hidden",
+				class5: "header"
 			};
 			return _this;
 		}
@@ -28535,42 +28618,63 @@
 		_createClass(ProjectsHeader, [{
 			key: 'componentDidMount',
 			value: function componentDidMount() {
-	
+				this.scrollTop();
+				this.sendToParent();
+			}
+		}, {
+			key: 'componentWillUnmount',
+			value: function componentWillUnmount() {
+				(0, _jquery2.default)(window).unbind("scroll");
+			}
+		}, {
+			key: 'scrollTop',
+			value: function scrollTop() {
+				var that = this;
 				var head = (0, _jquery2.default)(".header");
 				var stick = "sticky";
 				var projHead = document.getElementById("projHead");
-	
-				var that = this;
-	
 				(0, _jquery2.default)(window).scroll(function () {
 					(0, _jquery2.default)(window).scrollTop() > 400 ? head.addClass(stick) : head.removeClass(stick);
 					var newValue = projHead.classList.value.split(' ', 2);
 					for (var i = 0; i < newValue.length; i++) {
-						newValue[i] === "sticky" ? that.setState({ class: "sticky-div", class2: "visible-span" }) : that.setState({ class: "not-sticky-div", class2: "hidden-span" });
+						newValue[i] === "sticky" ? that.setState({ hidden: true, class: "sticky-div", class2: "visible-span", class3: "projects-quote", class4: "projects-title" }) : null;
 					}
 				});
+			}
+		}, {
+			key: 'sendToParent',
+			value: function sendToParent() {
+				console.log(this.state.class);
+				var newStateFromHeader = this.state.hidden;
+				this.setState({ sizechange: newStateFromHeader });
+				this.props.cbChildToParent(newStateFromHeader);
+				console.log(newStateFromHeader);
 			}
 		}, {
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					{ id: 'projHead', className: 'header' },
+					{ id: 'projHead', className: this.state.class5 },
 					_react2.default.createElement(
 						'div',
 						{ className: this.state.class },
 						this.state.class === "not-sticky-div" ? _react2.default.createElement(
 							'div',
 							null,
-							'"This is My Projects Page" --Lonnie McGill'
-						) : _react2.default.createElement(
+							'"I love to code" --Lonnie McGill'
+						) : null
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: this.state.class3 },
+						_react2.default.createElement(
 							'div',
-							null,
-							' ',
-							_react2.default.createElement(_ProjectsHeaderLinks2.default, null),
-							' '
+							{ className: this.state.class4 },
+							'This is my project page, go ahead and look around.'
 						)
-					)
+					),
+					this.state.class === "sticky-div" ? _react2.default.createElement(_ProjectsHeaderLinks2.default, null) : null
 				);
 			}
 		}]);
@@ -28581,207 +28685,7 @@
 	exports.default = ProjectsHeader;
 
 /***/ },
-/* 257 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(258);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(240)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./About.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./About.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
 /* 258 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(239)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".about-background {\n  top: 0;\n  height: 100vh;\n  width: 100vw;\n  background-image: url(\"/img/tranquil.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  display: flex;\n  flex-direction: column;\n  position: fixed; }\n\n.about-upper {\n  height: 25vh;\n  width: 100vw; }\n\n.about-lower {\n  height: 75vh;\n  width: 100vw;\n  display: flex;\n  justify-content: center; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 259 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(260);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(240)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./AboutMe.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./AboutMe.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 260 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(239)();
-	// imports
-	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
-	
-	// module
-	exports.push([module.id, ".about-me-wrapper {\n  height: 60vh;\n  width: 70vw;\n  border: 2px solid grey;\n  background-color: white;\n  opacity: 0.8;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.about-me-wrapper-hidden {\n  height: 60vh;\n  width: 70vw;\n  border: 2px solid grey;\n  background-color: white;\n  opacity: 0;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.pic-box {\n  margin-top: 20px;\n  margin-left: 20px;\n  height: 150px;\n  width: 150px;\n  border-radius: 50%;\n  background-image: url(\"/img/profilepic.jpg\");\n  background-size: cover;\n  background-repeat: no-repeat;\n  transition: all 3s; }\n\n.pic-box-alternative {\n  margin-top: 20px;\n  margin-left: 20px;\n  height: 150px;\n  width: 150px;\n  border-radius: 50%;\n  background-image: url(\"/img/Jango.jpg\");\n  background-size: cover;\n  background-repeat: no-repeat;\n  transition: all 2s; }\n\n.about-me-content-box {\n  height: 100%;\n  width: 85%;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.about-me-text-area {\n  height: 80%;\n  width: 90%;\n  border: 2px solid grey;\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n\n.about-me-header {\n  border-bottom: 2px solid black;\n  height: 54px;\n  width: 90%;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .about-me-header h1 {\n    font-size: 40px;\n    font-family: 'PT Mono', monospace; }\n\n.about-me-text {\n  margin-top: 15px;\n  height: 303px;\n  width: 80%;\n  display: flex;\n  justify-content: center;\n  align-self: center; }\n  .about-me-text p {\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    line-height: 2; }\n\n.about-me-footer-wrapper {\n  cursor: pointer;\n  height: 83px;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around; }\n  .about-me-footer-wrapper div {\n    font-size: 30px;\n    font-family: 'PT Mono', monospace; }\n\n.about-me-home {\n  text-decoration: none;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black; }\n  .about-me-home:hover {\n    color: #42C0FB; }\n\n.skills-link {\n  text-decoration: none;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black; }\n  .skills-link:hover {\n    color: #42C0FB; }\n\n.personal-link {\n  text-decoration: none;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black; }\n  .personal-link:hover {\n    color: #42C0FB; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 261 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(262);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(240)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Skills.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Skills.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 262 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(239)();
-	// imports
-	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
-	
-	// module
-	exports.push([module.id, ".skills-wrapper {\n  margin-top: 15px;\n  height: 303px;\n  width: 90%;\n  display: flex;\n  flex-direction: row; }\n  .skills-wrapper h1 {\n    width: 160px;\n    font-size: 30px;\n    font-family: 'PT Mono', monospace; }\n  .skills-wrapper div {\n    height: 150px;\n    width: 100%;\n    line-height: 2;\n    display: flex;\n    flex-direction: column;\n    flex-wrap: wrap; }\n    .skills-wrapper div p {\n      font-size: 20px;\n      font-family: 'PT Mono', monospace; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 263 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(264);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(240)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./PersonalFacts.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./PersonalFacts.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 264 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(239)();
-	// imports
-	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
-	
-	// module
-	exports.push([module.id, ".personal-facts-wrapper {\n  margin-top: 15px;\n  height: 303px;\n  width: 90%;\n  display: flex;\n  flex-direction: row; }\n  .personal-facts-wrapper h1 {\n    width: 170px;\n    font-size: 30px;\n    font-family: 'PT Mono', monospace; }\n  .personal-facts-wrapper p {\n    line-height: 1.5;\n    font-size: 20px;\n    font-family: 'PT Mono', monospace; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 265 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(266);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(240)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Projects.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Projects.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 266 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(239)();
-	// imports
-	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
-	
-	// module
-	exports.push([module.id, "body {\n  padding-top: 400px; }\n\n.projects-background {\n  top: 0;\n  height: 100vh;\n  width: 100vw;\n  background-image: url(/img/code.jpeg);\n  background-repeat: no-repeat;\n  background-size: cover;\n  position: fixed; }\n\n.header {\n  top: 0; }\n\n.sticky {\n  top: 0;\n  position: fixed; }\n\n.not-sticky-div {\n  height: 15vh;\n  width: 100vw;\n  background-color: black;\n  opacity: 0.9;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transition: 2s all ease; }\n  .not-sticky-div div {\n    font-size: 30px;\n    font-family: 'PT Mono', monospace;\n    color: white; }\n\n.sticky-div {\n  height: 10vh;\n  width: 100vw;\n  background-color: gray;\n  opacity: 0.9;\n  transition: 2s all ease; }\n  .sticky-div section {\n    height: 10vh;\n    width: 100vw;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: space-around; }\n\n.demo-space {\n  height: 200vh;\n  width: 100vw; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -39007,13 +38911,505 @@
 
 
 /***/ },
+/* 259 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(172);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var ProjectsHeaderLinks = function (_React$Component) {
+		_inherits(ProjectsHeaderLinks, _React$Component);
+	
+		function ProjectsHeaderLinks() {
+			_classCallCheck(this, ProjectsHeaderLinks);
+	
+			return _possibleConstructorReturn(this, (ProjectsHeaderLinks.__proto__ || Object.getPrototypeOf(ProjectsHeaderLinks)).call(this));
+		}
+	
+		_createClass(ProjectsHeaderLinks, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'section',
+					{ className: 'projects-header-links-container' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'projects-header-links' },
+						_react2.default.createElement(
+							_reactRouter.Link,
+							{ className: 'projects-to-home', to: '/' },
+							'Home'
+						),
+						_react2.default.createElement(
+							_reactRouter.Link,
+							{ className: 'projects-to-contact', to: '/contact' },
+							'Contact'
+						),
+						_react2.default.createElement(
+							_reactRouter.Link,
+							{ className: 'projects-to-about', to: '/about' },
+							'About'
+						)
+					)
+				);
+			}
+		}]);
+	
+		return ProjectsHeaderLinks;
+	}(_react2.default.Component);
+	
+	exports.default = ProjectsHeaderLinks;
+
+/***/ },
+/* 260 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(261);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(240)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ProjectsHeaderLinks.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ProjectsHeaderLinks.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 261 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(239)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".projects-header-links-container-hidden {\n  right: -500px;\n  top: 0;\n  width: 100%;\n  z-index: 3;\n  position: fixed; }\n\n.projects-header-links-container {\n  top: 0;\n  margin-top: 20px;\n  margin-right: 20px;\n  right: 0;\n  width: 100%;\n  z-index: 3;\n  position: fixed;\n  transition: 3s all ease; }\n\n.projects-header-links {\n  width: 300px;\n  float: right;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around; }\n\n.projects-to-home {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  text-decoration: none;\n  color: white; }\n  .projects-to-home:hover {\n    color: #ffff66; }\n\n.projects-to-contact {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  text-decoration: none;\n  color: white; }\n  .projects-to-contact:hover {\n    color: #ffff66; }\n\n.projects-to-about {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  text-decoration: none;\n  color: white; }\n  .projects-to-about:hover {\n    color: #ffff66; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 262 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _AngularGroup = __webpack_require__(277);
+	
+	var _AngularGroup2 = _interopRequireDefault(_AngularGroup);
+	
+	var _ReactGroup = __webpack_require__(278);
+	
+	var _ReactGroup2 = _interopRequireDefault(_ReactGroup);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	__webpack_require__(275);
+	
+	var ReactBody = function (_React$Component) {
+		_inherits(ReactBody, _React$Component);
+	
+		function ReactBody() {
+			_classCallCheck(this, ReactBody);
+	
+			var _this = _possibleConstructorReturn(this, (ReactBody.__proto__ || Object.getPrototypeOf(ReactBody)).call(this));
+	
+			_this.state = {
+				rb: "react-body-container",
+				projectgroup: "angular"
+			};
+			_this.triggerSticky = _this.triggerSticky.bind(_this);
+			return _this;
+		}
+	
+		_createClass(ReactBody, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				window.addEventListener('scroll', this.triggerSticky);
+			}
+		}, {
+			key: 'triggerSticky',
+			value: function triggerSticky() {
+				window.pageYOffset > 400 ? this.setState({ rb: "react-body-container-sticky" }) : null;
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'section',
+					{ id: 'rbc', className: 'react-body-wrapper' },
+					_react2.default.createElement(
+						'div',
+						{ className: this.state.rb },
+						_react2.default.createElement(
+							'div',
+							{ className: 'links-to-projects-groups' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'angular-js' },
+								'Angular.js'
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'react-js' },
+								'React.js'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'project-text-and-links-container' },
+							_react2.default.createElement('div', { className: 'project-text' }),
+							_react2.default.createElement(
+								'div',
+								{ className: 'project-group-routes' },
+								this.state.projectgroup === "angular" ? _react2.default.createElement(_AngularGroup2.default, null) : _react2.default.createElement(_ReactGroup2.default, null)
+							)
+						)
+					)
+				);
+			}
+		}]);
+	
+		return ReactBody;
+	}(_react2.default.Component);
+	
+	exports.default = ReactBody;
+
+/***/ },
+/* 263 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(264);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(240)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./About.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./About.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 264 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(239)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".about-background {\n  top: 0;\n  height: 100vh;\n  width: 100vw;\n  background-image: url(\"/img/tranquil.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  display: flex;\n  flex-direction: column;\n  position: fixed; }\n\n.about-upper {\n  height: 25vh;\n  width: 100vw; }\n\n.about-lower {\n  height: 75vh;\n  width: 100vw;\n  display: flex;\n  justify-content: center; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 265 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(266);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(240)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./AboutMe.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./AboutMe.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 266 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(239)();
+	// imports
+	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
+	
+	// module
+	exports.push([module.id, ".about-me-wrapper {\n  height: 60vh;\n  width: 70vw;\n  border: 2px solid grey;\n  background-color: white;\n  opacity: 0.8;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.about-me-wrapper-hidden {\n  height: 60vh;\n  width: 70vw;\n  border: 2px solid grey;\n  background-color: white;\n  opacity: 0;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.pic-box {\n  margin-top: 20px;\n  margin-left: 20px;\n  height: 150px;\n  width: 150px;\n  border-radius: 50%;\n  background-image: url(\"/img/profilepic.jpg\");\n  background-size: cover;\n  background-repeat: no-repeat;\n  transition: all 3s; }\n\n.pic-box-alternative {\n  margin-top: 20px;\n  margin-left: 20px;\n  height: 150px;\n  width: 150px;\n  border-radius: 50%;\n  background-image: url(\"/img/Jango.jpg\");\n  background-size: cover;\n  background-repeat: no-repeat;\n  transition: all 2s; }\n\n.about-me-content-box {\n  height: 100%;\n  width: 85%;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.about-me-text-area {\n  height: 80%;\n  width: 90%;\n  border: 2px solid grey;\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n\n.about-me-header {\n  border-bottom: 2px solid black;\n  height: 54px;\n  width: 90%;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .about-me-header h1 {\n    font-size: 40px;\n    font-family: 'PT Mono', monospace; }\n\n.about-me-text-wrapper {\n  margin-top: 15px;\n  height: 303px;\n  width: 80%;\n  display: flex;\n  justify-content: center;\n  align-self: center; }\n\n.about-me-text {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  line-height: 2; }\n\n.about-me-footer-wrapper {\n  cursor: pointer;\n  height: 83px;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around; }\n  .about-me-footer-wrapper div {\n    font-size: 30px;\n    font-family: 'PT Mono', monospace; }\n\n.about-me-home {\n  text-decoration: none;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black; }\n  .about-me-home:hover {\n    color: #42C0FB; }\n\n.skills-link {\n  text-decoration: none;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black; }\n  .skills-link:hover {\n    color: #42C0FB; }\n\n.personal-link {\n  text-decoration: none;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black; }\n  .personal-link:hover {\n    color: #42C0FB; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 267 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(268);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(240)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Skills.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Skills.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
 /* 268 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(239)();
+	// imports
+	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
+	
+	// module
+	exports.push([module.id, ".skills-wrapper {\n  margin-top: 15px;\n  height: 303px;\n  width: 90%;\n  display: flex; }\n\n.skills {\n  height: 303px;\n  width: 160px;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace; }\n\n.skills-container {\n  height: 150px;\n  width: 100%;\n  line-height: 2;\n  display: flex;\n  flex-direction: column;\n  flex-wrap: wrap; }\n\n.skill-list {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 269 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(270);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(240)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./PersonalFacts.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./PersonalFacts.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 270 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(239)();
+	// imports
+	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
+	
+	// module
+	exports.push([module.id, ".personal-facts-wrapper {\n  margin-top: 15px;\n  height: 303px;\n  width: 90%;\n  display: flex;\n  flex-direction: row; }\n\n.facts {\n  width: 170px;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace; }\n\n.facts-text {\n  line-height: 1.5;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 271 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(272);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(240)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Projects.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Projects.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 272 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(239)();
+	// imports
+	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
+	
+	// module
+	exports.push([module.id, "body {\n  padding-top: 400px; }\n\n.projects-background {\n  z-index: -2;\n  top: 0;\n  height: 100vh;\n  width: 100vw;\n  background-image: url(/img/code.jpeg);\n  background-repeat: no-repeat;\n  background-size: cover;\n  position: fixed; }\n\n.sticky {\n  top: 0;\n  position: fixed; }\n\n.not-sticky-div {\n  height: 15vh;\n  width: 100vw;\n  background-color: black;\n  opacity: 0.9;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transition: 2s all ease; }\n  .not-sticky-div div {\n    font-size: 30px;\n    font-family: 'PT Mono', monospace;\n    color: white; }\n\n.sticky-div {\n  top: 0;\n  position: fixed;\n  height: 40vh;\n  width: 100vw;\n  background-color: black;\n  opacity: 0.5;\n  transition: 1s all ease; }\n\n.projects-quote-hidden {\n  z-index: -3;\n  top: 0;\n  position: fixed;\n  height: 40vh;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.projects-title-hidden {\n  font-size: 1px;\n  font-family: 'PT Mono', monospace;\n  opacity: .1;\n  color: black; }\n\n.projects-quote {\n  z-index: 2;\n  top: 0;\n  position: fixed;\n  height: 40vh;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.projects-title {\n  font-size: 40px;\n  font-family: 'PT Mono', monospace;\n  color: white;\n  transition: 5s all ease; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 273 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(274);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(240)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Contact.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Contact.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 274 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(239)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".contact-background {\n  top: 0;\n  height: 100vh;\n  width: 100vw;\n  position: fixed; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 275 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(276);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(240)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ProjectsBody.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ProjectsBody.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 276 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(239)();
+	// imports
+	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
+	
+	// module
+	exports.push([module.id, ".react-body-wrapper {\n  top: 398px;\n  width: 100vw; }\n\n.react-body-container {\n  position: absolute;\n  top: 100vh;\n  height: 60vh;\n  width: 100vw;\n  background-color: white;\n  display: flex;\n  flex-direction: column; }\n\n.react-body-container-sticky {\n  position: fixed;\n  top: 40vh;\n  height: 60vh;\n  width: 100vw;\n  background-color: white;\n  display: flex;\n  flex-direction: column; }\n\n.links-to-projects-groups {\n  height: 50px;\n  width: 100vw;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  border-bottom: 2px solid grey; }\n\n.angular-js {\n  margin-top: 10px;\n  cursor: pointer;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none;\n  margin-left: 100px; }\n\n.react-js {\n  margin-top: 10px;\n  cursor: pointer;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none;\n  margin-right: 100px; }\n\n.project-text-and-links-container {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-direction: row; }\n\n.project-text {\n  height: 100%;\n  width: 80%; }\n\n.project-group-routes {\n  height: 100%;\n  width: 20%;\n  border-left: 2px solid black; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -39030,44 +39426,110 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var ProjectsHeaderLinks = function (_React$Component) {
-	  _inherits(ProjectsHeaderLinks, _React$Component);
+	var AngularGroup = function (_React$Component) {
+		_inherits(AngularGroup, _React$Component);
 	
-	  function ProjectsHeaderLinks() {
-	    _classCallCheck(this, ProjectsHeaderLinks);
+		function AngularGroup() {
+			_classCallCheck(this, AngularGroup);
 	
-	    return _possibleConstructorReturn(this, (ProjectsHeaderLinks.__proto__ || Object.getPrototypeOf(ProjectsHeaderLinks)).call(this));
-	  }
+			return _possibleConstructorReturn(this, (AngularGroup.__proto__ || Object.getPrototypeOf(AngularGroup)).apply(this, arguments));
+		}
 	
-	  _createClass(ProjectsHeaderLinks, [{
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "section",
-	        null,
-	        _react2.default.createElement(
-	          "div",
-	          { className: "projects-to-home" },
-	          "Link"
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "projects-label" },
-	          "Projects Page"
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "projects-to-about" },
-	          "Link"
-	        )
-	      );
-	    }
-	  }]);
+		_createClass(AngularGroup, [{
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"section",
+					{ className: "project-groups-section" },
+					_react2.default.createElement(
+						"div",
+						{ className: "angular-apps" },
+						_react2.default.createElement(
+							"div",
+							{ className: "ecommerce-app" },
+							"Ecommerce App"
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "financial-app" },
+							"Financial App"
+						)
+					)
+				);
+			}
+		}]);
 	
-	  return ProjectsHeaderLinks;
+		return AngularGroup;
 	}(_react2.default.Component);
 	
-	exports.default = ProjectsHeaderLinks;
+	exports.default = AngularGroup;
+
+/***/ },
+/* 278 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var ReactGroup = function (_React$Component) {
+		_inherits(ReactGroup, _React$Component);
+	
+		function ReactGroup() {
+			_classCallCheck(this, ReactGroup);
+	
+			return _possibleConstructorReturn(this, (ReactGroup.__proto__ || Object.getPrototypeOf(ReactGroup)).apply(this, arguments));
+		}
+	
+		_createClass(ReactGroup, [{
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"section",
+					{ className: "project-groups-section" },
+					_react2.default.createElement(
+						"div",
+						{ className: "react-app" },
+						_react2.default.createElement(
+							"div",
+							{ className: "portfolio-app" },
+							"Portfolio"
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "fakebook" },
+							"Fakebook"
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "calculator" },
+							"Calculator"
+						)
+					)
+				);
+			}
+		}]);
+	
+		return ReactGroup;
+	}(_react2.default.Component);
+	
+	exports.default = ReactGroup;
 
 /***/ }
 /******/ ]);

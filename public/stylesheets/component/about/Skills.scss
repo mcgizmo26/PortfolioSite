@@ -5,25 +5,25 @@
     height: 303px;
     width: 90%;
     display: flex;
-    flex-direction: row;
+}
 
-    h1 {
-        width: 160px;
-        font-size: 30px;
-        font-family: 'PT Mono', monospace;
-    }
+.skills {
+    height: 303px;
+    width: 160px;
+    font-size: 30px;
+    font-family: 'PT Mono', monospace;
+}
 
-    div {
-        height:150px;
-        width: 100%;
-        line-height: 2;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+.skills-container {
+    height: 150px;
+    width: 100%;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
-        p {
-            font-size: 20px;
-            font-family: 'PT Mono', monospace;
-        }
-    }
+.skill-list{
+  font-size: 20px;
+  font-family: 'PT Mono', monospace;
 }

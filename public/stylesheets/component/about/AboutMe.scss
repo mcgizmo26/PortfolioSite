@@ -76,18 +76,19 @@
     }
 }
 
-.about-me-text {
+.about-me-text-wrapper {
   margin-top: 15px;
     height: 303px;
     width: 80%;
     display: flex;
     justify-content: center;
     align-self: center;
-    p {
-        font-size: 20px;
-        font-family: 'PT Mono', monospace;
-        line-height: 2;
-    }
+}
+
+.about-me-text {
+    font-size: 20px;
+    font-family: 'PT Mono', monospace;
+    line-height: 2;
 }
 // ******************* AboutMeFooter Component ***************
 .about-me-footer-wrapper {

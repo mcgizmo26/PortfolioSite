@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {render} from 'react-dom'
 import {IndexRoute} from 'react-router';
-import {Router, Route, browserHistory, Link, hashHistory} from 'react-router';
+import {Router, Route, browserHistory, Link} from 'react-router';
 
 import About from './component/about/About.jsx';
 import AboutMeText from './component/about/aboutmecomponents/AboutMeText.jsx';
+import Contact from './component/contact/Contact.jsx';
 import PersonalFacts from './component/about/aboutmecomponents/PersonalFacts.jsx';
 import PortfolioHomePage from './component/home/HomePage.jsx';
 import Projects from './component/projects/Projects.jsx';
@@ -18,6 +19,8 @@ require('../stylesheets/component/about/Skills.scss');
 require('../stylesheets/component/about/PersonalFacts.scss');
 
 require('../stylesheets/component/projects/Projects.scss');
+
+require('../stylesheets/component/contact/Contact.scss');
 
 class PortfolioApp extends React.Component {
 	constructor() {
@@ -32,7 +35,11 @@ class PortfolioApp extends React.Component {
 					<Route path="/about/skills" component={Skills}/>
 					<Route path="/about/personalfacts" component={PersonalFacts}/>
 				</Route>
-				<Route path="/projects" component={Projects}/>
+				<Route path="/projects" component={Projects}>
+				
+				</Route>
+
+				<Route path="/contact" component={Contact}/>
 			</Router>
 		)
 	}
