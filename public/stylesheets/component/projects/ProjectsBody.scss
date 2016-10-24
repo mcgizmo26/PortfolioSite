@@ -1,75 +1,317 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+@import url( 'https://fonts.googleapis.com/css?family=PT+Mono');
 
-.react-body-wrapper{
-  top: 398px;
-  width: 100vw;
+.react-body-wrapper {
+    top: 398px;
+    width: 100vw;
 }
 
-.react-body-container{
-  position: absolute;
-  top: 100vh;
-  height: 60vh;
-  width:100vw;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
+.react-body-container {
+    position: absolute;
+    top: 100vh;
+    height: 60vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
 }
 
-.react-body-container-sticky{
-  position: fixed;
-  top: 40vh;
-  height: 60vh;
-  width:100vw;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
+.react-body-container-sticky {
+    position: fixed;
+    top: 40vh;
+    height: 60vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
 }
-
 // *************** Link Section *************
-.links-to-projects-groups{
-  height: 50px;
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border-bottom: 2px solid grey;
+
+.links-to-projects-groups {
+    height: 50px;
+    width: 100vw;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 0.25px solid grey;
 }
 
-.angular-js{
-  margin-top: 10px;
-  cursor: pointer;
-  font-size: 30px;
-  font-family: 'PT Mono', monospace;
-  color: black;
-  text-decoration: none;
-  margin-left: 100px;
+.angular-js {
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    font-family: 'PT Mono', monospace;
+    color: black;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    margin-left: 100px;
+
+    &:hover {
+        color: #1874CD;
+    }
+
+    &:focus {
+        outline: none;
+    }
 }
 
-.react-js{
-  margin-top: 10px;
-  cursor: pointer;
-  font-size: 30px;
-  font-family: 'PT Mono', monospace;
-  color: black;
-  text-decoration: none;
-  margin-right: 100px;
-}
+.react-js {
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    font-family: 'PT Mono', monospace;
+    color: black;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    margin-right: 100px;
 
+    &:hover {
+        color: #1874CD;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
 // ******************* Display Projects Section **************
-.project-text-and-links-container{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+
+.project-text-and-links-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
-.project-text{
-  height: 100%;
-  width: 80%;
+.project-text {
+    height: 100%;
+    width: 80%;
 }
 
-.project-group-routes{
-  height: 100%;
-  width: 20%;
-  border-left: 2px solid black;
+.instructions {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'PT Mono', monospace;
+    color: black;
+    line-height: 2;
+}
+
+.project-group-routes {
+    height: 100%;
+    width: 20%;
+    border-left: 0.25px solid gray;
+}
+// ******************* Project Groups Styles *******************
+
+.project-groups-section {
+    height: 100%;
+    width: 100%;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+// ********* Angular Project Routes *********
+
+.angular-app-header {
+    padding-bottom: 5px;
+    margin-top: 30px;
+    width: 60%;
+    border-bottom: 2px solid gray;
+
+    div {
+        font-size: 25px;
+        font-family: 'PT Mono', monospace;
+        color: black;
+    }
+}
+
+.ecommerce-app {
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'PT Mono', monospace;
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+        color: #1874CD;
+    }
+}
+
+.financial-app {
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'PT Mono', monospace;
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+        color: #1874CD;
+    }
+}
+// *********** React Project Routes **********
+
+.react-app-header {
+    padding-bottom: 5px;
+    margin-top: 30px;
+    width: 60%;
+    border-bottom: 2px solid gray;
+
+    div {
+        font-size: 25px;
+        font-family: 'PT Mono', monospace;
+        color: black;
+    }
+}
+
+.portfolio-app {
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'PT Mono', monospace;
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+        color: #1874CD;
+    }
+}
+
+.fakebook-app {
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'PT Mono', monospace;
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+        color: #1874CD;
+    }
+}
+
+.calculator-app {
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'PT Mono', monospace;
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+        color: #1874CD;
+    }
+}
+@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+    // *************** Link Section *************
+
+    .angular-js {
+        margin-top: 5px;
+        font-size: 25px;
+    }
+
+    .react-js {
+        margin-top: 5px;
+        font-size: 25px;
+    }
+    // ********* Angular Project Routes *********
+    .angular-app-header {
+        padding-bottom: 10px;
+        margin-top: 15px;
+        border-bottom: 0.5px solid gray;
+
+        div {
+            font-weight: bold;
+            font-size: 22px;
+        }
+    }
+
+    .ecommerce-app {
+        margin-top: 15px;
+        font-size: 15px;
+    }
+
+    .financial-app {
+        margin-top: 15px;
+        font-size: 15px;
+    }
+    // *********** React Project Routes **********
+    .react-app-header {
+        padding-bottom: 10px;
+        margin-top: 15px;
+        border-bottom: 0.5px solid gray;
+
+        div {
+            font-weight: bold;
+            font-size: 22px;
+        }
+    }
+
+    .portfolio-app {
+        margin-top: 15px;
+        font-size: 15px;
+    }
+
+    .fakebook-app {
+        margin-top: 15px;
+        font-size: 15px;
+    }
+
+    .calculator-app {
+        margin-top: 15px;
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 1350px) and (-webkit-min-device-pixel-ratio: 1) {
+    // ********* Angular Project Routes *********
+
+    .angular-app-header {
+        padding-bottom: 10px;
+        margin-top: 18px;
+
+        div {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+    // *********** React Project Routes **********
+    .react-app-header {
+        padding-bottom: 10px;
+        margin-top: 18px;
+
+        div {
+            font-weight: bold;
+            font-size: 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1300px) and (-webkit-min-device-pixel-ratio: 1) {
+    // ********* Angular Project Routes *********
+    .angular-app-header {
+        padding-bottom: 10px;
+        margin-top: 15px;
+        border-bottom: 0.5px solid gray;
+        div {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+    // *********** React Project Routes **********
+    .react-app-header {
+        padding-bottom: 10px;
+        margin-top: 15px;
+        div {
+            font-weight: bold;
+            font-size: 15px;
+        }
+    }
 }

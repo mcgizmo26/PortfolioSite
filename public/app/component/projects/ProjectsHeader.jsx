@@ -8,38 +8,36 @@ require('../../../stylesheets/component/projects/ProjectsHeaderLinks.scss');
 
 export default class ProjectsHeader extends React.Component {
 
-	constructor(props) {
-		super(props)
+	constructor() {
+		super()
 		this.state = {
-			hidden: this.props.parentToChild,
 			class: "not-sticky-div",
 			class2: "hidden-span",
 			class3: "projects-quote-hidden",
 			class4: "project-title-hidden",
 			class5: "header"
-		}		
+		}
 	}
 
 	componentDidMount() {
 		this.scrollTop();
-		this.sendToParent();
 	}
-
-
-
-
-  componentWillUnmount(){
-		$(window).unbind("scroll");
-	}
-
 
 		scrollTop(){
 			let that = this;
 			let head = $(".header");
 			let stick = "sticky";
+			let sw = 400;
 			let projHead = document.getElementById("projHead");
+			if ($(window).width() > 1601) {
+         sw = 400;
+			 } else if ($(window).width() <= 1200){
+         sw = 250;
+       } else if ($(window).width() <= 1600){
+				 sw = 300;
+			 }
 		$(window).scroll(function() {
-			$(window).scrollTop() > 400
+			$(window).scrollTop() > sw
 				? head.addClass(stick)
 				: head.removeClass(stick);
 			let newValue = projHead.classList.value.split(' ', 2);
@@ -51,31 +49,41 @@ export default class ProjectsHeader extends React.Component {
 		})
 	}
 
-	sendToParent(){
-		console.log(this.state.class);
-		let newStateFromHeader = this.state.hidden;
-		this.setState({sizechange: newStateFromHeader});
-		this.props.cbChildToParent(newStateFromHeader);
-		console.log(newStateFromHeader);
-	}
 
 	render() {
+
 		return (
 			<div id="projHead" className={this.state.class5}>
+
 				<div className={this.state.class}>
 				{this.state.class === "not-sticky-div"
 					? <div>"I love to code" --Lonnie McGill</div>
 					: null
 				}
 				</div>
-				<div className={this.state.class3}>
-					<div className={this.state.class4}>This is my project page, go ahead and look around.</div>
-				</div>
+
+				{this.props.state === "default"
+			   ?<div className={this.state.class3}>
+            <div className={this.state.class4}>This is my project page, go ahead and look around.</div>
+					</div>
+         : <div className={this.state.class3}>
+					  {this.props.state === "angular"
+						  ? <div className={this.state.class4}>These are my Angular.js projects.</div>
+						  :<div className={this.state.class4}>These are my React.js projects.</div>
+						}
+						</div>
+				 }
+
+
 				{this.state.class === "sticky-div"
 					? <ProjectsHeaderLinks />
 					: null
 				}
 			</div>
 		)
+	}
+
+	componentWillUnmount(){
+		$(window).unbind("scroll");
 	}
 }

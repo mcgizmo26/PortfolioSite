@@ -21,3 +21,17 @@
   display: flex;
   justify-content: center;
 }
+
+@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {
+  .about-upper{
+    height: 15vh;
+    width: 100vw;
+  }
+
+  .about-lower{
+    height: 85vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+  }
+}
