@@ -12,7 +12,7 @@ export default class ReactGroup extends React.Component {
 			<section className="project-groups-section">
 				<div className="react-app">
 					<div className="react-app-header">
-						<div>Angular Apps</div>
+						<div>React Apps</div>
 					</div>
 					<Link to="/projects/portfolio" className="portfolio-app">Portfolio</Link>
 					<Link to="/projects/fakebook" className="fakebook-app">Fakebook</Link>

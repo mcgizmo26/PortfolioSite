@@ -28212,7 +28212,7 @@
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -28230,54 +28230,72 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var Financial = function (_React$Component) {
-	  _inherits(Financial, _React$Component);
+		_inherits(Financial, _React$Component);
 	
-	  function Financial() {
-	    _classCallCheck(this, Financial);
+		function Financial() {
+			_classCallCheck(this, Financial);
 	
-	    return _possibleConstructorReturn(this, (Financial.__proto__ || Object.getPrototypeOf(Financial)).apply(this, arguments));
-	  }
+			return _possibleConstructorReturn(this, (Financial.__proto__ || Object.getPrototypeOf(Financial)).apply(this, arguments));
+		}
 	
-	  _createClass(Financial, [{
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "section",
-	        { className: "actual-project-wrapper" },
-	        _react2.default.createElement(
-	          "div",
-	          { className: "project-wrapper-left-side" },
-	          _react2.default.createElement("div", { className: "ecommerce-image" }),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "about-project-links" },
-	            _react2.default.createElement(
-	              "div",
-	              { className: "project-git-hub-link", href: "https://github.com/mcgizmo26/Ecommerce-Site" },
-	              "Click to see the code"
-	            ),
-	            _react2.default.createElement(
-	              "div",
-	              { className: "project-link", href: "http://138.68.23.129/#/" },
-	              "Click to see the project"
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "about-project-right-side" },
-	          _react2.default.createElement(
-	            "div",
-	            { className: "about-project-title" },
-	            "Ecommerce"
-	          ),
-	          _react2.default.createElement("div", { className: "about-project-text" })
-	        )
-	      );
-	    }
-	  }]);
+		_createClass(Financial, [{
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"section",
+					{ className: "actual-project-wrapper" },
+					_react2.default.createElement(
+						"div",
+						{ className: "actual-project-top-container" },
+						_react2.default.createElement(
+							"div",
+							{ className: "project-wrapper-left-side" },
+							_react2.default.createElement("div", { className: "ecommerce-image" })
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "project-wrapper-right-side" },
+							_react2.default.createElement(
+								"div",
+								{ className: "project-title" },
+								"Ecommerce App:"
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "about-project-text" },
+								"This is a simple web application using Angular.js, Node.js, and PostgreSql. I used several custom directives in order to stream line the code. I also implemented passport in order to hash the users password. The cart is actually stored into local storage and then when the user signs in the cart is then pushed to the backend."
+							)
+						)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "actual-project-bottom-container" },
+						_react2.default.createElement(
+							"div",
+							null,
+							"Click here to see the code: \xA0",
+							_react2.default.createElement(
+								"a",
+								{ href: "https://github.com/mcgizmo26/Ecommerce-Site" },
+								"Ecommmerce Github Repository"
+							)
+						),
+						_react2.default.createElement(
+							"div",
+							null,
+							"Click here to see the project: \xA0",
+							_react2.default.createElement(
+								"a",
+								{ href: "http://138.68.23.129/#/" },
+								"E-commerce App"
+							)
+						)
+					)
+				);
+			}
+		}]);
 	
-	  return Financial;
+		return Financial;
 	}(_react2.default.Component);
 	
 	exports.default = Financial;
@@ -29274,7 +29292,7 @@
 							_react2.default.createElement(
 								"div",
 								null,
-								"Angular Apps"
+								"React Apps"
 							)
 						),
 						_react2.default.createElement(
@@ -29457,7 +29475,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
 	
 	// module
-	exports.push([module.id, ".skills-wrapper {\n  margin-top: 15px;\n  height: 303px;\n  width: 90%;\n  display: flex; }\n\n.skills {\n  height: 303px;\n  width: 160px;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace; }\n\n.skills-container {\n  height: 150px;\n  width: 100%;\n  line-height: 2;\n  display: flex;\n  flex-direction: column;\n  flex-wrap: wrap; }\n\n@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  .skills {\n    font-size: 25px;\n    font-weight: bold; }\n  .skill-list {\n    margin-top: -5px;\n    font-size: 20px;\n    font-family: 'PT Mono', monospace; } }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  .skills {\n    font-size: 25px;\n    font-weight: bold; }\n  .skill-list {\n    margin-top: -5px;\n    font-size: 18px;\n    font-family: 'PT Mono', monospace; } }\n", ""]);
+	exports.push([module.id, ".skills-wrapper {\n  margin-top: 15px;\n  height: 303px;\n  width: 90%;\n  display: flex; }\n\n.skills {\n  height: 303px;\n  width: 160px;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace; }\n\n.skill-list {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace; }\n\n.skills-container {\n  height: 150px;\n  width: 100%;\n  line-height: 2;\n  display: flex;\n  flex-direction: column;\n  flex-wrap: wrap; }\n\n@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  .skills {\n    font-size: 25px;\n    font-weight: bold; }\n  .skill-list {\n    margin-top: -5px;\n    font-size: 20px;\n    font-family: 'PT Mono', monospace; } }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  .skills {\n    font-size: 25px;\n    font-weight: bold; }\n  .skill-list {\n    margin-top: -5px;\n    font-size: 18px;\n    font-family: 'PT Mono', monospace; } }\n", ""]);
 	
 	// exports
 
@@ -29537,7 +29555,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
 	
 	// module
-	exports.push([module.id, "body {\n  padding-top: 400px; }\n\n.projects-background {\n  z-index: -2;\n  top: 0;\n  height: 100vh;\n  width: 100vw;\n  background-image: url(/img/code.jpeg);\n  background-repeat: no-repeat;\n  background-size: cover;\n  position: fixed; }\n\n.sticky {\n  top: 0;\n  position: fixed; }\n\n.not-sticky-div {\n  height: 15vh;\n  width: 100vw;\n  background-color: black;\n  opacity: 0.9;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transition: 2s all ease; }\n  .not-sticky-div div {\n    font-size: 30px;\n    font-family: 'PT Mono', monospace;\n    color: white; }\n\n.sticky-div {\n  top: 0;\n  position: fixed;\n  height: 40vh;\n  width: 100vw;\n  background-color: black;\n  opacity: 0.5;\n  transition: 1s all ease; }\n\n.projects-quote-hidden {\n  z-index: -3;\n  top: 0;\n  position: fixed;\n  height: 40vh;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.projects-title-hidden {\n  font-size: 1px;\n  font-family: 'PT Mono', monospace;\n  opacity: .1;\n  color: black; }\n\n.projects-quote {\n  z-index: 2;\n  top: 0;\n  position: fixed;\n  height: 40vh;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.projects-title {\n  font-size: 40px;\n  font-family: 'PT Mono', monospace;\n  color: white;\n  transition: 5s all ease; }\n\n@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  body {\n    padding-top: 300px; } }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  body {\n    padding-top: 250px; }\n  .sticky-div {\n    opacity: 0.7; }\n  .projects-title {\n    font-size: 30px; } }\n", ""]);
+	exports.push([module.id, "body {\n  padding-top: 400px;\n  margin: 0; }\n\n.projects-background {\n  z-index: -2;\n  top: 0;\n  left: 0;\n  height: 100vh;\n  width: 100vw;\n  background-image: url(/img/code.jpeg);\n  background-repeat: no-repeat;\n  background-size: cover;\n  position: fixed; }\n\n.sticky {\n  top: 0;\n  position: fixed; }\n\n.not-sticky-div {\n  height: 15vh;\n  width: 100vw;\n  background-color: black;\n  opacity: 0.9;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transition: 2s all ease; }\n  .not-sticky-div div {\n    font-size: 30px;\n    font-family: 'PT Mono', monospace;\n    color: white; }\n\n.sticky-div {\n  top: 0;\n  position: fixed;\n  height: 40vh;\n  width: 100vw;\n  background-color: black;\n  opacity: 0.5;\n  transition: 1s all ease; }\n\n.projects-quote-hidden {\n  z-index: -3;\n  top: 0;\n  position: fixed;\n  height: 40vh;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.projects-title-hidden {\n  font-size: 1px;\n  font-family: 'PT Mono', monospace;\n  opacity: .1;\n  color: black; }\n\n.projects-quote {\n  z-index: 2;\n  top: 0;\n  position: fixed;\n  height: 40vh;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.projects-title {\n  font-size: 40px;\n  font-family: 'PT Mono', monospace;\n  color: white;\n  transition: 5s all ease; }\n\n@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  body {\n    padding-top: 300px; } }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  body {\n    padding-top: 250px; }\n  .sticky-div {\n    opacity: 0.7; }\n  .projects-title {\n    font-size: 30px; } }\n", ""]);
 	
 	// exports
 
@@ -39949,10 +39967,10 @@
 
 	exports = module.exports = __webpack_require__(239)();
 	// imports
-	
+	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
 	
 	// module
-	exports.push([module.id, ".actual-project-wrapper {\n  height: 100%;\n  width: 100%;\n  padding: 10px;\n  display: flex;\n  flex-direction: row; }\n\n.project-wrapper-left-side {\n  height: 100%;\n  width: 40%; }\n\n.ecommerce-image {\n  background-image: url(\"/img/ecommerce.png\");\n  height: 40%;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: contain; }\n", ""]);
+	exports.push([module.id, "section {\n  padding: 0; }\n\n.actual-project-wrapper {\n  padding: 0;\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-direction: column; }\n\n.actual-project-top-container {\n  margin-top: 30px;\n  height: 80%;\n  width: 100%;\n  display: flex;\n  flex-direction: row; }\n\n.project-wrapper-left-side {\n  margin-left: 5%;\n  height: 100%;\n  width: 40%;\n  display: flex;\n  flex-direction: column; }\n\n.ecommerce-image {\n  background-image: url(\"/img/ecommerce.png\");\n  height: 80%;\n  width: 90%;\n  background-repeat: no-repeat;\n  background-size: contain; }\n\n.project-wrapper-right-side {\n  height: 100%;\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  margin-left: 10px;\n  margin-right: 15px; }\n\n.project-title {\n  margin-bottom: 15px;\n  font-weight: bold;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black; }\n\n.about-project-text {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  line-height: 2; }\n\n.actual-project-bottom-container {\n  margin-left: 5%;\n  height: 20%;\n  width: 90%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n  .actual-project-bottom-container div {\n    margin-top: 15px;\n    margin-left: 10px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    font-size: 20px; }\n    .actual-project-bottom-container div a {\n      color: blue;\n      font-size: 17px; }\n", ""]);
 	
 	// exports
 

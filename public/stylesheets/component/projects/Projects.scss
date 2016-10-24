@@ -2,11 +2,13 @@
 
 body{
   padding-top:400px;
+  margin: 0;
 }
 
 .projects-background{
   z-index: -2;
   top: 0;
+  left: 0;
   height: 100vh;
   width: 100vw;
   background-image: url(/img/code.jpeg);
