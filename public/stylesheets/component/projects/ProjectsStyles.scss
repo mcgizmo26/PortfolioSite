@@ -37,6 +37,39 @@ section{
   background-size: contain;
 }
 
+.financial-image{
+  background-image: url('/img/financial.png');
+  height: 80%;
+  width: 90%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.portfolio-image{
+  background-image: url('/img/portfolio.png');
+  height: 80%;
+  width: 90%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.fakebook-image{
+  background-image: url('/img/fakebook.png');
+  height: 80%;
+  width: 90%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.calculator-image{
+  background-image: url('/img/calculator.png');
+  height: 80%;
+  width: 90%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
 // ******************* Right Side Wrapper ***************
 .project-wrapper-right-side{
   height: 100%;
@@ -79,6 +112,50 @@ section{
     a{
       color: blue;
       font-size: 17px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+
+  .project-title{
+    font-size: 20px;
+  }
+
+  .about-project-text{
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .actual-project-bottom-container{
+    div{
+      font-size: 15px;
+      a{
+        color: blue;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .project-title{
+    font-size: 20px;
+  }
+
+  .about-project-text{
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .actual-project-bottom-container{
+    div{
+      font-size: 12px;
+      a{
+        color: blue;
+        font-size: 12px;
+      }
     }
   }
 }

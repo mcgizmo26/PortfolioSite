@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Financial extends React.Component {
+export default class Ecommerce extends React.Component {
 	render() {
 		return (
 			<section className="actual-project-wrapper">
@@ -12,7 +12,7 @@ export default class Financial extends React.Component {
 					</div>
 
 					<div className="project-wrapper-right-side">
-						<div className="project-title">Ecommerce App:</div>
+						<div className="project-title">E-commerce App:</div>
 						<div className="about-project-text">
 							This is a simple web application using Angular.js, Node.js, and PostgreSql. I used several custom directives in order to stream line the code. I also implemented passport in order to hash the users password. The cart is actually stored into local storage and then when the user signs in the cart is then pushed to the backend.
 						</div>

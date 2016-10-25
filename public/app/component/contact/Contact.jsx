@@ -1,17 +1,27 @@
 import React from 'react';
 import {Link} from "react-router";
 
-export default class Contact extends React.Component{
+require('../../../stylesheets/component/contact/Contact.scss');
 
-  constructor(){
-    super()
-  }
+export default class Contact extends React.Component {
 
-  render(){
-    return(
-      <div className="contact-background">
-          <div>Contact Place Holder Under Construction</div>
-      </div>
-    )
-  }
+	constructor() {
+		super()
+	}
+
+	render() {
+		return (
+			<section className="contact-background">
+
+				<div className="upper-contacts-container">
+					<div>
+						<Link to='/' className="home-contact-link">Home</Link>
+						<Link to='/about' className="about-contact-link">About</Link>
+						<Link to='/projects' className="projects-contact-link">Projects</Link>
+					</div>
+				</div>
+
+			</section>
+		)
+	}
 }
