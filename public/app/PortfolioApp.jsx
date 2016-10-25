@@ -24,8 +24,6 @@ require('../stylesheets/component/about/PersonalFacts.scss');
 
 require('../stylesheets/component/projects/Projects.scss');
 
-require('../stylesheets/component/contact/Contact.scss');
-
 class PortfolioApp extends React.Component {
 	constructor() {
 		super()

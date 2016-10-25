@@ -1,7 +1,11 @@
 import React from 'react';
-import {Link} from "react-router";
 
-require('../../../stylesheets/component/contact/Contact.scss');
+import ContactBackground from './ContactBackground.jsx';
+import ContactForeground from './ContactForeground.jsx';
+
+
+require('../../../stylesheets/component/contact/ContactForeground.scss');
+require('../../../stylesheets/component/contact/ContactBackground.scss');
 
 export default class Contact extends React.Component {
 
@@ -11,16 +15,9 @@ export default class Contact extends React.Component {
 
 	render() {
 		return (
-			<section className="contact-background">
-
-				<div className="upper-contacts-container">
-					<div>
-						<Link to='/' className="home-contact-link">Home</Link>
-						<Link to='/about' className="about-contact-link">About</Link>
-						<Link to='/projects' className="projects-contact-link">Projects</Link>
-					</div>
-				</div>
-
+			<section className="contact-container">
+      <ContactBackground />
+      <ContactForeground />
 			</section>
 		)
 	}
