@@ -1,13 +1,20 @@
 import React from 'react';
 
 import ContactLinks from './contactcomponents/ContactLinks.jsx';
-import BottomContactsContainer from './contactcomponents/BottomContactsContainer.jsx';
+import ContactBottomContainer from './contactcomponents/ContactBottomContainer.jsx';
+
+require('../../../stylesheets/component/contact/ContactUpperContainer.scss');
 
 export default class ContactForeground extends React.Component{
 
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
+    this.state={
+      clicked: this.props.clicked
+    }
+    this.handleOnClick = this.handleOnClick.bind(this);
   }
+
 
   render(){
     return(
@@ -17,7 +24,7 @@ export default class ContactForeground extends React.Component{
 
         <div className="upper-contacts-container">
           <div>Click
-            <div>color mode</div>
+            <div onClick={this.handleOnClick}>color mode</div>
             Here</div>
         </div>
 
@@ -27,9 +34,26 @@ export default class ContactForeground extends React.Component{
           </div>
         </div>
 
-        <BottomContactsContainer />
+        <ContactBottomContainer clicked={this.state.clicked}/>
 
       </div>
     )
+  }
+
+  handleOnClick(event){
+    this.setState({
+      clicked: "true"
+    })
+  }
+
+  componentDidUpdate(prevProps, prevState){
+    prevState.clicked !== this.state.clicked
+    ? this.sendToContact()
+    : null
+  }
+
+  sendToContact(){
+    let clickedStateChange = this.state.clicked;
+    this.props.cbClickedChange(clickedStateChange);
   }
 }

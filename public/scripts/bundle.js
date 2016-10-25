@@ -28191,7 +28191,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -28216,31 +28216,45 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(248);
 	__webpack_require__(250);
+	__webpack_require__(248);
+	__webpack_require__(294);
+	__webpack_require__(292);
 	
 	var Contact = function (_React$Component) {
-		_inherits(Contact, _React$Component);
+	  _inherits(Contact, _React$Component);
 	
-		function Contact() {
-			_classCallCheck(this, Contact);
+	  function Contact() {
+	    _classCallCheck(this, Contact);
 	
-			return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this));
-		}
+	    var _this = _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this));
 	
-		_createClass(Contact, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'section',
-					{ className: 'contact-container' },
-					_react2.default.createElement(_ContactBackground2.default, null),
-					_react2.default.createElement(_ContactForeground2.default, null)
-				);
-			}
-		}]);
+	    _this.state = {
+	      clicked: "false"
+	    };
+	    _this.changeOnClick = _this.changeOnClick.bind(_this);
+	    return _this;
+	  }
 	
-		return Contact;
+	  _createClass(Contact, [{
+	    key: 'changeOnClick',
+	    value: function changeOnClick(clickedStateChange) {
+	      clickedStateChange !== 'false' ? this.setState({ clicked: clickedStateChange }) : null;
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      console.log('Clicked:', this.state.clicked);
+	      return _react2.default.createElement(
+	        'section',
+	        { className: 'contact-container' },
+	        _react2.default.createElement(_ContactBackground2.default, { clicked: this.state.clicked }),
+	        _react2.default.createElement(_ContactForeground2.default, { clicked: this.state.clicked, cbClickedChange: this.changeOnClick })
+	      );
+	    }
+	  }]);
+	
+	  return Contact;
 	}(_react2.default.Component);
 	
 	exports.default = Contact;
@@ -28280,7 +28294,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
 	
 	// module
-	exports.push([module.id, ".contact-foreground {\n  top: 0;\n  height: 100vh;\n  width: 100vw;\n  position: fixed;\n  background-color: transparent; }\n\n.upper-contacts-container {\n  height: 5vh;\n  width: 100vw;\n  display: flex;\n  align-items: flex-end;\n  justify-content: center; }\n  .upper-contacts-container div {\n    font-size: 25px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center; }\n    .upper-contacts-container div div {\n      margin-left: 5px;\n      margin-right: 5px;\n      height: 0px;\n      width: 0px;\n      background: linear-gradient(#d3d3d3, #e9e9e9);\n      border: 1px solid black;\n      border-radius: 50px;\n      transition: 1s all ease;\n      font-size: 0px; }\n    .upper-contacts-container div:hover div {\n      margin-left: 5px;\n      margin-right: 5px;\n      height: 45px;\n      width: 45px;\n      background: linear-gradient(#d3d3d3, #e9e9e9);\n      border: 1px solid black;\n      border-radius: 50px;\n      transition: 2s all ease;\n      font-size: 12px;\n      text-align: center; }\n\n.contact-link-wrapper {\n  height: 5vh;\n  width: 500px;\n  display: flex;\n  align-items: flex-end;\n  justify-content: space-around;\n  position: absolute;\n  right: 0; }\n\n.home-contact-link {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .home-contact-link:hover {\n    color: #1874CD; }\n\n.about-contact-link {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .about-contact-link:hover {\n    color: #1874CD; }\n\n.projects-contact-link {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .projects-contact-link:hover {\n    color: #1874CD; }\n\n.middle-contacts-container {\n  height: 50vh;\n  width: 100vw;\n  border-bottom: 1px solid gray;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n  .middle-contacts-container div {\n    margin-top: -5vh;\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    color: black; }\n\n.bottom-contacts-conatiner {\n  height: 45vh;\n  width: 100vw;\n  display: flex;\n  flex-direction: row; }\n\n.twitter-container {\n  height: 100%;\n  width: 33.33%;\n  border-right: 0.5px solid gray;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .twitter-container div {\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center; }\n    .twitter-container div div {\n      background-image: url(\"/img/twitterblue.png\");\n      height: 30px;\n      width: 40px;\n      background-size: contain;\n      background-repeat: no-repeat; }\n\n.linkedin-container {\n  height: 100%;\n  width: 33.33%;\n  border-right: 0.5px solid gray;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .linkedin-container div {\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center; }\n    .linkedin-container div div {\n      background-image: url(\"/img/linkedinblue.png\");\n      height: 30px;\n      width: 40px;\n      background-size: contain;\n      background-repeat: no-repeat; }\n\n.email-container {\n  height: 100%;\n  width: 33.33%;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .email-container div {\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    flex-wrap: wrap; }\n    .email-container div div {\n      background-image: url(\"/img/yahoopurple.png\");\n      height: 60px;\n      width: 90px;\n      background-size: contain;\n      background-repeat: no-repeat; }\n", ""]);
+	exports.push([module.id, ".contact-foreground {\n  top: 0;\n  height: 100vh;\n  width: 100vw;\n  position: fixed;\n  background-color: transparent; }\n\n.middle-contacts-container {\n  height: 45vh;\n  width: 100vw;\n  border-bottom: 1px solid gray;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n  .middle-contacts-container div {\n    margin-top: -10vh;\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    color: black; }\n\n.bottom-contacts-conatiner {\n  height: 45vh;\n  width: 100vw;\n  display: flex;\n  flex-direction: row;\n  position: relative; }\n\n.colored-background-left {\n  z-index: -1;\n  height: 45vh;\n  width: 0vw;\n  position: absolute; }\n\n.colored-background-right {\n  right: 0;\n  z-index: -1;\n  height: 45vh;\n  width: 0vw;\n  position: absolute; }\n\n.twitter-container {\n  height: 100%;\n  width: 33.33%;\n  border-right: 0.5px solid gray;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .twitter-container div {\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center; }\n    .twitter-container div div {\n      background-image: url(\"/img/twitterblue.png\");\n      height: 30px;\n      width: 40px;\n      background-size: contain;\n      background-repeat: no-repeat; }\n\n.linkedin-container {\n  height: 100%;\n  width: 33.33%;\n  border-right: 0.5px solid gray;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .linkedin-container div {\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center; }\n    .linkedin-container div div {\n      background-image: url(\"/img/linkedinblue.png\");\n      height: 30px;\n      width: 40px;\n      background-size: contain;\n      background-repeat: no-repeat; }\n\n.email-container {\n  height: 100%;\n  width: 33.33%;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .email-container div {\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    flex-wrap: wrap; }\n    .email-container div div {\n      background-image: url(\"/img/yahoopurple.png\");\n      height: 60px;\n      width: 90px;\n      background-size: contain;\n      background-repeat: no-repeat; }\n\n.colored-background-left-change {\n  z-index: -1;\n  height: 45vh;\n  width: 50vw;\n  position: absolute;\n  background: linear-gradient(90deg, #3232ff, #ccccff 50%);\n  transition: 2s width ease; }\n\n.colored-background-right-change {\n  right: 0;\n  z-index: -1;\n  height: 45vh;\n  width: 50vw;\n  position: absolute;\n  background: linear-gradient(90deg, #ccccff 50%, #3232ff);\n  transition: 2s width ease; }\n", ""]);
 	
 	// exports
 
@@ -28320,7 +28334,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".contact-container {\n  top: 0;\n  position: fixed; }\n\n.absolute-contact-background {\n  height: 100vh;\n  width: 100vw;\n  background-color: yellow;\n  position: absolute; }\n\n.upper-background-container {\n  border-bottom: 2px solid black;\n  height: 55vh;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.colored-square-wrapper {\n  height: 20vh;\n  width: 80vh;\n  border: 2px solid black;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-around; }\n  .colored-square-wrapper div {\n    height: 60px;\n    width: 60px;\n    border: 1px solid black; }\n\n.colored-square-wrapper-big div {\n  height: 60px;\n  width: 60px;\n  border: 1px solid black; }\n\n.colored-square-wrapper-transform div {\n  height: 60px;\n  width: 60px;\n  border: 1px solid black;\n  transform: rotate(45deg); }\n", ""]);
+	exports.push([module.id, ".contact-container {\n  top: 0;\n  position: fixed; }\n\n.absolute-contact-background {\n  height: 100vh;\n  width: 100vw;\n  position: absolute; }\n\n.upper-background-container {\n  border-bottom: 2px solid black;\n  height: 55vh;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.colored-square-wrapper {\n  height: 20vh;\n  width: 80vh;\n  border: 2px solid black;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-around; }\n  .colored-square-wrapper div {\n    height: 0px;\n    width: 0px;\n    border: 1px solid black; }\n\n.colored-square-wrapper-big {\n  height: 20vh;\n  width: 80vh;\n  border: 2px solid black;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-around; }\n  .colored-square-wrapper-big div {\n    height: 80px;\n    width: 80px;\n    border: 1px solid black; }\n\n.colored-square-wrapper-transform div {\n  height: 60px;\n  width: 60px;\n  border: 1px solid black;\n  transform: rotate(45deg); }\n", ""]);
 	
 	// exports
 
@@ -40187,7 +40201,7 @@
 /* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -40210,27 +40224,33 @@
 	var ContactBackground = function (_React$Component) {
 	  _inherits(ContactBackground, _React$Component);
 	
-	  function ContactBackground() {
+	  function ContactBackground(props) {
 	    _classCallCheck(this, ContactBackground);
 	
-	    return _possibleConstructorReturn(this, (ContactBackground.__proto__ || Object.getPrototypeOf(ContactBackground)).call(this));
+	    var _this = _possibleConstructorReturn(this, (ContactBackground.__proto__ || Object.getPrototypeOf(ContactBackground)).call(this, props));
+	
+	    _this.state = {
+	      clicked: _this.props.clicked
+	    };
+	    return _this;
 	  }
 	
 	  _createClass(ContactBackground, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
+	      console.log('CB:', this.props.clicked);
 	      return _react2.default.createElement(
-	        "div",
-	        { className: "absolute-contact-background" },
+	        'div',
+	        { className: 'absolute-contact-background' },
 	        _react2.default.createElement(
-	          "div",
-	          { className: "upper-background-container" },
+	          'div',
+	          { className: 'upper-background-container' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "colored-square-wrapper" },
-	            _react2.default.createElement("div", { className: "blue-background-square" }),
-	            _react2.default.createElement("div", { className: "blue-background-square" }),
-	            _react2.default.createElement("div", { className: "blue-background-square" })
+	            'div',
+	            { className: 'colored-square-wrapper' },
+	            _react2.default.createElement('div', { className: 'blue-background-square' }),
+	            _react2.default.createElement('div', { className: 'blue-background-square' }),
+	            _react2.default.createElement('div', { className: 'blue-background-square' })
 	          )
 	        )
 	      );
@@ -40262,9 +40282,9 @@
 	
 	var _ContactLinks2 = _interopRequireDefault(_ContactLinks);
 	
-	var _BottomContactsContainer = __webpack_require__(291);
+	var _ContactBottomContainer = __webpack_require__(296);
 	
-	var _BottomContactsContainer2 = _interopRequireDefault(_BottomContactsContainer);
+	var _ContactBottomContainer2 = _interopRequireDefault(_ContactBottomContainer);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -40274,13 +40294,21 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
+	__webpack_require__(292);
+	
 	var ContactForeground = function (_React$Component) {
 	  _inherits(ContactForeground, _React$Component);
 	
-	  function ContactForeground() {
+	  function ContactForeground(props) {
 	    _classCallCheck(this, ContactForeground);
 	
-	    return _possibleConstructorReturn(this, (ContactForeground.__proto__ || Object.getPrototypeOf(ContactForeground)).call(this));
+	    var _this = _possibleConstructorReturn(this, (ContactForeground.__proto__ || Object.getPrototypeOf(ContactForeground)).call(this, props));
+	
+	    _this.state = {
+	      clicked: _this.props.clicked
+	    };
+	    _this.handleOnClick = _this.handleOnClick.bind(_this);
+	    return _this;
 	  }
 	
 	  _createClass(ContactForeground, [{
@@ -40299,7 +40327,7 @@
 	            'Click',
 	            _react2.default.createElement(
 	              'div',
-	              null,
+	              { onClick: this.handleOnClick },
 	              'color mode'
 	            ),
 	            'Here'
@@ -40314,8 +40342,26 @@
 	            '"Feel free to contact me. I\'m reachable on several social media platforms" --Lonnie McGill'
 	          )
 	        ),
-	        _react2.default.createElement(_BottomContactsContainer2.default, null)
+	        _react2.default.createElement(_ContactBottomContainer2.default, { clicked: this.state.clicked })
 	      );
+	    }
+	  }, {
+	    key: 'handleOnClick',
+	    value: function handleOnClick(event) {
+	      this.setState({
+	        clicked: "true"
+	      });
+	    }
+	  }, {
+	    key: 'componentDidUpdate',
+	    value: function componentDidUpdate(prevProps, prevState) {
+	      prevState.clicked !== this.state.clicked ? this.sendToContact() : null;
+	    }
+	  }, {
+	    key: 'sendToContact',
+	    value: function sendToContact() {
+	      var clickedStateChange = this.state.clicked;
+	      this.props.cbClickedChange(clickedStateChange);
 	    }
 	  }]);
 	
@@ -40390,7 +40436,88 @@
 	exports.default = ContactLinks;
 
 /***/ },
-/* 291 */
+/* 291 */,
+/* 292 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(293);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(240)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ContactUpperContainer.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ContactUpperContainer.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 293 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(239)();
+	// imports
+	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
+	
+	// module
+	exports.push([module.id, ".upper-contacts-container {\n  height: 10vh;\n  width: 100vw;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n  .upper-contacts-container div {\n    cursor: pointer;\n    font-size: 25px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    transition: 1s all ease; }\n    .upper-contacts-container div div {\n      margin-left: 5px;\n      margin-right: 5px;\n      height: 0px;\n      width: 0px;\n      background: linear-gradient(#d3d3d3, #e9e9e9);\n      border: 1px solid black;\n      border-radius: 50px;\n      font-size: 0px; }\n    .upper-contacts-container div:hover {\n      font-size: 10px;\n      transition: 2s all ease; }\n      .upper-contacts-container div:hover div {\n        margin-left: 5px;\n        margin-right: 5px;\n        height: 45px;\n        width: 45px;\n        background: linear-gradient(#d3d3d3, #e9e9e9);\n        border: 1px solid black;\n        border-radius: 50px;\n        font-size: 12px;\n        text-align: center; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 294 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(295);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(240)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ContactLinks.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ContactLinks.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 295 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(239)();
+	// imports
+	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
+	
+	// module
+	exports.push([module.id, ".contact-link-wrapper {\n  height: 5vh;\n  width: 500px;\n  display: flex;\n  align-items: flex-end;\n  justify-content: space-around;\n  position: absolute;\n  right: 0; }\n\n.home-contact-link {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .home-contact-link:hover {\n    color: #1874CD; }\n\n.about-contact-link {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .about-contact-link:hover {\n    color: #1874CD; }\n\n.projects-contact-link {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .projects-contact-link:hover {\n    color: #1874CD; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -40413,21 +40540,44 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var BottomContactsContainer = function (_React$Component) {
-	  _inherits(BottomContactsContainer, _React$Component);
+	var ContactBottomContainer = function (_React$Component) {
+	  _inherits(ContactBottomContainer, _React$Component);
 	
-	  function BottomContactsContainer() {
-	    _classCallCheck(this, BottomContactsContainer);
+	  function ContactBottomContainer(props) {
+	    _classCallCheck(this, ContactBottomContainer);
 	
-	    return _possibleConstructorReturn(this, (BottomContactsContainer.__proto__ || Object.getPrototypeOf(BottomContactsContainer)).call(this));
+	    var _this = _possibleConstructorReturn(this, (ContactBottomContainer.__proto__ || Object.getPrototypeOf(ContactBottomContainer)).call(this, props));
+	
+	    _this.state = {
+	      cbl: "colored-background-left",
+	      cbr: "colored-background-right"
+	    };
+	    _this.triggerBackgroundChange = _this.triggerBackgroundChange.bind(_this);
+	    return _this;
 	  }
 	
-	  _createClass(BottomContactsContainer, [{
+	  _createClass(ContactBottomContainer, [{
+	    key: "componentWillReceiveProps",
+	    value: function componentWillReceiveProps(nextProps) {
+	      console.log(this.props, nextProps);
+	      this.props !== nextProps ? this.triggerBackgroundChange() : null;
+	    }
+	  }, {
+	    key: "triggerBackgroundChange",
+	    value: function triggerBackgroundChange() {
+	      setTimeout(function contactStateUpdate() {
+	        this.setState({ cbl: "colored-background-left-change", cbr: "colored-background-right-change" });
+	      }.bind(this), 1000);
+	    }
+	  }, {
 	    key: "render",
 	    value: function render() {
+	      console.log('CBC:', this.props.clicked);
 	      return _react2.default.createElement(
 	        "div",
 	        { className: "bottom-contacts-conatiner" },
+	        _react2.default.createElement("div", { className: this.state.cbl }),
+	        _react2.default.createElement("div", { className: this.state.cbr }),
 	        _react2.default.createElement(
 	          "div",
 	          { className: "twitter-container" },
@@ -40465,10 +40615,10 @@
 	    }
 	  }]);
 	
-	  return BottomContactsContainer;
+	  return ContactBottomContainer;
 	}(_react2.default.Component);
 	
-	exports.default = BottomContactsContainer;
+	exports.default = ContactBottomContainer;
 
 /***/ }
 /******/ ]);

@@ -25,7 +25,6 @@ export default class AboutHeader extends React.Component {
 		setTimeout(function updateState() {
 			this.setState({class: "about-header-wrapper", class3: "mounted"})
 		}.bind(this), 1000);
-
 	}
 
 	render() {

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+
+
+.contact-link-wrapper{
+  height: 5vh;
+  width: 500px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  position: absolute;
+  right: 0;
+}
+
+.home-contact-link{
+  font-size: 20px;
+  font-family: 'PT Mono', monospace;
+  color: black;
+  text-decoration: none;
+  &:hover{
+    color: #1874CD;
+  }
+}
+
+.about-contact-link{
+  font-size: 20px;
+  font-family: 'PT Mono', monospace;
+  color: black;
+  text-decoration: none;
+  &:hover{
+    color: #1874CD;
+  }
+}
+
+.projects-contact-link{
+  font-size: 20px;
+  font-family: 'PT Mono', monospace;
+  color: black;
+  text-decoration: none;
+  &:hover{
+    color: #1874CD;
+  }
+}

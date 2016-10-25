@@ -2,11 +2,15 @@ import React from 'react';
 
 export default class ContactBackground extends React.Component{
 
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
+    this.state={
+      clicked: this.props.clicked
+    }
   }
 
   render(){
+    console.log('CB:', this.props.clicked);
     return(
 
       <div className="absolute-contact-background">
