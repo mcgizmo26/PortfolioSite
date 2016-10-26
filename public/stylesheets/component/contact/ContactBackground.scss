@@ -12,16 +12,16 @@
 
 // ***************** Upper Background Container *************
 .upper-background-container{
-  height: 55%;
-  width: 100%;
+  height: 55vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .colored-square-wrapper{
-  height: 20%;
-  width: 80%;
+  height: 20vh;
+  width: 80vw;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -29,8 +29,8 @@
 }
 
 .colored-square-wrapper-together{
-  height: 20%;
-  width: 10%;
+  height: 20vh;
+  width: 12vw;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -64,8 +64,8 @@
 // ***************** Visible state 1 ***************
 .red-background-square-1{
   z-index: 1;
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   border: 1px solid black;
   background-color: #00ACED;
   opacity: 0.4;
@@ -74,8 +74,8 @@
 
 .yellow-background-square-1{
   z-index: 1;
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   border: 1px solid black;
   transition-duration: 1s;
   background-color: #00ACED;
@@ -85,8 +85,8 @@
 
 .green-background-square-1{
   z-index: 1;
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   border: 1px solid black;
   transition-duration: 1s;
   background-color: #00ACED;
@@ -160,8 +160,8 @@
 
 @media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
   .colored-square-wrapper-together{
-    height: 20%;
-    width: 15%;
+    height: 20vh;
+    width: 15vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -172,8 +172,8 @@
 
 @media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {
   .colored-square-wrapper-together{
-    height: 20%;
-    width: 18%;
+    height: 20vh;
+    width: 18vw;
     display: flex;
     flex-direction: row;
     align-items: center;
