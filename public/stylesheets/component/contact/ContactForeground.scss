@@ -134,6 +134,8 @@
   position: absolute;
   background: linear-gradient(90deg, #3232ff, #ccccff 50%);
   transition: 2s width ease;
+  -webkit-transition: 2s width ease;
+  -moz-transition: 2s width ease;
 }
 
 .colored-background-right-change{
@@ -144,6 +146,8 @@
   position: absolute;
   background: linear-gradient(90deg, #ccccff  50%, #3232ff);
   transition: 2s width ease;
+  -webkit-transition: 2s width ease;
+  -moz-transition: 2s width ease;
 }
 
 

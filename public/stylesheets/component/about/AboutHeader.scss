@@ -62,6 +62,8 @@
     flex-direction: column;
     cursor: pointer;
     transition: all ease 1s;
+    -webkit-transition: all ease 1s;
+    -moz-transition: all ease 1s;
     span {
         width: 100%;
         div {
@@ -73,6 +75,8 @@
         height: 40px;
         width: 40px;
         transition: all ease 1s;
+        -webkit-transition: all ease 1s;
+        -moz-transition: all ease 1s;
     }
 }
 
@@ -94,6 +98,8 @@
     flex-direction: row;
     justify-content: space-around;
     transition: all ease 2s;
+    -webkit-transition: all ease 2s;
+    -moz-transition: all ease 2s;
 }
 
 .from-about-to-home-link {

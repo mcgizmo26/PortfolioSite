@@ -22,11 +22,11 @@ export default class Menu extends React.Component {
 					<div className={this.state.class1} onClick={this.handleClick}></div>
           <div className={this.state.class}>
             {this.state.modalVisible ? <div>
-            <Link className="about-link" to='/About'>
+            <Link className="menu-about-link" to='/About'>
             <ul>About</ul>
             </Link>
-            <Link className="projects-link" to='/Projects'>Projects</Link>
-            <Link className="contact-link">Contact Info</Link>
+            <Link className="menu-projects-link" to='/Projects'>Projects</Link>
+            <Link className="menu-contact-link">Contact Info</Link>
             </div> : null}
           </div>
 				</div>

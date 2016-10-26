@@ -27,9 +27,15 @@
     background-size: contain;
     background-repeat: no-repeat;
     transition: all ease 2s;
+    -webkit-transition: all ease 2s;
+    -moz-transition: all ease 2s;
     &:hover{
       transition: transform 1s;
+      -webkit-transition: transform 1s;
+      -moz-transition: transform 1s;
       transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
     }
   }
 
@@ -44,9 +50,15 @@
     background-size: contain;
     background-repeat: no-repeat;
     transition: all ease 2s;
+    -webkit-transition: all ease 2s;
+    -moz-transition: all ease 2s;
     &:hover{
       transition: transform 1s;
+      -webkit-transition: transform 1s;
+      -moz-transition: transform 1s;
       transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      -webkit-transform: rotate(-180deg);
     }
   }
 
@@ -55,6 +67,8 @@
     width:5px;
     font-size: 1px;
     transition: width 2s ease, height 2s ease;
+    -webkit-transition: width 2s ease, height 2s ease;
+    -moz-transition: width 2s ease, height 2s ease;
   }
 
   .menu-box{
@@ -64,6 +78,8 @@
     color: white;
     opacity: 0.8;
     transition: all 3s ease;
+    -webkit-transition: all 3s ease;
+    -moz-transition: all 3s ease;
     div{
       height: 400px;
       width:280px;
@@ -74,7 +90,7 @@
     }
   }
 
-  .about-link{
+  .menu-about-link{
     text-decoration: none;
     color: white;
     &:hover{
@@ -82,7 +98,7 @@
     }
   }
 
-  .projects-link{
+  .menu-projects-link{
     text-decoration: none;
     color: white;
     &:hover{
@@ -90,7 +106,7 @@
     }
   }
 
-  .contact-link{
+  .menu-contact-link{
     text-decoration: none;
     color: white;
     &:hover{

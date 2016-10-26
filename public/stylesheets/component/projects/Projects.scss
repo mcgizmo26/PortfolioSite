@@ -34,7 +34,9 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 2s all ease;
+  transition: all ease 2s;
+  -webkit-transition: all ease 2s;
+  -moz-transition: all ease 2s;
   div{
     font-size: 30px;
     font-family: 'PT Mono', monospace;
@@ -50,6 +52,8 @@ body{
   background-color: black;
   opacity: 0.5;
   transition: 1s all ease;
+  -webkit-transition: all ease 1s;
+  -moz-transition: all ease 1s;
 }
 
 .projects-quote-hidden{
@@ -86,6 +90,8 @@ body{
   font-family: 'PT Mono', monospace;
   color: white;
   transition: 5s all ease;
+  -webkit-transition: all ease 5s;
+  -moz-transition: all ease 5s;
 }
 
 @media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {

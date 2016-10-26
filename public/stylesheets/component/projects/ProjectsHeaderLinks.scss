@@ -16,6 +16,8 @@
   z-index: 3;
   position: fixed;
     transition: 3s all ease;
+    -webkit-transition: all ease 3s;
+    -moz-transition: all ease 3s;
 }
 
 
