@@ -40,3 +40,22 @@
     color: #1874CD;
   }
 }
+
+@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {
+
+  .contact-link-wrapper{
+    width: 300px;
+  }
+  
+  .home-contact-link{
+    font-size: 15px;
+  }
+
+  .about-contact-link{
+    font-size: 15px;
+  }
+
+  .projects-contact-link{
+    font-size: 15px;
+  }
+}

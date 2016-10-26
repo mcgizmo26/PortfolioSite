@@ -44,3 +44,19 @@
     }
   }
 }
+
+@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {
+
+  .upper-contacts-container{
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div{
+      cursor: pointer;
+      font-size: 20px;
+    }
+  }
+  
+}

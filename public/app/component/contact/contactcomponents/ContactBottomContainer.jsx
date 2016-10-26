@@ -41,7 +41,7 @@ export default class ContactBottomContainer extends React.Component{
         </div>
 
         <div className="linkedin-container">
-          <div className="linkedin-text">I'm also on
+          <div className="linkedin-text">I'm also on &nbsp;
             <div></div>
             so link with Lonnie McGill</div>
         </div>

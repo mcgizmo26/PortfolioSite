@@ -145,3 +145,125 @@
   background: linear-gradient(90deg, #ccccff  50%, #3232ff);
   transition: 2s width ease;
 }
+
+
+@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+
+
+  .twitter-container{
+    div{
+      font-size: 18px;
+      div{
+        height: 30px;
+        width: 40px;
+      }
+    }
+  }
+
+  .linkedin-container{
+    div{
+      font-size: 18px;
+      div{
+        background-image: url('/img/linkedinblue.png');
+        height: 30px;
+        width: 40px;
+      }
+    }
+  }
+
+  .email-container{
+    div{
+      font-size: 18px;
+      div{
+        background-image: url('/img/yahoopurple.png');
+        height: 50px;
+        width: 80px;
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 1400px) and (-webkit-min-device-pixel-ratio: 1) {
+
+  .middle-contacts-container{
+    div{
+      font-size: 18px;
+    }
+  }
+
+  .twitter-container{
+    div{
+      font-size: 15px;
+      div{
+        height: 20px;
+        width: 30px;
+      }
+    }
+  }
+
+  .linkedin-container{
+    div{
+      font-size: 15px;
+      div{
+        background-image: url('/img/linkedinblue.png');
+        height: 20px;
+        width: 30px;
+      }
+    }
+  }
+
+  .email-container{
+    div{
+      font-size: 15px;
+      div{
+        background-image: url('/img/yahoopurple.png');
+        height: 40px;
+        width: 70px;
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {
+
+  .middle-contacts-container{
+    div{
+      font-size: 18px;
+    }
+  }
+
+  .twitter-container{
+    div{
+      font-size: 13px;
+      div{
+        height: 20px;
+        width: 30px;
+      }
+    }
+  }
+
+  .linkedin-container{
+    div{
+      font-size: 13px;
+      div{
+        background-image: url('/img/linkedinblue.png');
+        height: 20px;
+        width: 30px;
+      }
+    }
+  }
+
+  .email-container{
+    div{
+      font-size: 13px;
+      div{
+        background-image: url('/img/yahoopurple.png');
+        height: 40px;
+        width: 70px;
+      }
+    }
+  }
+
+}

@@ -6,54 +6,178 @@
 .absolute-contact-background{
   height: 100vh;
   width: 100vw;
+  background-color: white;
   position: absolute;
 }
 
 // ***************** Upper Background Container *************
 .upper-background-container{
-  border-bottom: 2px solid black;
-  height: 55vh;
-  width: 100vw;
+  height: 55%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .colored-square-wrapper{
-  height: 20vh;
-  width: 80vh;
-  border: 2px solid black;
+  height: 20%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  div{
-    height: 0px;
-    width: 0px;
-    border: 1px solid black;
-  }
 }
 
-.colored-square-wrapper-big{
-  height: 20vh;
-  width: 80vh;
-  border: 2px solid black;
+.colored-square-wrapper-together{
+  height: 20%;
+  width: 10%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  div{
-    height: 80px;
-    width: 80px;
-    border: 1px solid black;
+  transition: 1s all ease;
+}
+
+// *************** hidden ******************
+
+.red-background-square-hidden{
+  z-index: -1;
+  height: 0px;
+  width: 0px;
+  border: 1px solid black;
+}
+
+.yellow-background-square-hidden{
+  z-index: -1;
+  height: 0px;
+  width: 0px;
+  border: 1px solid black;
+}
+
+.green-background-square-hidden{
+  z-index: -1;
+  height: 0px;
+  width: 0px;
+  border: none;
+}
+
+// ***************** Visible state 1 ***************
+.red-background-square-1{
+  z-index: 1;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  background-color: #00ACED;
+  opacity: 0.4;
+  transition-duration: 1s;
+}
+
+.yellow-background-square-1{
+  z-index: 1;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  transition-duration: 1s;
+  background-color: #00ACED;
+  opacity: 0.4;
+  transition-delay: 1s;
+}
+
+.green-background-square-1{
+  z-index: 1;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  transition-duration: 1s;
+  background-color: #00ACED;
+  opacity: 0.4;
+  transition-delay: 2s;
+}
+
+// ***************** Visible state 2 ***************
+.red-background-square-2{
+  height: 60px;
+  width: 60px;
+  border: 1px solid black;
+  transition-duration: 1s;
+  background-color: red;
+  opacity: 0.6;
+}
+
+.yellow-background-square-2{
+  height: 60px;
+  width: 60px;
+  border: 1px solid black;
+  transition-duration: 1s;
+  background-color: yellow;
+  opacity: 0.6;
+  transition-delay: 1s;
+}
+
+.green-background-square-2{
+  height: 60px;
+  width: 60px;
+  border: 1px solid black;
+  transition-duration: 1s;
+  background-color: green;
+  opacity: 0.6;
+  transition-delay: 2s;
+}
+
+// ***************** Visible state 3 ***************
+.red-background-square-3{
+  height: 60px;
+  width: 60px;
+  border: 0.5px solid black;
+  transition-duration: 1s;
+  background-color: red;
+  opacity: 0.6;
+  transition-delay:1s;
+  transform: rotate(45deg);
+}
+
+.yellow-background-square-3{
+  height: 60px;
+  width: 60px;
+  border: 0.5px solid black;
+  transition-duration: 1s;
+  background-color: yellow;
+  opacity: 0.6;
+  transition-delay: 2s;
+  transform: rotate(225deg);
+}
+
+.green-background-square-3{
+  height: 60px;
+  width: 60px;
+  border: 0.5px solid black;
+  transition-duration: 1s;
+  background-color: green;
+  opacity: 0.6;
+  transition-delay:1s;
+  transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .colored-square-wrapper-together{
+    height: 20%;
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    transition: 1s all ease;
   }
 }
 
-.colored-square-wrapper-transform{
-  div{
-    height: 60px;
-    width: 60px;
-    border: 1px solid black;
-    transform: rotate(45deg);
+@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {
+  .colored-square-wrapper-together{
+    height: 20%;
+    width: 18%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    transition: 1s all ease;
   }
 }
