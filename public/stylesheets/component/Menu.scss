@@ -2,13 +2,21 @@
   height: 20vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  display: -webkit-flex;
   justify-content: flex-end;
   position: relative;
 }
 
-.menu-container{
+.icon-container{
+  cursor: pointer;
   margin-top: 20px;
-  margin-right: 20px;
+  height: 70px;
+  width: 70px;
+}
+
+.menu-container{
   height: 500px;
   width:280px;
   position: relative;

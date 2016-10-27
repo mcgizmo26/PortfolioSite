@@ -27287,7 +27287,7 @@
 			_this.handleClick = _this.handleClick.bind(_this);
 			_this.state = {
 				class: "about-header-wrapper-hidden",
-				class2: "route-away-hidden"
+				class2: "lower-about-header-container-hidden"
 			};
 			return _this;
 		}
@@ -27309,14 +27309,13 @@
 			value: function render() {
 				return _react2.default.createElement(
 					'section',
-					null,
+					{ className: this.state.class },
 					_react2.default.createElement(
-						'div',
-						{ className: this.state.class },
-						_react2.default.createElement('span', { className: 'header-left-block' }),
+						'section',
+						{ className: 'upper-about-header-container' },
 						_react2.default.createElement(
 							'span',
-							{ className: 'header-mid-block' },
+							{ className: 'header-left-block' },
 							_react2.default.createElement(
 								'h1',
 								null,
@@ -27327,31 +27326,35 @@
 							'span',
 							{ className: 'header-right-block' },
 							_react2.default.createElement(
-								'section',
-								{ className: 'right-upper-box' },
+								'div',
+								{ className: 'about-menu-header-button', onClick: this.handleClick },
 								_react2.default.createElement(
 									'div',
-									{ className: 'about-menu-header-button', onClick: this.handleClick },
-									_react2.default.createElement(
-										'span',
-										null,
-										_react2.default.createElement('div', null)
-									),
-									_react2.default.createElement(
-										'span',
-										null,
-										_react2.default.createElement('div', null)
-									),
-									_react2.default.createElement(
-										'span',
-										null,
-										_react2.default.createElement('div', null)
-									)
+									{ className: 'button-piece' },
+									_react2.default.createElement('div', null)
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'button-piece' },
+									_react2.default.createElement('div', null)
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'button-piece' },
+									_react2.default.createElement('div', null)
 								)
-							),
+							)
+						)
+					),
+					_react2.default.createElement(
+						'section',
+						{ className: this.state.class2 },
+						_react2.default.createElement(
+							'span',
+							null,
 							_react2.default.createElement(
-								'section',
-								{ className: this.state.class2 },
+								'div',
+								null,
 								_react2.default.createElement(
 									_reactRouter.Link,
 									{ className: 'from-about-to-home-link', to: '/' },
@@ -27375,7 +27378,7 @@
 		}, {
 			key: 'handleClick',
 			value: function handleClick(event) {
-				this.state.class2 === "route-away-hidden" ? this.setState({ class2: "route-away" }) : this.setState({ class2: "route-away-hidden" });
+				this.state.class2 === "lower-about-header-container-hidden" ? this.setState({ class2: "lower-about-header-container" }) : this.setState({ class2: "lower-about-header-container-hidden" });
 			}
 		}]);
 	
@@ -27419,7 +27422,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
 	
 	// module
-	exports.push([module.id, ".about-header-wrapper-hidden {\n  height: 0.5px;\n  width: 0.5px;\n  background-color: black;\n  opacity: 0; }\n\n.about-header-wrapper {\n  height: 10vh;\n  width: 100%;\n  background-color: black;\n  opacity: 0.7;\n  transition: height ease 3s;\n  display: flex;\n  flex-direction: row;\n  position: fixed; }\n  .about-header-wrapper span {\n    height: 100%; }\n    .about-header-wrapper span h1 {\n      color: #fff;\n      font-size: 30px;\n      font-family: 'PT Mono', monospace; }\n\n.header-left-block {\n  width: 20%; }\n\n.header-mid-block {\n  width: 60%;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.header-right-block {\n  height: 100%;\n  width: 20%;\n  display: flex;\n  flex-direction: column; }\n\n.right-upper-box {\n  align-items: center;\n  height: 50px;\n  display: flex;\n  justify-content: flex-end;\n  flex-direction: row; }\n\n.about-menu-header-button {\n  cursor: pointer;\n  margin-right: 10px;\n  height: 30px;\n  width: 30px;\n  display: flex;\n  flex-direction: column;\n  cursor: pointer;\n  transition: all ease 1s;\n  -webkit-transition: all ease 1s;\n  -moz-transition: all ease 1s; }\n  .about-menu-header-button span {\n    width: 100%; }\n    .about-menu-header-button span div {\n      border: 2px solid grey; }\n  .about-menu-header-button:hover {\n    margin-top: 20px;\n    height: 40px;\n    width: 40px;\n    transition: all ease 1s;\n    -webkit-transition: all ease 1s;\n    -moz-transition: all ease 1s; }\n\n.route-away-hidden {\n  height: 1px;\n  width: 1px;\n  opacity: 0; }\n\n.route-away {\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  height: 50%;\n  width: 100%;\n  display: flex;\n  align-items: flex-end;\n  flex-direction: row;\n  justify-content: space-around;\n  transition: all ease 2s;\n  -webkit-transition: all ease 2s;\n  -moz-transition: all ease 2s; }\n\n.from-about-to-home-link {\n  color: #fff;\n  text-decoration: none;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace; }\n  .from-about-to-home-link:hover {\n    color: #ffff99; }\n\n.from-about-to-projects-link {\n  color: #fff;\n  text-decoration: none;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace; }\n  .from-about-to-projects-link:hover {\n    color: #ffff99; }\n\n.from-about-to-contact-link {\n  color: #fff;\n  text-decoration: none;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace; }\n  .from-about-to-contact-link:hover {\n    color: #ffff99; }\n\n@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  .about-header-wrapper span h1 {\n    margin-top: -10px; }\n  .header-left-block {\n    width: 20%; }\n  .header-right-block {\n    height: 100%;\n    width: 20%;\n    display: flex;\n    flex-direction: column; }\n  .header-mid-block {\n    width: 60%;\n    display: flex;\n    justify-content: center;\n    align-items: center; } }\n", ""]);
+	exports.push([module.id, ".about-header-wrapper-hidden {\n  height: 0vh;\n  width: 0vw;\n  background-color: black;\n  opacity: 0; }\n\n.about-header-wrapper {\n  position: relative;\n  height: 10vh;\n  width: 100%;\n  background-color: black;\n  opacity: 0.7;\n  transition: height ease 3s;\n  -webkit-transition: height ease 3s;\n  -moz-transition: height ease 3s; }\n\n.upper-about-header-container {\n  height: 70%;\n  width: 100%;\n  display: flex;\n  flex-direction: row; }\n\n.header-left-block {\n  height: 100%;\n  width: 95%;\n  display: flex;\n  justify-content: center;\n  align-items: flex-end; }\n  .header-left-block h1 {\n    margin: 0;\n    color: #fff;\n    font-size: 30px;\n    font-family: 'PT Mono', monospace; }\n\n.header-right-block {\n  height: 100%;\n  width: 5%;\n  display: flex;\n  align-items: flex-end;\n  flex-direction: column; }\n\n.about-menu-header-button {\n  cursor: pointer;\n  margin-top: 10px;\n  margin-right: 10px;\n  height: 30px;\n  width: 30px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  cursor: pointer;\n  transition: all ease 1s;\n  -webkit-transition: all ease 1s;\n  -moz-transition: all ease 1s; }\n  .about-menu-header-button:hover {\n    height: 40px;\n    width: 40px;\n    transition: all ease 1s;\n    -webkit-transition: all ease 1s;\n    -moz-transition: all ease 1s; }\n\n.button-piece {\n  width: 100%; }\n  .button-piece div {\n    border: 2px solid grey; }\n\n.lower-about-header-container-hidden {\n  right: 0;\n  height: 1%;\n  width: 1%;\n  opacity: 0;\n  color: black;\n  font-size: 1px;\n  position: fixed;\n  transition: all ease 2s;\n  -webkit-transition: all ease 2s;\n  -moz-transition: all ease 2s; }\n\n.lower-about-header-container {\n  right: 0;\n  height: 30%;\n  width: 100%;\n  font-size: 20px;\n  position: absolute;\n  transition: all ease 2s;\n  -webkit-transition: all ease 2s;\n  -moz-transition: all ease 2s; }\n  .lower-about-header-container div {\n    right: 0;\n    height: 100%;\n    width: 100%;\n    display: flex;\n    align-items: flex-end;\n    flex-direction: row;\n    justify-content: space-around;\n    position: absolute; }\n\n.from-about-to-home-link {\n  color: #fff;\n  text-decoration: none;\n  font-family: 'PT Mono', monospace; }\n  .from-about-to-home-link:hover {\n    color: #ffff99; }\n\n.from-about-to-projects-link {\n  color: #fff;\n  text-decoration: none;\n  font-family: 'PT Mono', monospace; }\n  .from-about-to-projects-link:hover {\n    color: #ffff99; }\n\n.from-about-to-contact-link {\n  color: #fff;\n  text-decoration: none;\n  font-family: 'PT Mono', monospace; }\n  .from-about-to-contact-link:hover {\n    color: #ffff99; }\n", ""]);
 	
 	// exports
 
@@ -29272,8 +29275,12 @@
 	        { className: 'menu-wrapper' },
 	        _react2.default.createElement(
 	          'div',
+	          { className: 'icon-container' },
+	          _react2.default.createElement('div', { className: this.state.class1, onClick: this.handleClick })
+	        ),
+	        _react2.default.createElement(
+	          'div',
 	          { className: 'menu-container' },
-	          _react2.default.createElement('div', { className: this.state.class1, onClick: this.handleClick }),
 	          _react2.default.createElement(
 	            'div',
 	            { className: this.state.class },
@@ -29363,7 +29370,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".menu-wrapper {\n  height: 20vh;\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;\n  position: relative; }\n\n.menu-container {\n  margin-top: 20px;\n  margin-right: 20px;\n  height: 500px;\n  width: 280px;\n  position: relative;\n  display: flex;\n  justify-content: flex-end;\n  cursor: pointer; }\n\n.icon {\n  position: fixed;\n  z-index: 1;\n  height: 50px;\n  width: 50px;\n  border-radius: 50%;\n  background-image: url(\"/img/menu2.png\");\n  background-size: contain;\n  background-repeat: no-repeat;\n  transition: all ease 2s;\n  -webkit-transition: all ease 2s;\n  -moz-transition: all ease 2s; }\n  .icon:hover {\n    transition: transform 1s;\n    -webkit-transition: transform 1s;\n    -moz-transition: transform 1s;\n    transform: rotate(180deg);\n    -ms-transform: rotate(180deg);\n    -webkit-transform: rotate(180deg); }\n\n.icon-clicked {\n  position: fixed;\n  opacity: 0.5;\n  z-index: 1;\n  height: 50px;\n  width: 50px;\n  border-radius: 50%;\n  background-image: url(\"/img/menu2.png\");\n  background-size: contain;\n  background-repeat: no-repeat;\n  transition: all ease 2s;\n  -webkit-transition: all ease 2s;\n  -moz-transition: all ease 2s; }\n  .icon-clicked:hover {\n    transition: transform 1s;\n    -webkit-transition: transform 1s;\n    -moz-transition: transform 1s;\n    transform: rotate(-180deg);\n    -ms-transform: rotate(-180deg);\n    -webkit-transform: rotate(-180deg); }\n\n.menu-box-hidden {\n  height: 5px;\n  width: 5px;\n  font-size: 1px;\n  transition: width 2s ease, height 2s ease;\n  -webkit-transition: width 2s ease, height 2s ease;\n  -moz-transition: width 2s ease, height 2s ease; }\n\n.menu-box {\n  height: 400px;\n  width: 280px;\n  font-size: 30px;\n  color: white;\n  opacity: 0.8;\n  transition: all 3s ease;\n  -webkit-transition: all 3s ease;\n  -moz-transition: all 3s ease; }\n  .menu-box div {\n    height: 400px;\n    width: 280px;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center; }\n\n.menu-about-link {\n  text-decoration: none;\n  color: white; }\n  .menu-about-link:hover {\n    color: #ffff99; }\n\n.menu-projects-link {\n  text-decoration: none;\n  color: white; }\n  .menu-projects-link:hover {\n    color: #ffff99; }\n\n.menu-contact-link {\n  text-decoration: none;\n  color: white; }\n  .menu-contact-link:hover {\n    color: #ffff99; }\n", ""]);
+	exports.push([module.id, ".menu-wrapper {\n  height: 20vh;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-end;\n  display: -webkit-flex;\n  justify-content: flex-end;\n  position: relative; }\n\n.icon-container {\n  cursor: pointer;\n  margin-top: 20px;\n  height: 70px;\n  width: 70px; }\n\n.menu-container {\n  height: 500px;\n  width: 280px;\n  position: relative;\n  display: flex;\n  justify-content: flex-end;\n  cursor: pointer; }\n\n.icon {\n  position: fixed;\n  z-index: 1;\n  height: 50px;\n  width: 50px;\n  border-radius: 50%;\n  background-image: url(\"/img/menu2.png\");\n  background-size: contain;\n  background-repeat: no-repeat;\n  transition: all ease 2s;\n  -webkit-transition: all ease 2s;\n  -moz-transition: all ease 2s; }\n  .icon:hover {\n    transition: transform 1s;\n    -webkit-transition: transform 1s;\n    -moz-transition: transform 1s;\n    transform: rotate(180deg);\n    -ms-transform: rotate(180deg);\n    -webkit-transform: rotate(180deg); }\n\n.icon-clicked {\n  position: fixed;\n  opacity: 0.5;\n  z-index: 1;\n  height: 50px;\n  width: 50px;\n  border-radius: 50%;\n  background-image: url(\"/img/menu2.png\");\n  background-size: contain;\n  background-repeat: no-repeat;\n  transition: all ease 2s;\n  -webkit-transition: all ease 2s;\n  -moz-transition: all ease 2s; }\n  .icon-clicked:hover {\n    transition: transform 1s;\n    -webkit-transition: transform 1s;\n    -moz-transition: transform 1s;\n    transform: rotate(-180deg);\n    -ms-transform: rotate(-180deg);\n    -webkit-transform: rotate(-180deg); }\n\n.menu-box-hidden {\n  height: 5px;\n  width: 5px;\n  font-size: 1px;\n  transition: width 2s ease, height 2s ease;\n  -webkit-transition: width 2s ease, height 2s ease;\n  -moz-transition: width 2s ease, height 2s ease; }\n\n.menu-box {\n  height: 400px;\n  width: 280px;\n  font-size: 30px;\n  color: white;\n  opacity: 0.8;\n  transition: all 3s ease;\n  -webkit-transition: all 3s ease;\n  -moz-transition: all 3s ease; }\n  .menu-box div {\n    height: 400px;\n    width: 280px;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center; }\n\n.menu-about-link {\n  text-decoration: none;\n  color: white; }\n  .menu-about-link:hover {\n    color: #ffff99; }\n\n.menu-projects-link {\n  text-decoration: none;\n  color: white; }\n  .menu-projects-link:hover {\n    color: #ffff99; }\n\n.menu-contact-link {\n  text-decoration: none;\n  color: white; }\n  .menu-contact-link:hover {\n    color: #ffff99; }\n", ""]);
 	
 	// exports
 

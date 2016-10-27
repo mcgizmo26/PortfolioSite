@@ -1,77 +1,70 @@
 @import url( 'https://fonts.googleapis.com/css?family=PT+Mono');
 
 .about-header-wrapper-hidden {
-    height: 0.5px;
-    width: 0.5px;
+    height: 0vh;
+    width: 0vw;
     background-color: black;
     opacity: 0;
 }
 
 .about-header-wrapper {
+    position: relative;
     height: 10vh;
     width: 100%;
     background-color: black;
     opacity: 0.7;
     transition: height ease 3s;
-    display: flex;
-    flex-direction: row;
-    position: fixed;
+    -webkit-transition: height ease 3s;
+    -moz-transition: height ease 3s;
+}
 
-    span {
+
+// ***************** Upper Section *******************
+
+.upper-about-header-container{
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.header-left-block{
         height: 100%;
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
         h1 {
+            margin: 0;
             color: #fff;
             font-size: 30px;
             font-family: 'PT Mono', monospace;
         }
     }
-}
 
-.header-left-block{
-  width: 20%;
-}
-
-.header-mid-block {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-// ************* Right Section **************
 .header-right-block {
     height: 100%;
-    width: 20%;
+    width: 5%;
     display: flex;
+    align-items: flex-end;
     flex-direction: column;
 }
 // *************** Button Area ***************
-.right-upper-box {
-    align-items: center;
-    height: 50px;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-}
 
 .about-menu-header-button {
     cursor: pointer;
+    margin-top: 10px;
     margin-right: 10px;
     height: 30px;
     width: 30px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     cursor: pointer;
     transition: all ease 1s;
     -webkit-transition: all ease 1s;
     -moz-transition: all ease 1s;
-    span {
-        width: 100%;
-        div {
-            border: 2px solid grey;
-        }
-    }
     &:hover {
-        margin-top: 20px;
         height: 40px;
         width: 40px;
         transition: all ease 1s;
@@ -80,32 +73,53 @@
     }
 }
 
-// *************** Link Section ************
-.route-away-hidden {
-    height: 1px;
-    width: 1px;
-    opacity: 0;
+.button-piece {
+    width: 100%;
+    div {
+        border: 2px solid grey;
+    }
 }
 
-.route-away {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 50%;
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: row;
-    justify-content: space-around;
-    transition: all ease 2s;
-    -webkit-transition: all ease 2s;
-    -moz-transition: all ease 2s;
+// *************** Lower Section ************
+
+.lower-about-header-container-hidden{
+  right: 0;
+  height: 1%;
+  width: 1%;
+  opacity: 0;
+  color: black;
+  font-size: 1px;
+  position: fixed;
+  transition: all ease 2s;
+  -webkit-transition: all ease 2s;
+  -moz-transition: all ease 2s;
+}
+
+
+.lower-about-header-container{
+  right: 0;
+  height: 30%;
+  width: 100%;
+  font-size: 20px;
+  position: absolute;
+  transition: all ease 2s;
+  -webkit-transition: all ease 2s;
+  -moz-transition: all ease 2s;
+    div{
+      right: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: row;
+      justify-content: space-around;
+      position: absolute;
+  }
 }
 
 .from-about-to-home-link {
     color: #fff;
     text-decoration: none;
-    font-size: 20px;
     font-family: 'PT Mono', monospace;
 
     &:hover {
@@ -116,7 +130,6 @@
 .from-about-to-projects-link {
     color: #fff;
     text-decoration: none;
-    font-size: 20px;
     font-family: 'PT Mono', monospace;
 
     &:hover {
@@ -127,43 +140,14 @@
 .from-about-to-contact-link {
     color: #fff;
     text-decoration: none;
-    font-size: 20px;
     font-family: 'PT Mono', monospace;
 
     &:hover {
         color: #ffff99;
     }
 }
-
 // ******************* Laptop Screens *****************
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 
-@media screen
-  and (min-device-width: 1200px)
-  and (max-device-width: 1600px)
-  and (-webkit-min-device-pixel-ratio: 1) {
 
-    .about-header-wrapper{
-      span{
-        h1{
-          margin-top: -10px;
-        }
-      }
-    }
-
-    .header-left-block{
-      width: 20%;
-    }
-
-    .header-right-block {
-        height: 100%;
-        width: 20%;
-        display: flex;
-        flex-direction: column;
-    }
-    .header-mid-block {
-      width:60%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 }
