@@ -74,15 +74,15 @@
 	
 	var _Contact2 = _interopRequireDefault(_Contact);
 	
-	var _Ecommerce = __webpack_require__(252);
+	var _Ecommerce = __webpack_require__(260);
 	
 	var _Ecommerce2 = _interopRequireDefault(_Ecommerce);
 	
-	var _Fakebook = __webpack_require__(253);
+	var _Fakebook = __webpack_require__(261);
 	
 	var _Fakebook2 = _interopRequireDefault(_Fakebook);
 	
-	var _Financial = __webpack_require__(254);
+	var _Financial = __webpack_require__(262);
 	
 	var _Financial2 = _interopRequireDefault(_Financial);
 	
@@ -90,15 +90,15 @@
 	
 	var _PersonalFacts2 = _interopRequireDefault(_PersonalFacts);
 	
-	var _Portfolio = __webpack_require__(255);
+	var _Portfolio = __webpack_require__(263);
 	
 	var _Portfolio2 = _interopRequireDefault(_Portfolio);
 	
-	var _HomePage = __webpack_require__(256);
+	var _HomePage = __webpack_require__(264);
 	
 	var _HomePage2 = _interopRequireDefault(_HomePage);
 	
-	var _Projects = __webpack_require__(265);
+	var _Projects = __webpack_require__(273);
 	
 	var _Projects2 = _interopRequireDefault(_Projects);
 	
@@ -114,12 +114,12 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(278);
-	__webpack_require__(280);
-	__webpack_require__(282);
-	__webpack_require__(284);
-	
 	__webpack_require__(286);
+	__webpack_require__(288);
+	__webpack_require__(290);
+	__webpack_require__(292);
+	
+	__webpack_require__(294);
 	
 	var PortfolioApp = function (_React$Component) {
 		_inherits(PortfolioApp, _React$Component);
@@ -28200,11 +28200,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ContactBackground = __webpack_require__(288);
+	var _ContactBackground = __webpack_require__(248);
 	
 	var _ContactBackground2 = _interopRequireDefault(_ContactBackground);
 	
-	var _ContactForeground = __webpack_require__(289);
+	var _ContactForeground = __webpack_require__(249);
 	
 	var _ContactForeground2 = _interopRequireDefault(_ContactForeground);
 	
@@ -28216,10 +28216,10 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(250);
-	__webpack_require__(248);
-	__webpack_require__(294);
-	__webpack_require__(292);
+	__webpack_require__(254);
+	__webpack_require__(256);
+	__webpack_require__(258);
+	__webpack_require__(252);
 	
 	var Contact = function (_React$Component) {
 	  _inherits(Contact, _React$Component);
@@ -28263,10 +28263,375 @@
 /* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var ContactBackground = function (_React$Component) {
+	  _inherits(ContactBackground, _React$Component);
+	
+	  function ContactBackground(props) {
+	    _classCallCheck(this, ContactBackground);
+	
+	    var _this = _possibleConstructorReturn(this, (ContactBackground.__proto__ || Object.getPrototypeOf(ContactBackground)).call(this, props));
+	
+	    _this.state = {
+	      clicked: _this.props.clicked,
+	      bbs: "red-background-square-hidden",
+	      ybs: "yellow-background-square-hidden",
+	      gbs: "green-background-square-hidden",
+	      csw: "colored-square-wrapper"
+	    };
+	    return _this;
+	  }
+	
+	  _createClass(ContactBackground, [{
+	    key: "componentWillReceiveProps",
+	    value: function componentWillReceiveProps(nextProps) {
+	      console.log(this.props, nextProps);
+	      this.props !== nextProps ? this.triggerSquareToDiamond() : null;
+	    }
+	  }, {
+	    key: "triggerSquareToDiamond",
+	    value: function triggerSquareToDiamond() {
+	      setTimeout(function contactShapeUpdate() {
+	        this.setState({ bbs: "red-background-square-1", ybs: "yellow-background-square-1", gbs: "green-background-square-1" });
+	      }.bind(this), 1000);
+	      setTimeout(function contactShapeUpdate2() {
+	        this.setState({ bbs: "red-background-square-2", ybs: "yellow-background-square-2", gbs: "green-background-square-2" });
+	      }.bind(this), 3500);
+	      setTimeout(function contactShapeUpdate2() {
+	        this.setState({ csw: "colored-square-wrapper-together", bbs: "red-background-square-3", ybs: "yellow-background-square-3", gbs: "green-background-square-3" });
+	      }.bind(this), 6000);
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      console.log('CB:', this.props.clicked);
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "absolute-contact-background" },
+	        _react2.default.createElement(
+	          "div",
+	          { className: "upper-background-container" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: this.state.csw },
+	            _react2.default.createElement("div", { className: this.state.bbs }),
+	            _react2.default.createElement("div", { className: this.state.ybs }),
+	            _react2.default.createElement("div", { className: this.state.gbs })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return ContactBackground;
+	}(_react2.default.Component);
+	
+	exports.default = ContactBackground;
+
+/***/ },
+/* 249 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _ContactLinks = __webpack_require__(250);
+	
+	var _ContactLinks2 = _interopRequireDefault(_ContactLinks);
+	
+	var _ContactBottomContainer = __webpack_require__(251);
+	
+	var _ContactBottomContainer2 = _interopRequireDefault(_ContactBottomContainer);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	__webpack_require__(252);
+	
+	var ContactForeground = function (_React$Component) {
+	  _inherits(ContactForeground, _React$Component);
+	
+	  function ContactForeground(props) {
+	    _classCallCheck(this, ContactForeground);
+	
+	    var _this = _possibleConstructorReturn(this, (ContactForeground.__proto__ || Object.getPrototypeOf(ContactForeground)).call(this, props));
+	
+	    _this.state = {
+	      clicked: _this.props.clicked
+	    };
+	    _this.handleOnClick = _this.handleOnClick.bind(_this);
+	    return _this;
+	  }
+	
+	  _createClass(ContactForeground, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'contact-foreground' },
+	        _react2.default.createElement(_ContactLinks2.default, null),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'upper-contacts-container' },
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            'Click',
+	            _react2.default.createElement(
+	              'div',
+	              { onClick: this.handleOnClick },
+	              'color mode'
+	            ),
+	            'Here'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'middle-contacts-container' },
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            '"Feel free to contact me. I\'m reachable on several social media platforms" --Lonnie McGill'
+	          )
+	        ),
+	        _react2.default.createElement(_ContactBottomContainer2.default, { clicked: this.state.clicked })
+	      );
+	    }
+	  }, {
+	    key: 'handleOnClick',
+	    value: function handleOnClick(event) {
+	      this.setState({
+	        clicked: "true"
+	      });
+	    }
+	  }, {
+	    key: 'componentDidUpdate',
+	    value: function componentDidUpdate(prevProps, prevState) {
+	      prevState.clicked !== this.state.clicked ? this.sendToContact() : null;
+	    }
+	  }, {
+	    key: 'sendToContact',
+	    value: function sendToContact() {
+	      var clickedStateChange = this.state.clicked;
+	      this.props.cbClickedChange(clickedStateChange);
+	    }
+	  }]);
+	
+	  return ContactForeground;
+	}(_react2.default.Component);
+	
+	exports.default = ContactForeground;
+
+/***/ },
+/* 250 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(172);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var ContactLinks = function (_React$Component) {
+	  _inherits(ContactLinks, _React$Component);
+	
+	  function ContactLinks() {
+	    _classCallCheck(this, ContactLinks);
+	
+	    return _possibleConstructorReturn(this, (ContactLinks.__proto__ || Object.getPrototypeOf(ContactLinks)).apply(this, arguments));
+	  }
+	
+	  _createClass(ContactLinks, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'contact-link-wrapper' },
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: '/', className: 'home-contact-link' },
+	          'Home'
+	        ),
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: '/about', className: 'about-contact-link' },
+	          'About'
+	        ),
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: '/projects', className: 'projects-contact-link' },
+	          'Projects'
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return ContactLinks;
+	}(_react2.default.Component);
+	
+	exports.default = ContactLinks;
+
+/***/ },
+/* 251 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var ContactBottomContainer = function (_React$Component) {
+	  _inherits(ContactBottomContainer, _React$Component);
+	
+	  function ContactBottomContainer(props) {
+	    _classCallCheck(this, ContactBottomContainer);
+	
+	    var _this = _possibleConstructorReturn(this, (ContactBottomContainer.__proto__ || Object.getPrototypeOf(ContactBottomContainer)).call(this, props));
+	
+	    _this.state = {
+	      cbl: "colored-background-left",
+	      cbr: "colored-background-right"
+	    };
+	    _this.triggerBackgroundChange = _this.triggerBackgroundChange.bind(_this);
+	    return _this;
+	  }
+	
+	  _createClass(ContactBottomContainer, [{
+	    key: "componentWillReceiveProps",
+	    value: function componentWillReceiveProps(nextProps) {
+	      console.log(this.props, nextProps);
+	      this.props !== nextProps ? this.triggerBackgroundChange() : null;
+	    }
+	  }, {
+	    key: "triggerBackgroundChange",
+	    value: function triggerBackgroundChange() {
+	      setTimeout(function contactStateUpdate() {
+	        this.setState({ cbl: "colored-background-left-change", cbr: "colored-background-right-change" });
+	      }.bind(this), 1000);
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      console.log('CBC:', this.props.clicked);
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "bottom-contacts-conatiner" },
+	        _react2.default.createElement("div", { className: this.state.cbl }),
+	        _react2.default.createElement("div", { className: this.state.cbr }),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "twitter-container" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "twitter-text" },
+	            "Follow me on \xA0",
+	            _react2.default.createElement("div", null),
+	            "\xA0@26Mcgizmo"
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "linkedin-container" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "linkedin-text" },
+	            "I'm also on \xA0",
+	            _react2.default.createElement("div", null),
+	            "so link with Lonnie McGill"
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "email-container" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "twitter-text" },
+	            "If you'd like to e-mail me. I'm on \xA0",
+	            _react2.default.createElement("div", null),
+	            "\xA0 It's mcgizmo_26@yahoo.com"
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return ContactBottomContainer;
+	}(_react2.default.Component);
+	
+	exports.default = ContactBottomContainer;
+
+/***/ },
+/* 252 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(249);
+	var content = __webpack_require__(253);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(240)(content, {});
@@ -28275,8 +28640,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ContactForeground.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ContactForeground.scss");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ContactUpperContainer.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ContactUpperContainer.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -28286,7 +28651,7 @@
 	}
 
 /***/ },
-/* 249 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(239)();
@@ -28294,19 +28659,19 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
 	
 	// module
-	exports.push([module.id, ".contact-foreground {\n  top: 0;\n  height: 100vh;\n  width: 100vw;\n  position: fixed;\n  background-color: transparent; }\n\n.middle-contacts-container {\n  height: 45vh;\n  width: 100vw;\n  border-bottom: 1px solid gray;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n  .middle-contacts-container div {\n    margin-top: -10vh;\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    color: black; }\n\n.bottom-contacts-conatiner {\n  height: 45vh;\n  width: 100vw;\n  display: flex;\n  flex-direction: row;\n  position: relative; }\n\n.colored-background-left {\n  z-index: -1;\n  height: 45vh;\n  width: 0vw;\n  position: absolute; }\n\n.colored-background-right {\n  right: 0;\n  z-index: -1;\n  height: 45vh;\n  width: 0vw;\n  position: absolute; }\n\n.twitter-container {\n  height: 100%;\n  width: 33.33%;\n  border-right: 0.5px solid gray;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .twitter-container div {\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center; }\n    .twitter-container div div {\n      background-image: url(\"/img/twitterblue.png\");\n      height: 30px;\n      width: 40px;\n      background-size: contain;\n      background-repeat: no-repeat; }\n\n.linkedin-container {\n  height: 100%;\n  width: 33.33%;\n  border-right: 0.5px solid gray;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .linkedin-container div {\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center; }\n    .linkedin-container div div {\n      background-image: url(\"/img/linkedinblue.png\");\n      height: 30px;\n      width: 40px;\n      background-size: contain;\n      background-repeat: no-repeat; }\n\n.email-container {\n  height: 100%;\n  width: 33.33%;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .email-container div {\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    flex-wrap: wrap; }\n    .email-container div div {\n      background-image: url(\"/img/yahoopurple.png\");\n      height: 60px;\n      width: 90px;\n      background-size: contain;\n      background-repeat: no-repeat; }\n\n.colored-background-left-change {\n  z-index: -1;\n  height: 45vh;\n  width: 50vw;\n  position: absolute;\n  background: linear-gradient(90deg, #3232ff, #ccccff 50%);\n  transition: 2s width ease;\n  -webkit-transition: 2s width ease;\n  -moz-transition: 2s width ease; }\n\n.colored-background-right-change {\n  right: 0;\n  z-index: -1;\n  height: 45vh;\n  width: 50vw;\n  position: absolute;\n  background: linear-gradient(90deg, #ccccff 50%, #3232ff);\n  transition: 2s width ease;\n  -webkit-transition: 2s width ease;\n  -moz-transition: 2s width ease; }\n\n@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  .twitter-container div {\n    font-size: 18px; }\n    .twitter-container div div {\n      height: 30px;\n      width: 40px; }\n  .linkedin-container div {\n    font-size: 18px; }\n    .linkedin-container div div {\n      background-image: url(\"/img/linkedinblue.png\");\n      height: 30px;\n      width: 40px; }\n  .email-container div {\n    font-size: 18px; }\n    .email-container div div {\n      background-image: url(\"/img/yahoopurple.png\");\n      height: 50px;\n      width: 80px; } }\n\n@media only screen and (max-width: 1400px) and (-webkit-min-device-pixel-ratio: 1) {\n  .middle-contacts-container div {\n    font-size: 18px; }\n  .twitter-container div {\n    font-size: 15px; }\n    .twitter-container div div {\n      height: 20px;\n      width: 30px; }\n  .linkedin-container div {\n    font-size: 15px; }\n    .linkedin-container div div {\n      background-image: url(\"/img/linkedinblue.png\");\n      height: 20px;\n      width: 30px; }\n  .email-container div {\n    font-size: 15px; }\n    .email-container div div {\n      background-image: url(\"/img/yahoopurple.png\");\n      height: 40px;\n      width: 70px; } }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  .middle-contacts-container div {\n    font-size: 18px; }\n  .twitter-container div {\n    font-size: 13px; }\n    .twitter-container div div {\n      height: 20px;\n      width: 30px; }\n  .linkedin-container div {\n    font-size: 13px; }\n    .linkedin-container div div {\n      background-image: url(\"/img/linkedinblue.png\");\n      height: 20px;\n      width: 30px; }\n  .email-container div {\n    font-size: 13px; }\n    .email-container div div {\n      background-image: url(\"/img/yahoopurple.png\");\n      height: 40px;\n      width: 70px; } }\n", ""]);
+	exports.push([module.id, ".upper-contacts-container {\n  height: 10vh;\n  width: 100vw;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n  .upper-contacts-container div {\n    cursor: pointer;\n    font-size: 25px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    transition: 1s all ease; }\n    .upper-contacts-container div div {\n      margin-left: 5px;\n      margin-right: 5px;\n      height: 0px;\n      width: 0px;\n      background: linear-gradient(#d3d3d3, #e9e9e9);\n      border: 1px solid black;\n      border-radius: 50px;\n      font-size: 0px; }\n    .upper-contacts-container div:hover {\n      font-size: 10px;\n      transition: 2s all ease; }\n      .upper-contacts-container div:hover div {\n        margin-left: 5px;\n        margin-right: 5px;\n        height: 45px;\n        width: 45px;\n        background: linear-gradient(#d3d3d3, #e9e9e9);\n        border: 1px solid black;\n        border-radius: 50px;\n        font-size: 12px;\n        text-align: center; }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  .upper-contacts-container {\n    height: 10vh;\n    width: 100vw;\n    display: flex;\n    align-items: center;\n    justify-content: center; }\n    .upper-contacts-container div {\n      cursor: pointer;\n      font-size: 20px; } }\n", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 250 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(251);
+	var content = __webpack_require__(255);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(240)(content, {});
@@ -28326,7 +28691,7 @@
 	}
 
 /***/ },
-/* 251 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(239)();
@@ -28340,7 +28705,87 @@
 
 
 /***/ },
-/* 252 */
+/* 256 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(257);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(240)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ContactForeground.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ContactForeground.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 257 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(239)();
+	// imports
+	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
+	
+	// module
+	exports.push([module.id, ".contact-foreground {\n  top: 0;\n  height: 100vh;\n  width: 100vw;\n  position: fixed;\n  background-color: transparent; }\n\n.middle-contacts-container {\n  height: 45vh;\n  width: 100vw;\n  border-bottom: 1px solid gray;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n  .middle-contacts-container div {\n    margin-top: -10vh;\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    color: black; }\n\n.bottom-contacts-conatiner {\n  height: 45vh;\n  width: 100vw;\n  display: flex;\n  flex-direction: row;\n  position: relative; }\n\n.colored-background-left {\n  z-index: -1;\n  height: 45vh;\n  width: 0vw;\n  position: absolute; }\n\n.colored-background-right {\n  right: 0;\n  z-index: -1;\n  height: 45vh;\n  width: 0vw;\n  position: absolute; }\n\n.twitter-container {\n  height: 100%;\n  width: 33.33%;\n  border-right: 0.5px solid gray;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .twitter-container div {\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center; }\n    .twitter-container div div {\n      background-image: url(\"/img/twitterblue.png\");\n      height: 30px;\n      width: 40px;\n      background-size: contain;\n      background-repeat: no-repeat; }\n\n.linkedin-container {\n  height: 100%;\n  width: 33.33%;\n  border-right: 0.5px solid gray;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .linkedin-container div {\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center; }\n    .linkedin-container div div {\n      background-image: url(\"/img/linkedinblue.png\");\n      height: 30px;\n      width: 40px;\n      background-size: contain;\n      background-repeat: no-repeat; }\n\n.email-container {\n  height: 100%;\n  width: 33.33%;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .email-container div {\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    flex-wrap: wrap; }\n    .email-container div div {\n      background-image: url(\"/img/yahoopurple.png\");\n      height: 60px;\n      width: 90px;\n      background-size: contain;\n      background-repeat: no-repeat; }\n\n.colored-background-left-change {\n  z-index: -1;\n  height: 45vh;\n  width: 50vw;\n  position: absolute;\n  background: linear-gradient(90deg, #3232ff, #ccccff 50%);\n  transition: 2s width ease;\n  -webkit-transition: 2s width ease;\n  -moz-transition: 2s width ease; }\n\n.colored-background-right-change {\n  right: 0;\n  z-index: -1;\n  height: 45vh;\n  width: 50vw;\n  position: absolute;\n  background: linear-gradient(90deg, #ccccff 50%, #3232ff);\n  transition: 2s width ease;\n  -webkit-transition: 2s width ease;\n  -moz-transition: 2s width ease; }\n\n@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  .twitter-container div {\n    font-size: 18px; }\n    .twitter-container div div {\n      height: 30px;\n      width: 40px; }\n  .linkedin-container div {\n    font-size: 18px; }\n    .linkedin-container div div {\n      background-image: url(\"/img/linkedinblue.png\");\n      height: 30px;\n      width: 40px; }\n  .email-container div {\n    font-size: 18px; }\n    .email-container div div {\n      background-image: url(\"/img/yahoopurple.png\");\n      height: 50px;\n      width: 80px; } }\n\n@media only screen and (max-width: 1400px) and (-webkit-min-device-pixel-ratio: 1) {\n  .middle-contacts-container div {\n    font-size: 18px; }\n  .twitter-container div {\n    font-size: 15px; }\n    .twitter-container div div {\n      height: 20px;\n      width: 30px; }\n  .linkedin-container div {\n    font-size: 15px; }\n    .linkedin-container div div {\n      background-image: url(\"/img/linkedinblue.png\");\n      height: 20px;\n      width: 30px; }\n  .email-container div {\n    font-size: 15px; }\n    .email-container div div {\n      background-image: url(\"/img/yahoopurple.png\");\n      height: 40px;\n      width: 70px; } }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  .middle-contacts-container div {\n    font-size: 18px; }\n  .twitter-container div {\n    font-size: 13px; }\n    .twitter-container div div {\n      height: 20px;\n      width: 30px; }\n  .linkedin-container div {\n    font-size: 13px; }\n    .linkedin-container div div {\n      background-image: url(\"/img/linkedinblue.png\");\n      height: 20px;\n      width: 30px; }\n  .email-container div {\n    font-size: 13px; }\n    .email-container div div {\n      background-image: url(\"/img/yahoopurple.png\");\n      height: 40px;\n      width: 70px; } }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 258 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(259);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(240)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ContactLinks.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ContactLinks.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 259 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(239)();
+	// imports
+	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
+	
+	// module
+	exports.push([module.id, ".contact-link-wrapper {\n  height: 5vh;\n  width: 500px;\n  display: flex;\n  align-items: flex-end;\n  justify-content: space-around;\n  position: absolute;\n  right: 0; }\n\n.home-contact-link {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .home-contact-link:hover {\n    color: #1874CD; }\n\n.about-contact-link {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .about-contact-link:hover {\n    color: #1874CD; }\n\n.projects-contact-link {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .projects-contact-link:hover {\n    color: #1874CD; }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  .contact-link-wrapper {\n    width: 300px; }\n  .home-contact-link {\n    font-size: 15px; }\n  .about-contact-link {\n    font-size: 15px; }\n  .projects-contact-link {\n    font-size: 15px; } }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28435,7 +28880,7 @@
 	exports.default = Ecommerce;
 
 /***/ },
-/* 253 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28530,7 +28975,7 @@
 	exports.default = Fakebook;
 
 /***/ },
-/* 254 */
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28625,7 +29070,7 @@
 	exports.default = Financial;
 
 /***/ },
-/* 255 */
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28710,7 +29155,7 @@
 	exports.default = Portfolio;
 
 /***/ },
-/* 256 */
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28729,11 +29174,11 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _Menu = __webpack_require__(257);
+	var _Menu = __webpack_require__(265);
 	
 	var _Menu2 = _interopRequireDefault(_Menu);
 	
-	var _QuoteBox = __webpack_require__(260);
+	var _QuoteBox = __webpack_require__(268);
 	
 	var _QuoteBox2 = _interopRequireDefault(_QuoteBox);
 	
@@ -28745,7 +29190,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(263);
+	__webpack_require__(271);
 	
 	var PortfolioHomePage = function (_React$Component) {
 	  _inherits(PortfolioHomePage, _React$Component);
@@ -28774,7 +29219,7 @@
 	exports.default = PortfolioHomePage;
 
 /***/ },
-/* 257 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28799,7 +29244,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(258);
+	__webpack_require__(266);
 	
 	var Menu = function (_React$Component) {
 	  _inherits(Menu, _React$Component);
@@ -28884,13 +29329,13 @@
 	exports.default = Menu;
 
 /***/ },
-/* 258 */
+/* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(259);
+	var content = __webpack_require__(267);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(240)(content, {});
@@ -28910,7 +29355,7 @@
 	}
 
 /***/ },
-/* 259 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(239)();
@@ -28924,7 +29369,7 @@
 
 
 /***/ },
-/* 260 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28947,7 +29392,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(261);
+	__webpack_require__(269);
 	
 	var QuoteBox = function (_React$Component) {
 		_inherits(QuoteBox, _React$Component);
@@ -28988,13 +29433,13 @@
 	exports.default = QuoteBox;
 
 /***/ },
-/* 261 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(262);
+	var content = __webpack_require__(270);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(240)(content, {});
@@ -29014,7 +29459,7 @@
 	}
 
 /***/ },
-/* 262 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(239)();
@@ -29028,13 +29473,13 @@
 
 
 /***/ },
-/* 263 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(264);
+	var content = __webpack_require__(272);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(240)(content, {});
@@ -29054,7 +29499,7 @@
 	}
 
 /***/ },
-/* 264 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(239)();
@@ -29068,7 +29513,7 @@
 
 
 /***/ },
-/* 265 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29083,11 +29528,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProjectsHeader = __webpack_require__(266);
+	var _ProjectsHeader = __webpack_require__(274);
 	
 	var _ProjectsHeader2 = _interopRequireDefault(_ProjectsHeader);
 	
-	var _ProjectsBody = __webpack_require__(271);
+	var _ProjectsBody = __webpack_require__(279);
 	
 	var _ProjectsBody2 = _interopRequireDefault(_ProjectsBody);
 	
@@ -29144,7 +29589,7 @@
 	exports.default = Projects;
 
 /***/ },
-/* 266 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29159,11 +29604,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _jquery = __webpack_require__(267);
+	var _jquery = __webpack_require__(275);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _ProjectsHeaderLinks = __webpack_require__(268);
+	var _ProjectsHeaderLinks = __webpack_require__(276);
 	
 	var _ProjectsHeaderLinks2 = _interopRequireDefault(_ProjectsHeaderLinks);
 	
@@ -29175,7 +29620,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(269);
+	__webpack_require__(277);
 	
 	var ProjectsHeader = function (_React$Component) {
 		_inherits(ProjectsHeader, _React$Component);
@@ -29276,7 +29721,7 @@
 	exports.default = ProjectsHeader;
 
 /***/ },
-/* 267 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -39502,7 +39947,7 @@
 
 
 /***/ },
-/* 268 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39571,13 +40016,13 @@
 	exports.default = ProjectsHeaderLinks;
 
 /***/ },
-/* 269 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(270);
+	var content = __webpack_require__(278);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(240)(content, {});
@@ -39597,7 +40042,7 @@
 	}
 
 /***/ },
-/* 270 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(239)();
@@ -39611,7 +40056,7 @@
 
 
 /***/ },
-/* 271 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39626,11 +40071,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _AngularGroup = __webpack_require__(272);
+	var _AngularGroup = __webpack_require__(280);
 	
 	var _AngularGroup2 = _interopRequireDefault(_AngularGroup);
 	
-	var _ReactGroup = __webpack_require__(273);
+	var _ReactGroup = __webpack_require__(281);
 	
 	var _ReactGroup2 = _interopRequireDefault(_ReactGroup);
 	
@@ -39642,8 +40087,8 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(274);
-	__webpack_require__(276);
+	__webpack_require__(282);
+	__webpack_require__(284);
 	
 	var ReactBody = function (_React$Component) {
 	  _inherits(ReactBody, _React$Component);
@@ -39767,7 +40212,7 @@
 	exports.default = ReactBody;
 
 /***/ },
-/* 272 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39840,7 +40285,7 @@
 	exports.default = AngularGroup;
 
 /***/ },
-/* 273 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39918,13 +40363,13 @@
 	exports.default = ReactGroup;
 
 /***/ },
-/* 274 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(275);
+	var content = __webpack_require__(283);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(240)(content, {});
@@ -39944,166 +40389,6 @@
 	}
 
 /***/ },
-/* 275 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(239)();
-	// imports
-	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
-	
-	// module
-	exports.push([module.id, ".react-body-wrapper {\n  top: 398px;\n  width: 100vw; }\n\n.react-body-container {\n  position: absolute;\n  top: 100vh;\n  height: 60vh;\n  width: 100vw;\n  background-color: white;\n  display: flex;\n  flex-direction: column; }\n\n.react-body-container-sticky {\n  position: fixed;\n  top: 40vh;\n  height: 60vh;\n  width: 100vw;\n  background-color: white;\n  display: flex;\n  flex-direction: column; }\n\n.links-to-projects-groups {\n  height: 50px;\n  width: 100vw;\n  padding-bottom: 5px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  border-bottom: 0.25px solid grey; }\n\n.angular-js {\n  margin-top: 10px;\n  cursor: pointer;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none;\n  border: none;\n  background-color: transparent;\n  box-shadow: none;\n  margin-left: 100px; }\n  .angular-js:hover {\n    color: #1874CD; }\n  .angular-js:focus {\n    outline: none; }\n\n.react-js {\n  margin-top: 10px;\n  cursor: pointer;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none;\n  border: none;\n  background-color: transparent;\n  box-shadow: none;\n  margin-right: 100px; }\n  .react-js:hover {\n    color: #1874CD; }\n  .react-js:focus {\n    outline: none; }\n\n.project-text-and-links-container {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-direction: row; }\n\n.project-text {\n  height: 100%;\n  width: 80%; }\n\n.instructions {\n  margin-top: 10px;\n  margin-left: 10px;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  line-height: 2; }\n\n.project-group-routes {\n  height: 100%;\n  width: 20%;\n  border-left: 0.25px solid gray; }\n\n.project-groups-section {\n  height: 100%;\n  width: 100%; }\n  .project-groups-section div {\n    display: flex;\n    flex-direction: column;\n    align-items: center; }\n\n.angular-app-header {\n  padding-bottom: 5px;\n  margin-top: 30px;\n  width: 60%;\n  border-bottom: 2px solid gray; }\n  .angular-app-header div {\n    font-size: 25px;\n    font-family: 'PT Mono', monospace;\n    color: black; }\n\n.ecommerce-app {\n  margin-top: 20px;\n  cursor: pointer;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .ecommerce-app:hover {\n    color: #1874CD; }\n\n.financial-app {\n  margin-top: 20px;\n  cursor: pointer;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .financial-app:hover {\n    color: #1874CD; }\n\n.react-app-header {\n  padding-bottom: 5px;\n  margin-top: 30px;\n  width: 60%;\n  border-bottom: 2px solid gray; }\n  .react-app-header div {\n    font-size: 25px;\n    font-family: 'PT Mono', monospace;\n    color: black; }\n\n.portfolio-app {\n  margin-top: 20px;\n  cursor: pointer;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .portfolio-app:hover {\n    color: #1874CD; }\n\n.fakebook-app {\n  margin-top: 20px;\n  cursor: pointer;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .fakebook-app:hover {\n    color: #1874CD; }\n\n.calculator-app {\n  margin-top: 20px;\n  cursor: pointer;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .calculator-app:hover {\n    color: #1874CD; }\n\n@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  .angular-js {\n    margin-top: 5px;\n    font-size: 25px; }\n  .react-js {\n    margin-top: 5px;\n    font-size: 25px; }\n  .angular-app-header {\n    padding-bottom: 10px;\n    margin-top: 15px;\n    border-bottom: 0.5px solid gray; }\n    .angular-app-header div {\n      font-weight: bold;\n      font-size: 22px; }\n  .ecommerce-app {\n    margin-top: 15px;\n    font-size: 15px; }\n  .financial-app {\n    margin-top: 15px;\n    font-size: 15px; }\n  .react-app-header {\n    padding-bottom: 10px;\n    margin-top: 15px;\n    border-bottom: 0.5px solid gray; }\n    .react-app-header div {\n      font-weight: bold;\n      font-size: 22px; }\n  .portfolio-app {\n    margin-top: 15px;\n    font-size: 15px; }\n  .fakebook-app {\n    margin-top: 15px;\n    font-size: 15px; }\n  .calculator-app {\n    margin-top: 15px;\n    font-size: 15px; } }\n\n@media only screen and (max-width: 1350px) and (-webkit-min-device-pixel-ratio: 1) {\n  .angular-app-header {\n    padding-bottom: 10px;\n    margin-top: 18px; }\n    .angular-app-header div {\n      font-weight: bold;\n      font-size: 18px; }\n  .react-app-header {\n    padding-bottom: 10px;\n    margin-top: 18px; }\n    .react-app-header div {\n      font-weight: bold;\n      font-size: 15px; } }\n\n@media only screen and (max-width: 1300px) and (-webkit-min-device-pixel-ratio: 1) {\n  .angular-app-header {\n    padding-bottom: 10px;\n    margin-top: 15px;\n    border-bottom: 0.5px solid gray; }\n    .angular-app-header div {\n      font-weight: bold;\n      font-size: 18px; }\n  .react-app-header {\n    padding-bottom: 10px;\n    margin-top: 15px; }\n    .react-app-header div {\n      font-weight: bold;\n      font-size: 15px; } }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 276 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(277);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(240)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ProjectsStyles.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ProjectsStyles.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 277 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(239)();
-	// imports
-	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
-	
-	// module
-	exports.push([module.id, "section {\n  padding: 0; }\n\n.actual-project-wrapper {\n  padding: 0;\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-direction: column; }\n\n.actual-project-top-container {\n  margin-top: 30px;\n  height: 80%;\n  width: 100%;\n  display: flex;\n  flex-direction: row; }\n\n.project-wrapper-left-side {\n  margin-left: 5%;\n  height: 100%;\n  width: 40%;\n  display: flex;\n  flex-direction: column; }\n\n.ecommerce-image {\n  background-image: url(\"/img/ecommerce.png\");\n  height: 80%;\n  width: 90%;\n  background-repeat: no-repeat;\n  background-size: contain; }\n\n.financial-image {\n  background-image: url(\"/img/financial.png\");\n  height: 80%;\n  width: 90%;\n  background-repeat: no-repeat;\n  background-size: contain; }\n\n.portfolio-image {\n  background-image: url(\"/img/portfolio.png\");\n  height: 80%;\n  width: 90%;\n  background-repeat: no-repeat;\n  background-size: contain; }\n\n.fakebook-image {\n  background-image: url(\"/img/fakebook.png\");\n  height: 80%;\n  width: 90%;\n  background-repeat: no-repeat;\n  background-size: contain; }\n\n.calculator-image {\n  background-image: url(\"/img/calculator.png\");\n  height: 80%;\n  width: 90%;\n  background-repeat: no-repeat;\n  background-size: contain; }\n\n.project-wrapper-right-side {\n  height: 100%;\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  margin-left: 10px;\n  margin-right: 15px; }\n\n.project-title {\n  margin-bottom: 15px;\n  font-weight: bold;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black; }\n\n.about-project-text {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  line-height: 2; }\n\n.actual-project-bottom-container {\n  margin-left: 5%;\n  height: 20%;\n  width: 90%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n  .actual-project-bottom-container div {\n    margin-top: 15px;\n    margin-left: 10px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    font-size: 20px; }\n    .actual-project-bottom-container div a {\n      color: blue;\n      font-size: 17px; }\n\n@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  .project-title {\n    font-size: 20px; }\n  .about-project-text {\n    font-size: 15px;\n    line-height: 2; }\n  .actual-project-bottom-container div {\n    font-size: 15px; }\n    .actual-project-bottom-container div a {\n      color: blue;\n      font-size: 12px; } }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  .project-title {\n    font-size: 20px; }\n  .about-project-text {\n    font-size: 15px;\n    line-height: 1.5; }\n  .actual-project-bottom-container div {\n    font-size: 12px; }\n    .actual-project-bottom-container div a {\n      color: blue;\n      font-size: 12px; } }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 278 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(279);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(240)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./About.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./About.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 279 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(239)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".about-background {\n  top: 0;\n  height: 100vh;\n  width: 100vw;\n  background-image: url(\"/img/tranquil.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  display: flex;\n  flex-direction: column;\n  position: fixed; }\n\n.about-upper {\n  height: 25vh;\n  width: 100vw; }\n\n.about-lower {\n  height: 75vh;\n  width: 100vw;\n  display: flex;\n  justify-content: center; }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  .about-upper {\n    height: 15vh;\n    width: 100vw; }\n  .about-lower {\n    height: 85vh;\n    width: 100vw;\n    display: flex;\n    justify-content: center; } }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 280 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(281);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(240)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./AboutMe.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./AboutMe.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 281 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(239)();
-	// imports
-	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
-	
-	// module
-	exports.push([module.id, ".about-me-wrapper {\n  height: 60vh;\n  width: 70vw;\n  border: 2px solid grey;\n  background-color: white;\n  opacity: 0.8;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.about-me-wrapper-hidden {\n  height: 60vh;\n  width: 70vw;\n  border: 2px solid grey;\n  background-color: white;\n  opacity: 0;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.pic-box {\n  margin-top: 20px;\n  margin-left: 20px;\n  height: 150px;\n  width: 150px;\n  border-radius: 50%;\n  background-image: url(\"/img/profilepic.jpg\");\n  background-size: cover;\n  background-repeat: no-repeat;\n  transition: all 3s; }\n\n.pic-box-alternative {\n  margin-top: 20px;\n  margin-left: 20px;\n  height: 150px;\n  width: 150px;\n  border-radius: 50%;\n  background-image: url(\"/img/Jango.jpg\");\n  background-size: cover;\n  background-repeat: no-repeat;\n  transition: all 2s; }\n\n.about-me-content-box {\n  height: 100%;\n  width: 85%;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.about-me-text-area {\n  height: 80%;\n  width: 90%;\n  border: 2px solid grey;\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n\n.about-me-header {\n  border-bottom: 2px solid black;\n  height: 54px;\n  width: 90%;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .about-me-header h1 {\n    font-size: 40px;\n    font-family: 'PT Mono', monospace; }\n\n.about-me-text-wrapper {\n  margin-top: 15px;\n  height: 303px;\n  width: 80%;\n  display: flex;\n  justify-content: center;\n  align-self: center; }\n\n.about-me-text {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  line-height: 2; }\n\n.about-me-footer-wrapper {\n  cursor: pointer;\n  height: 83px;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around; }\n\n.about-me-home {\n  text-decoration: none;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black; }\n  .about-me-home:hover {\n    color: #42C0FB; }\n\n.skills-link {\n  text-decoration: none;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black; }\n  .skills-link:hover {\n    color: #42C0FB; }\n\n.personal-link {\n  text-decoration: none;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black; }\n  .personal-link:hover {\n    color: #42C0FB; }\n\n@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  .about-me-text {\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    line-height: 1.5; }\n  .about-me-wrapper {\n    height: 60vh;\n    width: 70vw;\n    border: 2px solid grey;\n    background-color: white;\n    opacity: 0.8;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between; }\n  .about-me-home {\n    font-size: 25px; }\n  .skills-link {\n    font-size: 25px; }\n  .personal-link {\n    font-size: 25px; } }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  .about-me-text {\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    line-height: 1.5; }\n  .about-me-wrapper {\n    height: 70vh;\n    width: 80vw;\n    border: 2px solid grey;\n    background-color: white;\n    opacity: 0.8;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between; }\n  .pic-box {\n    margin-top: 20px;\n    margin-left: 20px;\n    height: 120px;\n    width: 120px;\n    border-radius: 50%; }\n  .pic-box-alternative {\n    margin-top: 20px;\n    margin-left: 20px;\n    height: 120px;\n    width: 120px;\n    border-radius: 50%; }\n  .about-me-footer-wrapper {\n    cursor: pointer;\n    height: 53px;\n    width: 100%;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-around; }\n  .about-me-home {\n    font-size: 20px; }\n  .skills-link {\n    font-size: 20px; }\n  .personal-link {\n    font-size: 20px; } }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 282 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(283);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(240)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Skills.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Skills.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
 /* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -40112,7 +40397,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
 	
 	// module
-	exports.push([module.id, ".skills-wrapper {\n  margin-top: 15px;\n  height: 303px;\n  width: 90%;\n  display: flex; }\n\n.skills {\n  height: 303px;\n  width: 160px;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace; }\n\n.skill-list {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace; }\n\n.skills-container {\n  height: 150px;\n  width: 100%;\n  line-height: 2;\n  display: flex;\n  flex-direction: column;\n  flex-wrap: wrap; }\n\n@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  .skills {\n    font-size: 25px;\n    font-weight: bold; }\n  .skill-list {\n    margin-top: -5px;\n    font-size: 20px;\n    font-family: 'PT Mono', monospace; } }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  .skills {\n    font-size: 25px;\n    font-weight: bold; }\n  .skill-list {\n    margin-top: -5px;\n    font-size: 18px;\n    font-family: 'PT Mono', monospace; } }\n", ""]);
+	exports.push([module.id, ".react-body-wrapper {\n  top: 398px;\n  width: 100vw; }\n\n.react-body-container {\n  position: absolute;\n  top: 100vh;\n  height: 60vh;\n  width: 100vw;\n  background-color: white;\n  display: flex;\n  flex-direction: column; }\n\n.react-body-container-sticky {\n  position: fixed;\n  top: 40vh;\n  height: 60vh;\n  width: 100vw;\n  background-color: white;\n  display: flex;\n  flex-direction: column; }\n\n.links-to-projects-groups {\n  height: 50px;\n  width: 100vw;\n  padding-bottom: 5px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  border-bottom: 0.25px solid grey; }\n\n.angular-js {\n  margin-top: 10px;\n  cursor: pointer;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none;\n  border: none;\n  background-color: transparent;\n  box-shadow: none;\n  margin-left: 100px; }\n  .angular-js:hover {\n    color: #1874CD; }\n  .angular-js:focus {\n    outline: none; }\n\n.react-js {\n  margin-top: 10px;\n  cursor: pointer;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none;\n  border: none;\n  background-color: transparent;\n  box-shadow: none;\n  margin-right: 100px; }\n  .react-js:hover {\n    color: #1874CD; }\n  .react-js:focus {\n    outline: none; }\n\n.project-text-and-links-container {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-direction: row; }\n\n.project-text {\n  height: 100%;\n  width: 80%; }\n\n.instructions {\n  margin-top: 10px;\n  margin-left: 10px;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  line-height: 2; }\n\n.project-group-routes {\n  height: 100%;\n  width: 20%;\n  border-left: 0.25px solid gray; }\n\n.project-groups-section {\n  height: 100%;\n  width: 100%; }\n  .project-groups-section div {\n    display: flex;\n    flex-direction: column;\n    align-items: center; }\n\n.angular-app-header {\n  padding-bottom: 5px;\n  margin-top: 30px;\n  width: 60%;\n  border-bottom: 2px solid gray; }\n  .angular-app-header div {\n    font-size: 25px;\n    font-family: 'PT Mono', monospace;\n    color: black; }\n\n.ecommerce-app {\n  margin-top: 20px;\n  cursor: pointer;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .ecommerce-app:hover {\n    color: #1874CD; }\n\n.financial-app {\n  margin-top: 20px;\n  cursor: pointer;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .financial-app:hover {\n    color: #1874CD; }\n\n.react-app-header {\n  padding-bottom: 5px;\n  margin-top: 30px;\n  width: 60%;\n  border-bottom: 2px solid gray; }\n  .react-app-header div {\n    font-size: 25px;\n    font-family: 'PT Mono', monospace;\n    color: black; }\n\n.portfolio-app {\n  margin-top: 20px;\n  cursor: pointer;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .portfolio-app:hover {\n    color: #1874CD; }\n\n.fakebook-app {\n  margin-top: 20px;\n  cursor: pointer;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .fakebook-app:hover {\n    color: #1874CD; }\n\n.calculator-app {\n  margin-top: 20px;\n  cursor: pointer;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .calculator-app:hover {\n    color: #1874CD; }\n\n@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  .angular-js {\n    margin-top: 5px;\n    font-size: 25px; }\n  .react-js {\n    margin-top: 5px;\n    font-size: 25px; }\n  .angular-app-header {\n    padding-bottom: 10px;\n    margin-top: 15px;\n    border-bottom: 0.5px solid gray; }\n    .angular-app-header div {\n      font-weight: bold;\n      font-size: 22px; }\n  .ecommerce-app {\n    margin-top: 15px;\n    font-size: 15px; }\n  .financial-app {\n    margin-top: 15px;\n    font-size: 15px; }\n  .react-app-header {\n    padding-bottom: 10px;\n    margin-top: 15px;\n    border-bottom: 0.5px solid gray; }\n    .react-app-header div {\n      font-weight: bold;\n      font-size: 22px; }\n  .portfolio-app {\n    margin-top: 15px;\n    font-size: 15px; }\n  .fakebook-app {\n    margin-top: 15px;\n    font-size: 15px; }\n  .calculator-app {\n    margin-top: 15px;\n    font-size: 15px; } }\n\n@media only screen and (max-width: 1350px) and (-webkit-min-device-pixel-ratio: 1) {\n  .angular-app-header {\n    padding-bottom: 10px;\n    margin-top: 18px; }\n    .angular-app-header div {\n      font-weight: bold;\n      font-size: 18px; }\n  .react-app-header {\n    padding-bottom: 10px;\n    margin-top: 18px; }\n    .react-app-header div {\n      font-weight: bold;\n      font-size: 15px; } }\n\n@media only screen and (max-width: 1300px) and (-webkit-min-device-pixel-ratio: 1) {\n  .angular-app-header {\n    padding-bottom: 10px;\n    margin-top: 15px;\n    border-bottom: 0.5px solid gray; }\n    .angular-app-header div {\n      font-weight: bold;\n      font-size: 18px; }\n  .react-app-header {\n    padding-bottom: 10px;\n    margin-top: 15px; }\n    .react-app-header div {\n      font-weight: bold;\n      font-size: 15px; } }\n", ""]);
 	
 	// exports
 
@@ -40133,8 +40418,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./PersonalFacts.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./PersonalFacts.scss");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ProjectsStyles.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ProjectsStyles.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -40152,7 +40437,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
 	
 	// module
-	exports.push([module.id, ".personal-facts-wrapper {\n  margin-top: 15px;\n  height: 303px;\n  width: 90%;\n  display: flex;\n  flex-direction: row; }\n\n.facts {\n  width: 170px;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace; }\n\n.facts-text {\n  line-height: 1.5;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace; }\n\n@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  .facts {\n    font-weight: bold;\n    font-size: 25px; } }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  .facts {\n    font-weight: bold;\n    font-size: 25px; }\n  .facts-text {\n    line-height: 1.5;\n    font-size: 18px;\n    font-family: 'PT Mono', monospace; } }\n", ""]);
+	exports.push([module.id, "section {\n  padding: 0; }\n\n.actual-project-wrapper {\n  padding: 0;\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-direction: column; }\n\n.actual-project-top-container {\n  margin-top: 30px;\n  height: 80%;\n  width: 100%;\n  display: flex;\n  flex-direction: row; }\n\n.project-wrapper-left-side {\n  margin-left: 5%;\n  height: 100%;\n  width: 40%;\n  display: flex;\n  flex-direction: column; }\n\n.ecommerce-image {\n  background-image: url(\"/img/ecommerce.png\");\n  height: 80%;\n  width: 90%;\n  background-repeat: no-repeat;\n  background-size: contain; }\n\n.financial-image {\n  background-image: url(\"/img/financial.png\");\n  height: 80%;\n  width: 90%;\n  background-repeat: no-repeat;\n  background-size: contain; }\n\n.portfolio-image {\n  background-image: url(\"/img/portfolio.png\");\n  height: 80%;\n  width: 90%;\n  background-repeat: no-repeat;\n  background-size: contain; }\n\n.fakebook-image {\n  background-image: url(\"/img/fakebook.png\");\n  height: 80%;\n  width: 90%;\n  background-repeat: no-repeat;\n  background-size: contain; }\n\n.calculator-image {\n  background-image: url(\"/img/calculator.png\");\n  height: 80%;\n  width: 90%;\n  background-repeat: no-repeat;\n  background-size: contain; }\n\n.project-wrapper-right-side {\n  height: 100%;\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  margin-left: 10px;\n  margin-right: 15px; }\n\n.project-title {\n  margin-bottom: 15px;\n  font-weight: bold;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black; }\n\n.about-project-text {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  line-height: 2; }\n\n.actual-project-bottom-container {\n  margin-left: 5%;\n  height: 20%;\n  width: 90%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n  .actual-project-bottom-container div {\n    margin-top: 15px;\n    margin-left: 10px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    font-size: 20px; }\n    .actual-project-bottom-container div a {\n      color: blue;\n      font-size: 17px; }\n\n@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  .project-title {\n    font-size: 20px; }\n  .about-project-text {\n    font-size: 15px;\n    line-height: 2; }\n  .actual-project-bottom-container div {\n    font-size: 15px; }\n    .actual-project-bottom-container div a {\n      color: blue;\n      font-size: 12px; } }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  .project-title {\n    font-size: 20px; }\n  .about-project-text {\n    font-size: 15px;\n    line-height: 1.5; }\n  .actual-project-bottom-container div {\n    font-size: 12px; }\n    .actual-project-bottom-container div a {\n      color: blue;\n      font-size: 12px; } }\n", ""]);
 	
 	// exports
 
@@ -40173,8 +40458,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Projects.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Projects.scss");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./About.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./About.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -40189,10 +40474,10 @@
 
 	exports = module.exports = __webpack_require__(239)();
 	// imports
-	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
+	
 	
 	// module
-	exports.push([module.id, "body {\n  padding-top: 400px;\n  margin: 0; }\n\n.projects-background {\n  z-index: -2;\n  top: 0;\n  left: 0;\n  height: 100vh;\n  width: 100vw;\n  background-image: url(/img/code.jpeg);\n  background-repeat: no-repeat;\n  background-size: cover;\n  position: fixed; }\n\n.sticky {\n  top: 0;\n  position: fixed; }\n\n.not-sticky-div {\n  height: 15vh;\n  width: 100vw;\n  background-color: black;\n  opacity: 0.9;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transition: all ease 2s;\n  -webkit-transition: all ease 2s;\n  -moz-transition: all ease 2s; }\n  .not-sticky-div div {\n    font-size: 30px;\n    font-family: 'PT Mono', monospace;\n    color: white; }\n\n.sticky-div {\n  top: 0;\n  position: fixed;\n  height: 40vh;\n  width: 100vw;\n  background-color: black;\n  opacity: 0.5;\n  transition: 1s all ease;\n  -webkit-transition: all ease 1s;\n  -moz-transition: all ease 1s; }\n\n.projects-quote-hidden {\n  z-index: -3;\n  top: 0;\n  position: fixed;\n  height: 40vh;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.projects-title-hidden {\n  font-size: 1px;\n  font-family: 'PT Mono', monospace;\n  opacity: .1;\n  color: black; }\n\n.projects-quote {\n  z-index: 2;\n  top: 0;\n  position: fixed;\n  height: 40vh;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.projects-title {\n  font-size: 40px;\n  font-family: 'PT Mono', monospace;\n  color: white;\n  transition: 5s all ease;\n  -webkit-transition: all ease 5s;\n  -moz-transition: all ease 5s; }\n\n@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  body {\n    padding-top: 300px; } }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  body {\n    padding-top: 250px; }\n  .sticky-div {\n    opacity: 0.7; }\n  .projects-title {\n    font-size: 30px; } }\n", ""]);
+	exports.push([module.id, ".about-background {\n  top: 0;\n  height: 100vh;\n  width: 100vw;\n  background-image: url(\"/img/tranquil.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  display: flex;\n  flex-direction: column;\n  position: fixed; }\n\n.about-upper {\n  height: 25vh;\n  width: 100vw; }\n\n.about-lower {\n  height: 75vh;\n  width: 100vw;\n  display: flex;\n  justify-content: center; }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  .about-upper {\n    height: 15vh;\n    width: 100vw; }\n  .about-lower {\n    height: 85vh;\n    width: 100vw;\n    display: flex;\n    justify-content: center; } }\n", ""]);
 	
 	// exports
 
@@ -40201,265 +40486,83 @@
 /* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var ContactBackground = function (_React$Component) {
-	  _inherits(ContactBackground, _React$Component);
-	
-	  function ContactBackground(props) {
-	    _classCallCheck(this, ContactBackground);
-	
-	    var _this = _possibleConstructorReturn(this, (ContactBackground.__proto__ || Object.getPrototypeOf(ContactBackground)).call(this, props));
-	
-	    _this.state = {
-	      clicked: _this.props.clicked,
-	      bbs: "red-background-square-hidden",
-	      ybs: "yellow-background-square-hidden",
-	      gbs: "green-background-square-hidden",
-	      csw: "colored-square-wrapper"
-	    };
-	    return _this;
-	  }
-	
-	  _createClass(ContactBackground, [{
-	    key: "componentWillReceiveProps",
-	    value: function componentWillReceiveProps(nextProps) {
-	      console.log(this.props, nextProps);
-	      this.props !== nextProps ? this.triggerSquareToDiamond() : null;
-	    }
-	  }, {
-	    key: "triggerSquareToDiamond",
-	    value: function triggerSquareToDiamond() {
-	      setTimeout(function contactShapeUpdate() {
-	        this.setState({ bbs: "red-background-square-1", ybs: "yellow-background-square-1", gbs: "green-background-square-1" });
-	      }.bind(this), 1000);
-	      setTimeout(function contactShapeUpdate2() {
-	        this.setState({ bbs: "red-background-square-2", ybs: "yellow-background-square-2", gbs: "green-background-square-2" });
-	      }.bind(this), 3500);
-	      setTimeout(function contactShapeUpdate2() {
-	        this.setState({ csw: "colored-square-wrapper-together", bbs: "red-background-square-3", ybs: "yellow-background-square-3", gbs: "green-background-square-3" });
-	      }.bind(this), 6000);
-	    }
-	  }, {
-	    key: "render",
-	    value: function render() {
-	      console.log('CB:', this.props.clicked);
-	      return _react2.default.createElement(
-	        "div",
-	        { className: "absolute-contact-background" },
-	        _react2.default.createElement(
-	          "div",
-	          { className: "upper-background-container" },
-	          _react2.default.createElement(
-	            "div",
-	            { className: this.state.csw },
-	            _react2.default.createElement("div", { className: this.state.bbs }),
-	            _react2.default.createElement("div", { className: this.state.ybs }),
-	            _react2.default.createElement("div", { className: this.state.gbs })
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return ContactBackground;
-	}(_react2.default.Component);
-	
-	exports.default = ContactBackground;
+	// load the styles
+	var content = __webpack_require__(289);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(240)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./AboutMe.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./AboutMe.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
 /* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	exports = module.exports = __webpack_require__(239)();
+	// imports
+	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
 	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
+	// module
+	exports.push([module.id, ".about-me-wrapper {\n  height: 60vh;\n  width: 70vw;\n  border: 2px solid grey;\n  background-color: white;\n  opacity: 0.8;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.about-me-wrapper-hidden {\n  height: 60vh;\n  width: 70vw;\n  border: 2px solid grey;\n  background-color: white;\n  opacity: 0;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.pic-box {\n  margin-top: 20px;\n  margin-left: 20px;\n  height: 150px;\n  width: 150px;\n  border-radius: 50%;\n  background-image: url(\"/img/profilepicture.jpeg\");\n  background-size: cover;\n  background-repeat: no-repeat;\n  transition: all 3s; }\n\n.pic-box-alternative {\n  margin-top: 20px;\n  margin-left: 20px;\n  height: 150px;\n  width: 150px;\n  border-radius: 50%;\n  background-image: url(\"/img/jangoprofile.jpeg\");\n  background-size: cover;\n  background-repeat: no-repeat;\n  transition: all 2s; }\n\n.about-me-content-box {\n  height: 100%;\n  width: 85%;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.about-me-text-area {\n  height: 80%;\n  width: 90%;\n  border: 2px solid grey;\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n\n.about-me-header {\n  border-bottom: 2px solid black;\n  height: 54px;\n  width: 90%;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .about-me-header h1 {\n    font-size: 40px;\n    font-family: 'PT Mono', monospace; }\n\n.about-me-text-wrapper {\n  margin-top: 15px;\n  height: 303px;\n  width: 80%;\n  display: flex;\n  justify-content: center;\n  align-self: center; }\n\n.about-me-text {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  line-height: 2; }\n\n.about-me-footer-wrapper {\n  cursor: pointer;\n  height: 83px;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around; }\n\n.about-me-home {\n  text-decoration: none;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black; }\n  .about-me-home:hover {\n    color: #42C0FB; }\n\n.skills-link {\n  text-decoration: none;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black; }\n  .skills-link:hover {\n    color: #42C0FB; }\n\n.personal-link {\n  text-decoration: none;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace;\n  color: black; }\n  .personal-link:hover {\n    color: #42C0FB; }\n\n@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  .about-me-text {\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    line-height: 1.5; }\n  .about-me-wrapper {\n    height: 60vh;\n    width: 70vw;\n    border: 2px solid grey;\n    background-color: white;\n    opacity: 0.8;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between; }\n  .about-me-home {\n    font-size: 25px; }\n  .skills-link {\n    font-size: 25px; }\n  .personal-link {\n    font-size: 25px; } }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  .about-me-text {\n    font-size: 20px;\n    font-family: 'PT Mono', monospace;\n    line-height: 1.5; }\n  .about-me-wrapper {\n    height: 70vh;\n    width: 80vw;\n    border: 2px solid grey;\n    background-color: white;\n    opacity: 0.8;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between; }\n  .pic-box {\n    margin-top: 20px;\n    margin-left: 20px;\n    height: 120px;\n    width: 120px;\n    border-radius: 50%; }\n  .pic-box-alternative {\n    margin-top: 20px;\n    margin-left: 20px;\n    height: 120px;\n    width: 120px;\n    border-radius: 50%; }\n  .about-me-footer-wrapper {\n    cursor: pointer;\n    height: 53px;\n    width: 100%;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-around; }\n  .about-me-home {\n    font-size: 20px; }\n  .skills-link {\n    font-size: 20px; }\n  .personal-link {\n    font-size: 20px; } }\n", ""]);
 	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _ContactLinks = __webpack_require__(290);
-	
-	var _ContactLinks2 = _interopRequireDefault(_ContactLinks);
-	
-	var _ContactBottomContainer = __webpack_require__(296);
-	
-	var _ContactBottomContainer2 = _interopRequireDefault(_ContactBottomContainer);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	__webpack_require__(292);
-	
-	var ContactForeground = function (_React$Component) {
-	  _inherits(ContactForeground, _React$Component);
-	
-	  function ContactForeground(props) {
-	    _classCallCheck(this, ContactForeground);
-	
-	    var _this = _possibleConstructorReturn(this, (ContactForeground.__proto__ || Object.getPrototypeOf(ContactForeground)).call(this, props));
-	
-	    _this.state = {
-	      clicked: _this.props.clicked
-	    };
-	    _this.handleOnClick = _this.handleOnClick.bind(_this);
-	    return _this;
-	  }
-	
-	  _createClass(ContactForeground, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'contact-foreground' },
-	        _react2.default.createElement(_ContactLinks2.default, null),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'upper-contacts-container' },
-	          _react2.default.createElement(
-	            'div',
-	            null,
-	            'Click',
-	            _react2.default.createElement(
-	              'div',
-	              { onClick: this.handleOnClick },
-	              'color mode'
-	            ),
-	            'Here'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'middle-contacts-container' },
-	          _react2.default.createElement(
-	            'div',
-	            null,
-	            '"Feel free to contact me. I\'m reachable on several social media platforms" --Lonnie McGill'
-	          )
-	        ),
-	        _react2.default.createElement(_ContactBottomContainer2.default, { clicked: this.state.clicked })
-	      );
-	    }
-	  }, {
-	    key: 'handleOnClick',
-	    value: function handleOnClick(event) {
-	      this.setState({
-	        clicked: "true"
-	      });
-	    }
-	  }, {
-	    key: 'componentDidUpdate',
-	    value: function componentDidUpdate(prevProps, prevState) {
-	      prevState.clicked !== this.state.clicked ? this.sendToContact() : null;
-	    }
-	  }, {
-	    key: 'sendToContact',
-	    value: function sendToContact() {
-	      var clickedStateChange = this.state.clicked;
-	      this.props.cbClickedChange(clickedStateChange);
-	    }
-	  }]);
-	
-	  return ContactForeground;
-	}(_react2.default.Component);
-	
-	exports.default = ContactForeground;
+	// exports
+
 
 /***/ },
 /* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRouter = __webpack_require__(172);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var ContactLinks = function (_React$Component) {
-	  _inherits(ContactLinks, _React$Component);
-	
-	  function ContactLinks() {
-	    _classCallCheck(this, ContactLinks);
-	
-	    return _possibleConstructorReturn(this, (ContactLinks.__proto__ || Object.getPrototypeOf(ContactLinks)).apply(this, arguments));
-	  }
-	
-	  _createClass(ContactLinks, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'contact-link-wrapper' },
-	        _react2.default.createElement(
-	          _reactRouter.Link,
-	          { to: '/', className: 'home-contact-link' },
-	          'Home'
-	        ),
-	        _react2.default.createElement(
-	          _reactRouter.Link,
-	          { to: '/about', className: 'about-contact-link' },
-	          'About'
-	        ),
-	        _react2.default.createElement(
-	          _reactRouter.Link,
-	          { to: '/projects', className: 'projects-contact-link' },
-	          'Projects'
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return ContactLinks;
-	}(_react2.default.Component);
-	
-	exports.default = ContactLinks;
+	// load the styles
+	var content = __webpack_require__(291);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(240)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Skills.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Skills.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
-/* 291 */,
+/* 291 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(239)();
+	// imports
+	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
+	
+	// module
+	exports.push([module.id, ".skills-wrapper {\n  margin-top: 15px;\n  height: 303px;\n  width: 90%;\n  display: flex; }\n\n.skills {\n  height: 303px;\n  width: 160px;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace; }\n\n.skill-list {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace; }\n\n.skills-container {\n  height: 150px;\n  width: 100%;\n  line-height: 2;\n  display: flex;\n  flex-direction: column;\n  flex-wrap: wrap; }\n\n@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  .skills {\n    font-size: 25px;\n    font-weight: bold; }\n  .skill-list {\n    margin-top: -5px;\n    font-size: 20px;\n    font-family: 'PT Mono', monospace; } }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  .skills {\n    font-size: 25px;\n    font-weight: bold; }\n  .skill-list {\n    margin-top: -5px;\n    font-size: 18px;\n    font-family: 'PT Mono', monospace; } }\n", ""]);
+	
+	// exports
+
+
+/***/ },
 /* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -40475,8 +40578,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ContactUpperContainer.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ContactUpperContainer.scss");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./PersonalFacts.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./PersonalFacts.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -40494,7 +40597,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
 	
 	// module
-	exports.push([module.id, ".upper-contacts-container {\n  height: 10vh;\n  width: 100vw;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n  .upper-contacts-container div {\n    cursor: pointer;\n    font-size: 25px;\n    font-family: 'PT Mono', monospace;\n    color: black;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    transition: 1s all ease; }\n    .upper-contacts-container div div {\n      margin-left: 5px;\n      margin-right: 5px;\n      height: 0px;\n      width: 0px;\n      background: linear-gradient(#d3d3d3, #e9e9e9);\n      border: 1px solid black;\n      border-radius: 50px;\n      font-size: 0px; }\n    .upper-contacts-container div:hover {\n      font-size: 10px;\n      transition: 2s all ease; }\n      .upper-contacts-container div:hover div {\n        margin-left: 5px;\n        margin-right: 5px;\n        height: 45px;\n        width: 45px;\n        background: linear-gradient(#d3d3d3, #e9e9e9);\n        border: 1px solid black;\n        border-radius: 50px;\n        font-size: 12px;\n        text-align: center; }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  .upper-contacts-container {\n    height: 10vh;\n    width: 100vw;\n    display: flex;\n    align-items: center;\n    justify-content: center; }\n    .upper-contacts-container div {\n      cursor: pointer;\n      font-size: 20px; } }\n", ""]);
+	exports.push([module.id, ".personal-facts-wrapper {\n  margin-top: 15px;\n  height: 303px;\n  width: 90%;\n  display: flex;\n  flex-direction: row; }\n\n.facts {\n  width: 170px;\n  font-size: 30px;\n  font-family: 'PT Mono', monospace; }\n\n.facts-text {\n  line-height: 1.5;\n  font-size: 20px;\n  font-family: 'PT Mono', monospace; }\n\n@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  .facts {\n    font-weight: bold;\n    font-size: 25px; } }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  .facts {\n    font-weight: bold;\n    font-size: 25px; }\n  .facts-text {\n    line-height: 1.5;\n    font-size: 18px;\n    font-family: 'PT Mono', monospace; } }\n", ""]);
 	
 	// exports
 
@@ -40515,8 +40618,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ContactLinks.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./ContactLinks.scss");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Projects.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Projects.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -40534,114 +40637,10 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=PT+Mono);", ""]);
 	
 	// module
-	exports.push([module.id, ".contact-link-wrapper {\n  height: 5vh;\n  width: 500px;\n  display: flex;\n  align-items: flex-end;\n  justify-content: space-around;\n  position: absolute;\n  right: 0; }\n\n.home-contact-link {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .home-contact-link:hover {\n    color: #1874CD; }\n\n.about-contact-link {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .about-contact-link:hover {\n    color: #1874CD; }\n\n.projects-contact-link {\n  font-size: 20px;\n  font-family: 'PT Mono', monospace;\n  color: black;\n  text-decoration: none; }\n  .projects-contact-link:hover {\n    color: #1874CD; }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  .contact-link-wrapper {\n    width: 300px; }\n  .home-contact-link {\n    font-size: 15px; }\n  .about-contact-link {\n    font-size: 15px; }\n  .projects-contact-link {\n    font-size: 15px; } }\n", ""]);
+	exports.push([module.id, "body {\n  padding-top: 400px;\n  margin: 0; }\n\n.projects-background {\n  z-index: -2;\n  top: 0;\n  left: 0;\n  height: 100vh;\n  width: 100vw;\n  background-image: url(/img/code.jpeg);\n  background-repeat: no-repeat;\n  background-size: cover;\n  position: fixed; }\n\n.sticky {\n  top: 0;\n  position: fixed; }\n\n.not-sticky-div {\n  height: 15vh;\n  width: 100vw;\n  background-color: black;\n  opacity: 0.9;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transition: all ease 2s;\n  -webkit-transition: all ease 2s;\n  -moz-transition: all ease 2s; }\n  .not-sticky-div div {\n    font-size: 30px;\n    font-family: 'PT Mono', monospace;\n    color: white; }\n\n.sticky-div {\n  top: 0;\n  position: fixed;\n  height: 40vh;\n  width: 100vw;\n  background-color: black;\n  opacity: 0.5;\n  transition: 1s all ease;\n  -webkit-transition: all ease 1s;\n  -moz-transition: all ease 1s; }\n\n.projects-quote-hidden {\n  z-index: -3;\n  top: 0;\n  position: fixed;\n  height: 40vh;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.projects-title-hidden {\n  font-size: 1px;\n  font-family: 'PT Mono', monospace;\n  opacity: .1;\n  color: black; }\n\n.projects-quote {\n  z-index: 2;\n  top: 0;\n  position: fixed;\n  height: 40vh;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.projects-title {\n  font-size: 40px;\n  font-family: 'PT Mono', monospace;\n  color: white;\n  transition: 5s all ease;\n  -webkit-transition: all ease 5s;\n  -moz-transition: all ease 5s; }\n\n@media only screen and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {\n  body {\n    padding-top: 300px; } }\n\n@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {\n  body {\n    padding-top: 250px; }\n  .sticky-div {\n    opacity: 0.7; }\n  .projects-title {\n    font-size: 30px; } }\n", ""]);
 	
 	// exports
 
-
-/***/ },
-/* 296 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var ContactBottomContainer = function (_React$Component) {
-	  _inherits(ContactBottomContainer, _React$Component);
-	
-	  function ContactBottomContainer(props) {
-	    _classCallCheck(this, ContactBottomContainer);
-	
-	    var _this = _possibleConstructorReturn(this, (ContactBottomContainer.__proto__ || Object.getPrototypeOf(ContactBottomContainer)).call(this, props));
-	
-	    _this.state = {
-	      cbl: "colored-background-left",
-	      cbr: "colored-background-right"
-	    };
-	    _this.triggerBackgroundChange = _this.triggerBackgroundChange.bind(_this);
-	    return _this;
-	  }
-	
-	  _createClass(ContactBottomContainer, [{
-	    key: "componentWillReceiveProps",
-	    value: function componentWillReceiveProps(nextProps) {
-	      console.log(this.props, nextProps);
-	      this.props !== nextProps ? this.triggerBackgroundChange() : null;
-	    }
-	  }, {
-	    key: "triggerBackgroundChange",
-	    value: function triggerBackgroundChange() {
-	      setTimeout(function contactStateUpdate() {
-	        this.setState({ cbl: "colored-background-left-change", cbr: "colored-background-right-change" });
-	      }.bind(this), 1000);
-	    }
-	  }, {
-	    key: "render",
-	    value: function render() {
-	      console.log('CBC:', this.props.clicked);
-	      return _react2.default.createElement(
-	        "div",
-	        { className: "bottom-contacts-conatiner" },
-	        _react2.default.createElement("div", { className: this.state.cbl }),
-	        _react2.default.createElement("div", { className: this.state.cbr }),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "twitter-container" },
-	          _react2.default.createElement(
-	            "div",
-	            { className: "twitter-text" },
-	            "Follow me on \xA0",
-	            _react2.default.createElement("div", null),
-	            "\xA0@26Mcgizmo"
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "linkedin-container" },
-	          _react2.default.createElement(
-	            "div",
-	            { className: "linkedin-text" },
-	            "I'm also on \xA0",
-	            _react2.default.createElement("div", null),
-	            "so link with Lonnie McGill"
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "email-container" },
-	          _react2.default.createElement(
-	            "div",
-	            { className: "twitter-text" },
-	            "If you'd like to e-mail me. I'm on \xA0",
-	            _react2.default.createElement("div", null),
-	            "\xA0 It's mcgizmo_26@yahoo.com"
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return ContactBottomContainer;
-	}(_react2.default.Component);
-	
-	exports.default = ContactBottomContainer;
 
 /***/ }
 /******/ ]);
