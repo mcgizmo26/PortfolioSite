@@ -26,9 +26,7 @@ export default class Fakebook extends React.Component {
 						<div>Click here to see the code: &nbsp;
 							<a href={`https://github.com/FakebookClone/Fakebook`}>Fakebook Github Repository</a>
 						</div>
-						<div>Click here to see the project: &nbsp;
-							<a href={`http://www.fakebook.host/`}>Fakebook App</a>
-						</div>
+						
 
 				</div>
 

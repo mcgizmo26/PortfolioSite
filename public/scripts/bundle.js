@@ -28956,16 +28956,6 @@
 								{ href: "https://github.com/FakebookClone/Fakebook" },
 								"Fakebook Github Repository"
 							)
-						),
-						_react2.default.createElement(
-							"div",
-							null,
-							"Click here to see the project: \xA0",
-							_react2.default.createElement(
-								"a",
-								{ href: "http://www.fakebook.host/" },
-								"Fakebook App"
-							)
 						)
 					)
 				);
